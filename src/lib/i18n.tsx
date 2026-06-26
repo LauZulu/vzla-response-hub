@@ -179,8 +179,8 @@ const en: Dict = {
   "tools.contribute.title": "Did your community build a tool for this emergency?",
   "tools.contribute.sub": "Contact us to include it here or to be part of the AI for Good community.",
   "tools.contribute.cta": "Write to us",
-  "tools.contribute.whatsapp": "Join the AI for Good community",
-  "tools.contribute.coord": "Join the coordination group",
+  "tools.contribute.whatsapp": "Discover Young AI Leaders",
+  "tools.contribute.coord": "Join AI for Good LatAm community",
 
   "social.title": "Who's already helping",
   "social.ago": "{n} hours ago",
