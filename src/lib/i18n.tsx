@@ -136,7 +136,7 @@ const en: Dict = {
 
 
   "story.body":
-    "On June 24, 2026, at 6:04 PM, the earth shook. In 39 seconds, two earthquakes devastated Venezuela's northern coast. Buildings collapsed. Families separated.\n\nYou probably saw the news and felt helpless. We felt the same.\n\nSo we didn't build another charity website. We gathered real tools, built by tech communities, for real people. Right now.",
+    "On June 24, 2026, at 6:04 PM, the earth shook. In 39 seconds, two earthquakes devastated Venezuela's northern coast. Buildings collapsed. Families separated.\n\nYou probably saw the news and felt like there was nothing you could do. We felt the same.\n\nThen tech communities across the region mobilized. In hours, they built real tools: damage maps, missing-person registries, AI-powered search systems. Made by citizens, for citizens. Running right now.\n\nYou can be part of it too.",
 
   "tools.title": "Active solutions right now",
   "tools.sub":
