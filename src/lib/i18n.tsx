@@ -15,7 +15,7 @@ const es: Dict = {
   "lang.toggle": "ES | EN",
 
   "hero.kicker": "Terremoto Venezuela · 24 jun 2026 · 6:04 PM",
-  "hero.headline": "253+ personas fallecidas. 4.300+ heridas. 157+ desaparecidas. AHORA",
+  "hero.headline": "920+ personas fallecidas. 3.360+ heridas. Cientos desaparecidas. AHORA",
   "hero.live": "En este segundo, hay personas siendo localizadas",
   "hero.sub1": "Comunidades tech construyeron herramientas reales.",
   "hero.sub2": "Tú puedes ayudar.",
