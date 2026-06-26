@@ -494,7 +494,7 @@ function Footer() {
             <a
               href="https://www.linkedin.com/in/laura-zuluaga-pineda/"
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               className="underline underline-offset-2 hover:text-foreground transition"
             >
               {t("footer.creditName")}
