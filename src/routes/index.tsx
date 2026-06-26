@@ -5,6 +5,7 @@ import {
   Users,
   Camera,
   Search,
+  Building2,
   ShieldCheck,
   Radio,
   MessageCircle,
@@ -315,6 +316,12 @@ const SOLUTIONS = [
     color: "healing",
     href: "https://venezuela-te-busca-app.hellogafaro.workers.dev",
   },
+  {
+    key: "hospitals",
+    icon: Building2,
+    color: "violet",
+    href: "https://hospitalesenvenezuela.com",
+  },
 ] as const;
 
 const COLOR_CLASSES: Record<string, { bar: string; icon: string; btn: string }> = {
@@ -322,6 +329,7 @@ const COLOR_CLASSES: Record<string, { bar: string; icon: string; btn: string }> 
   teal: { bar: "bg-teal", icon: "text-teal", btn: "bg-teal text-teal-foreground" },
   trust: { bar: "bg-trust", icon: "text-trust", btn: "bg-trust text-trust-foreground" },
   healing: { bar: "bg-healing", icon: "text-healing", btn: "bg-healing text-healing-foreground" },
+  violet: { bar: "bg-violet", icon: "text-violet", btn: "bg-violet text-violet-foreground" },
 };
 
 function Tools() {

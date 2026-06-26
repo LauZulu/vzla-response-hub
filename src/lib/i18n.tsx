@@ -60,6 +60,11 @@ const es: Dict = {
     "Registro público de personas desaparecidas tras el terremoto. Permite registrar y buscar personas con foto, nombre, edad y ubicación. Más de 22.000 personas registradas hasta ahora.",
   "tool.search.cta": "Buscar o registrar",
 
+  "tool.hospitals.title": "Hospitales en Venezuela",
+  "tool.hospitals.desc":
+    "Digitaliza las listas de personas ingresadas en hospitales y centros de salud. Busca por nombre o cédula para saber si tu familiar está siendo atendido y en qué centro se encuentra.",
+  "tool.hospitals.cta": "Buscar en hospitales",
+
   "tools.disclaimer": "Estas herramientas son independientes, ciudadanas y no partidistas.",
   "tools.contribute.title": "¿Tu comunidad construyó una herramienta para esta emergencia?",
   "tools.contribute.sub": "Contáctanos para incluirla aquí o para ser parte de la comunidad AI for Good.",
@@ -162,6 +167,11 @@ const en: Dict = {
   "tool.search.desc":
     "Public registry of people missing after the earthquake. Register or search for people with photo, name, age, and location. Over 22,000 people registered so far.",
   "tool.search.cta": "Search or register",
+
+  "tool.hospitals.title": "Hospitals in Venezuela",
+  "tool.hospitals.desc":
+    "Digitizes the lists of people admitted to hospitals and health centers. Search by name or ID to find out if your relative is being treated and at which center.",
+  "tool.hospitals.cta": "Search hospitals",
 
   "tools.disclaimer": "These tools are independent, citizen-led, and nonpartisan.",
   "tools.contribute.title": "Did your community build a tool for this emergency?",
