@@ -70,9 +70,9 @@ const es: Dict = {
   "tools.disclaimer": "Estas herramientas son independientes, ciudadanas y no partidistas.",
   "tools.contribute.title": "¿Tu comunidad construyó una herramienta para esta emergencia?",
   "tools.contribute.sub": "Contáctanos para incluirla aquí o para ser parte de la comunidad AI for Good.",
-  "tools.contribute.cta": "Escribirnos",
-  "tools.contribute.whatsapp": "Conocer la comunidad AI for Good",
-  "tools.contribute.coord": "Unirse al grupo de coordinación",
+  "tools.contribute.cta": "Escríbenos",
+  "tools.contribute.whatsapp": "Conocer Young AI Leaders",
+  "tools.contribute.coord": "Unirse a comunidad AI for Good LatAm",
 
   "social.title": "Quiénes ya están ayudando",
   "social.ago": "hace {n} horas",
