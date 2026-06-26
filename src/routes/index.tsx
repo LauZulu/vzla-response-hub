@@ -376,7 +376,7 @@ function Tools() {
           <p className="mt-1.5 text-sm text-muted-foreground">{t("tools.contribute.sub")}</p>
         </div>
         <a
-          href="mailto:hub@yalvenezuela.org"
+          href="mailto:l.zuluaga@youngaileadershub.org"
           className="inline-flex shrink-0 items-center gap-1.5 rounded-full border border-foreground/80 px-4 py-2 text-sm font-medium text-foreground hover:bg-foreground hover:text-background transition"
         >
           <Mail className="size-3.5" />
