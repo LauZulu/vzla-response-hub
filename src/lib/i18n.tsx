@@ -6,7 +6,11 @@ type Dict = Record<string, string>;
 
 const es: Dict = {
   "nav.convenedBy":
-    "Convocado por Young AI Leaders Venezuela y Hubs Regionales · Iniciativa UN AI for Good · ITU Digital Innovation Hub",
+    "Iniciativa coordinada por Young AI Leaders Bogotá Hub en alianza con comunidades tech regionales. Parte de la red UN AI for Good e ITU.",
+  "footer.creditPrefix": "Plataforma creada por ",
+  "footer.creditName": "Laura Zuluaga",
+  "footer.join":
+    "Comunidades y organizaciones tech que quieran sumarse: l.zuluaga@youngaileadershub.org",
   "nav.logo": "VZLA Response Hub",
   "lang.toggle": "ES | EN",
 
@@ -105,7 +109,11 @@ const es: Dict = {
 
 const en: Dict = {
   "nav.convenedBy":
-    "Convened by Young AI Leaders Venezuela & Regional Hubs · UN AI for Good Initiative · ITU Digital Innovation Hub",
+    "Initiative coordinated by Young AI Leaders Bogotá Hub in alliance with regional tech communities. Part of the UN AI for Good and ITU network.",
+  "footer.creditPrefix": "Platform created by ",
+  "footer.creditName": "Laura Zuluaga",
+  "footer.join":
+    "Tech communities and organizations that want to join: l.zuluaga@youngaileadershub.org",
   "nav.logo": "VZLA Response Hub",
   "lang.toggle": "ES | EN",
 

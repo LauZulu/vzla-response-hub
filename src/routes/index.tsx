@@ -476,16 +476,32 @@ function Footer() {
   const { t } = useI18n();
   return (
     <footer className="border-t border-border">
-      <div className="mx-auto max-w-6xl px-4 py-10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 text-sm">
-        <div className="flex items-center gap-2">
-          <span className="relative inline-flex size-2.5">
-            <span className="absolute inset-0 rounded-full bg-coral animate-ping opacity-60" />
-            <span className="relative inline-flex size-2.5 rounded-full bg-coral" />
-          </span>
-          <span className="font-serif">{t("nav.logo")}</span>
+      <div className="mx-auto max-w-6xl px-4 py-10 flex flex-col gap-6 text-sm">
+        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+          <div className="flex items-center gap-2">
+            <span className="relative inline-flex size-2.5">
+              <span className="absolute inset-0 rounded-full bg-coral animate-ping opacity-60" />
+              <span className="relative inline-flex size-2.5 rounded-full bg-coral" />
+            </span>
+            <span className="font-serif">{t("nav.logo")}</span>
+          </div>
+          <div className="text-muted-foreground text-xs">{t("footer.rights")}</div>
+          <div className="text-muted-foreground text-xs">{t("footer.contact")}</div>
         </div>
-        <div className="text-muted-foreground text-xs">{t("footer.rights")}</div>
-        <div className="text-muted-foreground text-xs">{t("footer.contact")}</div>
+        <div className="border-t border-border/70 pt-5 space-y-2">
+          <p className="text-[12px] text-muted-foreground">
+            {t("footer.creditPrefix")}
+            <a
+              href="https://www.linkedin.com/in/laura-zuluaga-pineda/"
+              target="_blank"
+              rel="noreferrer"
+              className="underline underline-offset-2 hover:text-foreground transition"
+            >
+              {t("footer.creditName")}
+            </a>
+          </p>
+          <p className="text-[13px] text-muted-foreground">{t("footer.join")}</p>
+        </div>
       </div>
       <div className="h-20 sm:h-0" aria-hidden />
     </footer>
