@@ -5,6 +5,7 @@ import {
   Users,
   Camera,
   Search,
+  Building2,
   ShieldCheck,
   Radio,
   MessageCircle,
