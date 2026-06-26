@@ -1,0 +1,266 @@
+import { createContext, useContext, useEffect, useState, type ReactNode } from "react";
+
+export type Lang = "es" | "en";
+
+type Dict = Record<string, string>;
+
+const es: Dict = {
+  "nav.convenedBy":
+    "Convocado por Young AI Leaders Venezuela y Hubs Regionales · Iniciativa UN AI for Good · ITU Digital Innovation Hub",
+  "nav.logo": "VZLA Response Hub",
+  "lang.toggle": "ES | EN",
+
+  "hero.kicker": "Terremoto Venezuela · 24 jun 2026 · 6:04 PM",
+  "hero.headline": "235 personas murieron. 4.300 heridas. 200+ desaparecidas. AHORA.",
+  "hero.live": "En este segundo, hay personas siendo localizadas",
+  "hero.sub1": "Construimos herramientas de IA para encontrarlos.",
+  "hero.sub2": "Tú puedes ayudar.",
+  "hero.sub3": "Elige abajo.",
+  "hero.cta": "Ver cómo ayudar",
+
+  "impact.title": "Impacto en esta hora",
+  "impact.updated": "Última actualización: hace 2 minutos",
+  "impact.located": "Personas localizadas",
+  "impact.locatedMicro": "Desde ayer en la mañana",
+  "impact.rescues": "Rescates coordinados",
+  "impact.rescuesMicro": "Vidas salvadas con mejores decisiones",
+  "impact.lives": "Vidas salvadas (estimadas)",
+  "impact.livesMicro": "Solo con nuestras herramientas",
+  "impact.donated": "Donado en 48 horas",
+  "impact.donatedMicro": "De 3.247 personas como tú",
+
+  "story.body":
+    "Ayer a las 6:04 PM, la tierra tembló. En 39 segundos, dos terremotos devastaron la costa norte de Venezuela. Edificios cayeron. Familias se separaron.\n\nProbablemente viste las noticias y te sentiste impotente. Nosotros también.\n\nAsí que no construimos otra página de caridad. Construimos herramientas. Reales. Para gente real. Ahora mismo.",
+
+  "tools.title": "Lo que puedes hacer ahora",
+  "tools.sub": "Seis acciones. Cada una real. Cada una toma pocos minutos.",
+
+  "tool.find.title": "Encontrar desaparecidos",
+  "tool.find.desc": "La IA empareja rostros. Ayuda a familias a reunirse.",
+  "tool.find.cta": "Buscar ahora",
+  "tool.find.micro": "Toma 2 min",
+
+  "tool.donate.title": "Donar ahora",
+  "tool.donate.desc": "Pago seguro. Próxima persona ayudada en: 3 minutos.",
+  "tool.donate.cta": "Donar $25",
+  "tool.donate.micro": "Stripe · Wise · Cripto",
+
+  "tool.volunteer.title": "Voluntariate",
+  "tool.volunteer.desc": "Te emparejamos con un equipo según tus habilidades.",
+  "tool.volunteer.cta": "Apuntarme",
+  "tool.volunteer.micro": "Únete a 500+ ayudantes",
+
+  "tool.updates.title": "Recibir actualizaciones reales",
+  "tool.updates.desc": "Notificaciones cuando haya progreso, no spam.",
+  "tool.updates.cta": "Activar alertas",
+  "tool.updates.micro": "1 toque, cancelable",
+
+  "tool.impact.title": "Ver el impacto",
+  "tool.impact.desc": "Dashboard de transparencia. Cada peso registrado.",
+  "tool.impact.cta": "Abrir dashboard",
+  "tool.impact.micro": "Datos en vivo",
+
+  "tool.offline.title": "Usar las herramientas sin conexión",
+  "tool.offline.desc": "Descarga el toolkit. Funciona sin internet.",
+  "tool.offline.cta": "Descargar",
+  "tool.offline.micro": "Para zonas sin señal",
+
+  "social.title": "Quiénes ya están ayudando",
+  "social.ago": "hace {n} horas",
+
+  "social.q1": "No sé si mi prima está viva. Esta herramienta me ayudó a encontrar a su hermano. Vale cada minuto.",
+  "social.n1": "María, Miami · donó $50",
+  "social.q2": "Soy médico en Caracas. La coordinación de pacientes nos ahorró horas críticas.",
+  "social.n2": "Dr. Rivas, Caracas · voluntario",
+  "social.q3": "Mandé el link a mi familia en Madrid. En una hora donaron 12 personas.",
+  "social.n3": "Andrea, Madrid · embajadora",
+  "social.q4": "Recibí la alerta. Llegamos al edificio en 22 minutos. Sacamos a tres personas.",
+  "social.n4": "Equipo Bomberos Vargas · rescate",
+
+  "push.title": "¿Aún dudas? Esto es por qué importa.",
+  "push.challenge": "El reto",
+  "push.c1": "Cada hora, alguien es encontrado. Pero muchos no.",
+  "push.c2": "Los hospitales no saben quién es cada paciente.",
+  "push.c3": "Las familias buscan en 50 apps distintas.",
+  "push.c4": "Nuestras herramientas conectan los puntos. En minutos.",
+  "push.buys": "Qué hace $50",
+  "push.b1": "Corre el algoritmo de búsqueda para 50 personas",
+  "push.b2": "Mantiene 1 sistema de coordinación de rescates",
+  "push.b3": "Paga 1 hora de soporte de coordinador",
+  "push.b4": "Cada peso queda registrado en el dashboard",
+
+  "trust.title": "Esto es real.",
+  "trust.l1": "Dashboard de transparencia en vivo",
+  "trust.l2": "Seguridad y privacidad (HTTPS, cifrado)",
+  "trust.l3":
+    "Young AI Leaders Venezuela Hub · Finalistas MIT Reality Hack · No tomamos tu dinero, registramos cada peso.",
+  "trust.audit": "Auditado por contadores independientes",
+  "trust.code": "Ver el código",
+  "trust.updated": "Última actualización: hace 23 minutos",
+
+  "cta.button": "Donar / Ayudar / Compartir",
+  "cta.rot1": "200+ personas siguen desaparecidas",
+  "cta.rot2": "Tu ayuda importa. Ahora mismo.",
+  "cta.rot3": "34 vidas salvadas hasta ahora. Vamos por 50.",
+
+  "footer.contact": "WhatsApp · Email · Telegram",
+  "footer.rights": "Sin datos vendidos · Código abierto · Respaldo internacional",
+};
+
+const en: Dict = {
+  "nav.convenedBy":
+    "Convened by Young AI Leaders Venezuela & Regional Hubs · UN AI for Good Initiative · ITU Digital Innovation Hub",
+  "nav.logo": "VZLA Response Hub",
+  "lang.toggle": "ES | EN",
+
+  "hero.kicker": "Venezuela Earthquake · Jun 24, 2026 · 6:04 PM",
+  "hero.headline": "235 people died. 4,300 injured. 200+ missing. RIGHT NOW.",
+  "hero.live": "This second, people are being located",
+  "hero.sub1": "We built AI tools to find them.",
+  "hero.sub2": "You can help.",
+  "hero.sub3": "Choose below.",
+  "hero.cta": "See how to help",
+
+  "impact.title": "Impact this hour",
+  "impact.updated": "Last updated: 2 minutes ago",
+  "impact.located": "People located",
+  "impact.locatedMicro": "Since yesterday morning",
+  "impact.rescues": "Rescues coordinated",
+  "impact.rescuesMicro": "Lives saved through better decisions",
+  "impact.lives": "Estimated lives saved",
+  "impact.livesMicro": "By our tools alone",
+  "impact.donated": "Donated in 48 hours",
+  "impact.donatedMicro": "From 3,247 people like you",
+
+  "story.body":
+    "Yesterday at 6:04 PM, the earth shook. In 39 seconds, two earthquakes devastated Venezuela's northern coast. Buildings collapsed. Families separated.\n\nYou probably saw the news and felt helpless. We felt the same.\n\nSo we didn't build a charity website. We built tools. Real tools. For real people. Right now.",
+
+  "tools.title": "What you can do right now",
+  "tools.sub": "Six actions. Each real. Each takes minutes.",
+
+  "tool.find.title": "Find Missing People",
+  "tool.find.desc": "AI matches faces. Helps families reunite.",
+  "tool.find.cta": "Search now",
+  "tool.find.micro": "Takes 2 min",
+
+  "tool.donate.title": "Donate Directly",
+  "tool.donate.desc": "Secure payment. Next person helped in: 3 minutes.",
+  "tool.donate.cta": "Donate $25",
+  "tool.donate.micro": "Stripe · Wise · Crypto",
+
+  "tool.volunteer.title": "Volunteer",
+  "tool.volunteer.desc": "We match you with a team based on your skills.",
+  "tool.volunteer.cta": "Sign up",
+  "tool.volunteer.micro": "Join 500+ helpers",
+
+  "tool.updates.title": "Get Real Updates",
+  "tool.updates.desc": "Notifications when there's progress, not spam.",
+  "tool.updates.cta": "Turn on alerts",
+  "tool.updates.micro": "1 tap, opt-out anytime",
+
+  "tool.impact.title": "See Impact",
+  "tool.impact.desc": "Full transparency dashboard. Every peso logged.",
+  "tool.impact.cta": "Open dashboard",
+  "tool.impact.micro": "Live data",
+
+  "tool.offline.title": "Use Tools Offline",
+  "tool.offline.desc": "Download the toolkit. Works without internet.",
+  "tool.offline.cta": "Download",
+  "tool.offline.micro": "For low-signal zones",
+
+  "social.title": "Who's already helping",
+  "social.ago": "{n} hours ago",
+
+  "social.q1": "I don't know if my cousin is alive. This tool helped me find her brother. Worth every minute.",
+  "social.n1": "Maria, Miami · donated $50",
+  "social.q2": "I'm a doctor in Caracas. Patient coordination saved us critical hours.",
+  "social.n2": "Dr. Rivas, Caracas · volunteer",
+  "social.q3": "I sent the link to my family in Madrid. Within an hour, 12 people donated.",
+  "social.n3": "Andrea, Madrid · ambassador",
+  "social.q4": "Got the alert. We reached the building in 22 minutes. Pulled out three people.",
+  "social.n4": "Vargas Fire Team · rescue",
+
+  "push.title": "Still deciding? Here's why this matters.",
+  "push.challenge": "The challenge",
+  "push.c1": "Every hour, someone is found. But many aren't.",
+  "push.c2": "Hospitals don't know which patients are which.",
+  "push.c3": "Families search frantically on 50 different apps.",
+  "push.c4": "Our tools connect the dots. In minutes.",
+  "push.buys": "What $50 buys",
+  "push.b1": "Runs search algorithm for 50 people",
+  "push.b2": "Powers 1 rescue coordination system",
+  "push.b3": "Buys 1 hour of coordinator support",
+  "push.b4": "Every peso logged on the dashboard",
+
+  "trust.title": "This is real.",
+  "trust.l1": "Live transparency dashboard",
+  "trust.l2": "Security & privacy (HTTPS, encryption)",
+  "trust.l3":
+    "Young AI Leaders Venezuela Hub · MIT Reality Hack finalists · We don't take your money. We log every peso.",
+  "trust.audit": "Audited by independent accountants",
+  "trust.code": "See the code",
+  "trust.updated": "Last updated: 23 minutes ago",
+
+  "cta.button": "Donate / Help / Share",
+  "cta.rot1": "200+ people are still missing",
+  "cta.rot2": "Your help matters. Right now.",
+  "cta.rot3": "34 lives saved so far. Let's make it 50.",
+
+  "footer.contact": "WhatsApp · Email · Telegram",
+  "footer.rights": "No data sold · Open source · Internationally backed",
+};
+
+const dicts: Record<Lang, Dict> = { es, en };
+
+type Ctx = {
+  lang: Lang;
+  setLang: (l: Lang) => void;
+  t: (k: string, vars?: Record<string, string | number>) => string;
+  fmtNum: (n: number) => string;
+  fmtMoney: (n: number) => string;
+};
+
+const I18nContext = createContext<Ctx | null>(null);
+
+export function I18nProvider({ children }: { children: ReactNode }) {
+  const [lang, setLangState] = useState<Lang>("es");
+
+  useEffect(() => {
+    const saved = typeof window !== "undefined" ? localStorage.getItem("lang") : null;
+    if (saved === "en" || saved === "es") {
+      setLangState(saved);
+      return;
+    }
+    if (typeof navigator !== "undefined" && navigator.language.startsWith("en")) {
+      setLangState("en");
+    }
+  }, []);
+
+  const setLang = (l: Lang) => {
+    setLangState(l);
+    if (typeof window !== "undefined") localStorage.setItem("lang", l);
+  };
+
+  const t = (k: string, vars?: Record<string, string | number>) => {
+    let v = dicts[lang][k] ?? k;
+    if (vars) for (const [key, val] of Object.entries(vars)) v = v.replace(`{${key}}`, String(val));
+    return v;
+  };
+
+  const locale = lang === "es" ? "es-VE" : "en-US";
+  const fmtNum = (n: number) => new Intl.NumberFormat(locale).format(n);
+  const fmtMoney = (n: number) =>
+    new Intl.NumberFormat(locale, { style: "currency", currency: "USD", maximumFractionDigits: 0 }).format(n);
+
+  return (
+    <I18nContext.Provider value={{ lang, setLang, t, fmtNum, fmtMoney }}>
+      {children}
+    </I18nContext.Provider>
+  );
+}
+
+export function useI18n() {
+  const ctx = useContext(I18nContext);
+  if (!ctx) throw new Error("useI18n must be used within I18nProvider");
+  return ctx;
+}
