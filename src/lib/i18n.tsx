@@ -199,6 +199,13 @@ const en: Dict = {
     "Emergency platform to report and search for pets lost after the earthquake. Post without registering. Over 800 active reports between lost and found.",
   "tool.pets.cta": "Search or report a pet",
 
+  "tool.triage.title": "Structural pre-triage",
+  "tool.triage.desc":
+    "Rapid structural damage assessment based on Bulletin 61 of the National Academy of Engineering. Identifies collapse risk. Useful for engineers, inspectors and citizens.",
+  "tool.triage.cta": "Assess a structure",
+
+
+
   "tools.disclaimer": "These tools are independent, citizen-led, and nonpartisan.",
   "tools.contribute.title": "Did your community build a tool for this emergency?",
   "tools.contribute.sub": "Contact us to include it here or to be part of the AI for Good community.",
