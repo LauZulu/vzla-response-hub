@@ -108,6 +108,7 @@ const es: Dict = {
   "cta.rot3": "34 vidas salvadas hasta ahora. Vamos por 50.",
 
   "footer.contact": "WhatsApp · Email · Telegram",
+  "footer.whatsapp": "Grupo de coordinación en WhatsApp",
   "footer.rights": "Sin datos vendidos · Código abierto · Iniciativa ciudadana",
 };
 
