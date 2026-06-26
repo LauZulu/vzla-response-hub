@@ -157,15 +157,26 @@ function Hero() {
         <p className="mt-8 max-w-2xl text-lg sm:text-xl leading-relaxed">
           <span className="block">{t("hero.sub1")}</span>
           <span className="block">{t("hero.sub2")}</span>
-          <span className="block text-muted-foreground">{t("hero.sub3")}</span>
         </p>
 
-        <div className="mt-8">
+        <div className="mt-8 flex flex-col sm:flex-row gap-2 sm:gap-3">
           <a
             href="#tools"
-            className="inline-flex items-center gap-2 rounded-full bg-foreground text-background px-5 py-3 text-sm font-medium hover:opacity-90 transition"
+            className="inline-flex items-center justify-center rounded-full bg-teal text-white px-5 py-3 text-sm font-medium hover:opacity-90 transition"
           >
-            {t("hero.cta")} <ArrowRight className="size-4" />
+            {t("hero.cta.tools")}
+          </a>
+          <a
+            href="#donar"
+            className="inline-flex items-center justify-center rounded-full border border-teal text-teal px-5 py-3 text-sm font-medium hover:bg-teal/10 transition"
+          >
+            {t("hero.cta.donate")}
+          </a>
+          <a
+            href="#preparacion"
+            className="inline-flex items-center justify-center rounded-full border border-teal text-teal px-5 py-3 text-sm font-medium hover:bg-teal/10 transition"
+          >
+            {t("hero.cta.prepare")}
           </a>
         </div>
       </div>
@@ -495,7 +506,7 @@ function Push() {
       : "bg-trust/15 text-trust";
 
   return (
-    <section className="mx-auto max-w-6xl px-4 py-16 sm:py-24">
+    <section id="donar" className="mx-auto max-w-6xl px-4 py-16 sm:py-24">
       <div className="max-w-2xl mb-8">
         <h2 className="font-serif text-2xl sm:text-3xl">{t("help.title")}</h2>
         <p className="mt-2 text-[15px] text-muted-foreground leading-relaxed">{t("help.sub")}</p>
@@ -607,7 +618,7 @@ function Prepare() {
   const waHref = `https://wa.me/?text=${encodeURIComponent(`${t("prep.shareMsg")} ${shareUrl}`.trim())}`;
 
   return (
-    <section id="prepare" className="mx-auto max-w-6xl px-4 py-16 sm:py-24">
+    <section id="preparacion" className="mx-auto max-w-6xl px-4 py-16 sm:py-24">
       <div className="max-w-2xl mb-10">
         <h2 className="font-serif text-2xl sm:text-3xl">{t("prep.title")}</h2>
         <p className="mt-2 text-[14px] text-muted-foreground leading-relaxed">{t("prep.sub")}</p>
