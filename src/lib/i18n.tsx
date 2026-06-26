@@ -67,6 +67,13 @@ const es: Dict = {
     "Plataforma de emergencia para reportar y buscar mascotas extraviadas tras el terremoto. Publica sin registro. Más de 800 reportes activos entre perdidos y encontrados.",
   "tool.pets.cta": "Buscar o reportar mascota",
 
+  "tool.triage.title": "Pre-triage estructural",
+  "tool.triage.desc":
+    "Evaluación rápida de daños estructurales basada en el Boletín 61 de la Academia Nacional de Ingeniería. Identifica riesgo de colapso. Útil para ingenieros, inspectores y ciudadanos.",
+  "tool.triage.cta": "Evaluar estructura",
+
+
+
   "tools.disclaimer": "Estas herramientas son independientes, ciudadanas y no partidistas.",
   "tools.contribute.title": "¿Tu comunidad construyó una herramienta para esta emergencia?",
   "tools.contribute.sub": "Contáctanos para incluirla aquí o para ser parte de la comunidad AI for Good.",
@@ -191,6 +198,13 @@ const en: Dict = {
   "tool.pets.desc":
     "Emergency platform to report and search for pets lost after the earthquake. Post without registering. Over 800 active reports between lost and found.",
   "tool.pets.cta": "Search or report a pet",
+
+  "tool.triage.title": "Structural pre-triage",
+  "tool.triage.desc":
+    "Rapid structural damage assessment based on Bulletin 61 of the National Academy of Engineering. Identifies collapse risk. Useful for engineers, inspectors and citizens.",
+  "tool.triage.cta": "Assess a structure",
+
+
 
   "tools.disclaimer": "These tools are independent, citizen-led, and nonpartisan.",
   "tools.contribute.title": "Did your community build a tool for this emergency?",

@@ -6,6 +6,8 @@ import {
   Camera,
   Search,
   Building2,
+  Castle,
+
   PawPrint,
   ShieldCheck,
   MessageCircle,
@@ -245,6 +247,13 @@ const SOLUTIONS = [
     color: "amber",
     href: "https://www.huellascan.com/terremoto",
   },
+  {
+    key: "triage",
+    icon: Castle,
+    color: "navy",
+    href: "https://pretriageestructuralvenezuela.netlify.app",
+  },
+
 ] as const;
 
 const COLOR_CLASSES: Record<string, { bar: string; icon: string; btn: string }> = {
@@ -254,6 +263,8 @@ const COLOR_CLASSES: Record<string, { bar: string; icon: string; btn: string }> 
   healing: { bar: "bg-healing", icon: "text-healing", btn: "bg-healing text-healing-foreground" },
   violet: { bar: "bg-violet", icon: "text-violet", btn: "bg-violet text-violet-foreground" },
   amber: { bar: "bg-amber", icon: "text-amber", btn: "bg-amber text-amber-foreground" },
+  navy: { bar: "bg-[#11243E]", icon: "text-[#11243E]", btn: "bg-[#11243E] text-white" },
+
 };
 
 function Tools() {
