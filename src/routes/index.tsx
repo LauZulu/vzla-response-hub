@@ -8,7 +8,6 @@ import {
   Building2,
   PawPrint,
   ShieldCheck,
-  Radio,
   MessageCircle,
   Globe,
   ArrowRight,
@@ -179,101 +178,36 @@ function Ripples() {
 
 /* ───────────────────────── Impact ───────────────────────── */
 
-function useTicker(initial: number, min: number, max: number, intervalMs = 3000) {
-  const [n, setN] = useState(initial);
-  useEffect(() => {
-    const id = setInterval(() => {
-      setN((v) => v + Math.floor(min + Math.random() * (max - min + 1)));
-    }, intervalMs);
-    return () => clearInterval(id);
-  }, [min, max, intervalMs]);
-  return n;
-}
-
 function Impact() {
-  const { t, fmtNum, fmtMoney } = useI18n();
-  const located = useTicker(847, 1, 3, 2800);
-  const rescues = useTicker(123, 0, 1, 9000);
-  const lives = useTicker(34, 0, 1, 18000);
-  const donated = useTicker(47300, 5, 40, 3500);
-
+  const { t } = useI18n();
   const cards = [
-    {
-      value: fmtNum(located),
-      label: t("impact.located"),
-      micro: t("impact.locatedMicro"),
-      color: "teal",
-    },
-    {
-      value: fmtNum(rescues),
-      label: t("impact.rescues"),
-      micro: t("impact.rescuesMicro"),
-      color: "healing",
-    },
-    {
-      value: fmtNum(lives),
-      label: t("impact.lives"),
-      micro: t("impact.livesMicro"),
-      color: "trust",
-    },
-    {
-      value: fmtMoney(donated),
-      label: t("impact.donated"),
-      micro: t("impact.donatedMicro"),
-      color: "amber",
-    },
-  ] as const;
+    { value: "235+", label: t("impact.deaths") },
+    { value: "4.300+", label: t("impact.injured") },
+    { value: "200+", label: t("impact.missing") },
+  ];
 
   return (
     <section className="mx-auto max-w-6xl px-4 py-16 sm:py-20">
-      <div className="flex items-end justify-between gap-4 mb-8">
-        <h2 className="font-serif text-2xl sm:text-3xl">{t("impact.title")}</h2>
-        <span className="text-xs text-muted-foreground inline-flex items-center gap-1.5">
-          <Radio className="size-3 text-teal" /> {t("impact.updated")}
-        </span>
-      </div>
-      <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
-        {cards.map((c, i) => (
-          <ImpactCard key={i} {...c} />
+      <h2 className="font-serif text-2xl sm:text-3xl">{t("impact.title")}</h2>
+      <p className="mt-2 text-[13px] text-muted-foreground">{t("impact.sub")}</p>
+
+      <div className="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4">
+        {cards.map((c) => (
+          <div
+            key={c.label}
+            className="rounded-2xl border border-border bg-card p-6 sm:p-8"
+          >
+            <div className="tnum font-serif text-4xl sm:text-5xl font-bold">{c.value}</div>
+            <div className="mt-2 text-sm text-muted-foreground">{c.label}</div>
+          </div>
         ))}
       </div>
+
+      <p className="mt-6 text-[12px] text-muted-foreground">{t("impact.source")}</p>
     </section>
   );
 }
 
-function ImpactCard({
-  value,
-  label,
-  micro,
-  color,
-}: {
-  value: string;
-  label: string;
-  micro: string;
-  color: "teal" | "healing" | "trust" | "amber";
-}) {
-  const ring = {
-    teal: "before:bg-teal",
-    healing: "before:bg-healing",
-    trust: "before:bg-trust",
-    amber: "before:bg-amber",
-  }[color];
-  const text = {
-    teal: "text-teal",
-    healing: "text-healing",
-    trust: "text-trust",
-    amber: "text-amber",
-  }[color];
-  return (
-    <div
-      className={`relative overflow-hidden rounded-2xl border border-border bg-card p-5 sm:p-6 before:absolute before:left-0 before:top-0 before:h-full before:w-1 ${ring}`}
-    >
-      <div className={`tnum font-serif text-3xl sm:text-4xl ${text}`}>{value}</div>
-      <div className="mt-2 text-sm font-medium">{label}</div>
-      <div className="mt-1 text-xs text-muted-foreground">{micro}</div>
-    </div>
-  );
-}
 
 /* ───────────────────────── Story ───────────────────────── */
 
