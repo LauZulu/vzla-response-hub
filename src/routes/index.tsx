@@ -466,24 +466,72 @@ function Push() {
   const { t } = useI18n();
   return (
     <section className="mx-auto max-w-6xl px-4 py-16 sm:py-24">
-      <h2 className="font-serif text-2xl sm:text-3xl max-w-2xl mb-6">{t("donate.title")}</h2>
-      <div className="rounded-2xl border border-border bg-card p-6 sm:p-8 max-w-3xl">
-        <p className="text-[14px] leading-relaxed text-foreground/90">{t("donate.body")}</p>
-        <button
-          type="button"
-          disabled
-          aria-disabled="true"
-          className="mt-6 inline-flex items-center justify-center rounded-xl bg-coral text-white px-5 py-3 text-sm font-medium opacity-50 cursor-not-allowed select-none"
-        >
-          {t("donate.cta")}
-        </button>
-        <p className="mt-4 text-[12px] text-muted-foreground">
-          {t("donate.note")}{" "}
-          <a href="mailto:l.zuluaga@youngaileadershub.org" className="underline underline-offset-2 hover:text-foreground">
-            l.zuluaga@youngaileadershub.org
-          </a>
-        </p>
+      <div className="max-w-2xl mb-10">
+        <h2 className="font-serif text-2xl sm:text-3xl">{t("help.title")}</h2>
+        <p className="mt-2 text-[14px] text-muted-foreground leading-relaxed">{t("help.sub")}</p>
       </div>
+
+      <div className="flex flex-col gap-5 max-w-3xl">
+        {/* Monetary */}
+        <article className="relative rounded-2xl border border-border bg-card p-6 sm:p-8">
+          <span className="absolute left-0 top-8 h-12 w-1 rounded-r bg-teal" aria-hidden />
+          <h3 className="font-serif text-xl font-bold">{t("help.money.title")}</h3>
+          <p className="mt-2 text-[14px] text-foreground/90 leading-relaxed">{t("help.money.intro")}</p>
+
+          <div className="mt-6 flex flex-col divide-y divide-border">
+            <div className="pb-5">
+              <p className="text-[15px] font-bold">{t("help.money.a.name")}</p>
+              <p className="text-[13px] text-muted-foreground mt-0.5">{t("help.money.a.sub")}</p>
+              <p className="mt-2 text-[14px] leading-relaxed whitespace-pre-line">{t("help.money.a.details")}</p>
+            </div>
+            <div className="pt-5">
+              <p className="text-[15px] font-bold">{t("help.money.b.name")}</p>
+              <p className="text-[13px] text-muted-foreground mt-0.5">{t("help.money.b.sub")}</p>
+              <p className="mt-2 text-[14px] leading-relaxed whitespace-pre-line">{t("help.money.b.details")}</p>
+            </div>
+          </div>
+
+          <p className="mt-5 text-[12px] text-muted-foreground leading-relaxed">{t("help.money.verify")}</p>
+        </article>
+
+        {/* Physical supplies */}
+        <article className="relative rounded-2xl border border-border bg-card p-6 sm:p-8">
+          <span className="absolute left-0 top-8 h-12 w-1 rounded-r bg-coral" aria-hidden />
+          <h3 className="font-serif text-xl font-bold">{t("help.supplies.title")}</h3>
+          <p className="mt-2 text-[14px] text-foreground/90 leading-relaxed">{t("help.supplies.intro")}</p>
+          <p className="mt-3 text-[14px] leading-relaxed">
+            <span className="font-bold">{t("help.supplies.addressLabel")}</span>{" "}
+            <span className="font-bold">{t("help.supplies.address")}</span>
+          </p>
+          <p className="mt-3 text-[14px] leading-relaxed text-foreground/90">{t("help.supplies.needs")}</p>
+        </article>
+
+        {/* People search */}
+        <article className="relative rounded-2xl border border-border bg-card p-6 sm:p-8">
+          <span className="absolute left-0 top-8 h-12 w-1 rounded-r bg-trust" aria-hidden />
+          <h3 className="font-serif text-xl font-bold">{t("help.people.title")}</h3>
+          <p className="mt-2 text-[14px] text-foreground/90 leading-relaxed">{t("help.people.intro")}</p>
+
+          <div className="mt-5 flex flex-col gap-4">
+            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 border-b border-border/60 pb-4">
+              <p className="text-[14px] leading-relaxed">{t("help.people.row1")}</p>
+              <a
+                href="https://desaparecidosterremotovenezuela.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="shrink-0 inline-flex items-center gap-1.5 rounded-full bg-trust text-trust-foreground px-4 py-2 text-sm font-medium hover:opacity-90 transition"
+              >
+                {t("help.people.cta")}
+                <ArrowRight className="size-3.5" />
+              </a>
+            </div>
+            <p className="text-[14px] leading-relaxed border-b border-border/60 pb-4">{t("help.people.row2")}</p>
+            <p className="text-[14px] leading-relaxed">{t("help.people.row3")}</p>
+          </div>
+        </article>
+      </div>
+
+      <p className="mt-6 text-[12px] text-muted-foreground max-w-3xl leading-relaxed">{t("help.disclaimer")}</p>
     </section>
   );
 }
