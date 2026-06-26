@@ -71,6 +71,8 @@ const es: Dict = {
   "tools.contribute.title": "¿Tu comunidad construyó una herramienta para esta emergencia?",
   "tools.contribute.sub": "Contáctanos para incluirla aquí o para ser parte de la comunidad AI for Good.",
   "tools.contribute.cta": "Escribirnos",
+  "tools.contribute.whatsapp": "Conocer la comunidad AI for Good",
+  "tools.contribute.coord": "Unirse al grupo de coordinación",
 
   "social.title": "Quiénes ya están ayudando",
   "social.ago": "hace {n} horas",
@@ -106,6 +108,7 @@ const es: Dict = {
   "cta.rot3": "34 vidas salvadas hasta ahora. Vamos por 50.",
 
   "footer.contact": "WhatsApp · Email · Telegram",
+  "footer.whatsapp": "Grupo de coordinación en WhatsApp",
   "footer.rights": "Sin datos vendidos · Código abierto · Iniciativa ciudadana",
 };
 
@@ -176,6 +179,8 @@ const en: Dict = {
   "tools.contribute.title": "Did your community build a tool for this emergency?",
   "tools.contribute.sub": "Contact us to include it here or to be part of the AI for Good community.",
   "tools.contribute.cta": "Write to us",
+  "tools.contribute.whatsapp": "Join the AI for Good community",
+  "tools.contribute.coord": "Join the coordination group",
 
   "social.title": "Who's already helping",
   "social.ago": "{n} hours ago",
@@ -211,6 +216,7 @@ const en: Dict = {
   "cta.rot3": "34 lives saved so far. Let's make it 50.",
 
   "footer.contact": "WhatsApp · Email · Telegram",
+  "footer.whatsapp": "WhatsApp coordination group",
   "footer.rights": "No data sold · Open source · Citizen-led initiative",
 };
 
