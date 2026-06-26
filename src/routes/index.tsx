@@ -484,12 +484,19 @@ function Push() {
               <p className="text-[13px] text-muted-foreground mt-0.5">{t("help.money.a.sub")}</p>
               <p className="mt-2 text-[14px] leading-relaxed whitespace-pre-line">{t("help.money.a.details")}</p>
             </div>
-            <div className="pt-5">
+            <div className="py-5">
               <p className="text-[15px] font-bold">{t("help.money.b.name")}</p>
               <p className="text-[13px] text-muted-foreground mt-0.5">{t("help.money.b.sub")}</p>
               <p className="mt-2 text-[14px] leading-relaxed whitespace-pre-line">{t("help.money.b.details")}</p>
             </div>
+            <div className="pt-5">
+              <p className="text-[15px] font-bold">{t("help.money.c.name")}</p>
+              <p className="text-[13px] text-muted-foreground mt-0.5">{t("help.money.c.sub")}</p>
+              <p className="mt-2 text-[14px] leading-relaxed whitespace-pre-line">{t("help.money.c.details")}</p>
+              <p className="mt-3 text-[12px] text-muted-foreground leading-relaxed">{t("help.money.c.note")}</p>
+            </div>
           </div>
+
 
           <p className="mt-5 text-[12px] text-muted-foreground leading-relaxed">{t("help.money.verify")}</p>
         </article>
