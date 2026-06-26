@@ -168,6 +168,11 @@ const en: Dict = {
     "Public registry of people missing after the earthquake. Register or search for people with photo, name, age, and location. Over 22,000 people registered so far.",
   "tool.search.cta": "Search or register",
 
+  "tool.hospitals.title": "Hospitals in Venezuela",
+  "tool.hospitals.desc":
+    "Digitizes the lists of people admitted to hospitals and health centers. Search by name or ID to find out if your relative is being treated and at which center.",
+  "tool.hospitals.cta": "Search hospitals",
+
   "tools.disclaimer": "These tools are independent, citizen-led, and nonpartisan.",
   "tools.contribute.title": "Did your community build a tool for this emergency?",
   "tools.contribute.sub": "Contact us to include it here or to be part of the AI for Good community.",
