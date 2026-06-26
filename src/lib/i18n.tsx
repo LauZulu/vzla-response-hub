@@ -70,9 +70,9 @@ const es: Dict = {
   "tools.disclaimer": "Estas herramientas son independientes, ciudadanas y no partidistas.",
   "tools.contribute.title": "¿Tu comunidad construyó una herramienta para esta emergencia?",
   "tools.contribute.sub": "Contáctanos para incluirla aquí o para ser parte de la comunidad AI for Good.",
-  "tools.contribute.cta": "Escribirnos",
-  "tools.contribute.whatsapp": "Conocer la comunidad AI for Good",
-  "tools.contribute.coord": "Unirse al grupo de coordinación",
+  "tools.contribute.cta": "Escríbenos",
+  "tools.contribute.whatsapp": "Conocer Young AI Leaders",
+  "tools.contribute.coord": "Unirse a comunidad AI for Good LatAm",
 
   "social.title": "Quiénes ya están ayudando",
   "social.ago": "hace {n} horas",
@@ -179,8 +179,8 @@ const en: Dict = {
   "tools.contribute.title": "Did your community build a tool for this emergency?",
   "tools.contribute.sub": "Contact us to include it here or to be part of the AI for Good community.",
   "tools.contribute.cta": "Write to us",
-  "tools.contribute.whatsapp": "Join the AI for Good community",
-  "tools.contribute.coord": "Join the coordination group",
+  "tools.contribute.whatsapp": "Discover Young AI Leaders",
+  "tools.contribute.coord": "Join AI for Good LatAm community",
 
   "social.title": "Who's already helping",
   "social.ago": "{n} hours ago",

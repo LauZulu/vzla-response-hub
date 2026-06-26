@@ -306,12 +306,11 @@ function Tools() {
             {t("tools.contribute.cta")}
           </a>
           <a
-            href="https://chat.whatsapp.com/FTBI2oLHtuaEVnbEbjUHbl?mode=gi_t"
+            href="https://www.youngaileadershub.org"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center gap-1.5 rounded-full border border-foreground/80 px-4 py-2 text-sm font-medium text-foreground hover:bg-foreground hover:text-background transition"
           >
-            <MessageCircle className="size-3.5" />
             {t("tools.contribute.whatsapp")}
           </a>
           <a
