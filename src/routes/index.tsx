@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useMemo, useState } from "react";
 import {
-  Map,
+  Map as MapIcon,
   Users,
   Camera,
   Search,
