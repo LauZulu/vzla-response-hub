@@ -14,7 +14,16 @@ import {
   Mail,
   Phone,
   ExternalLink,
+  AlertTriangle,
+  Briefcase,
+  HomeIcon,
 } from "lucide-react";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 import { I18nProvider, useI18n, type Lang } from "@/lib/i18n";
 
 export const Route = createFileRoute("/")({
