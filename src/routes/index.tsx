@@ -8,9 +8,8 @@ import {
   Search,
   Building2,
   Castle,
-
-
-
+  HeartHandshake,
+  Package,
   PawPrint,
   ShieldCheck,
   MessageCircle,
