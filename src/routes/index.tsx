@@ -247,6 +247,13 @@ const SOLUTIONS = [
     color: "amber",
     href: "https://www.huellascan.com/terremoto",
   },
+  {
+    key: "triage",
+    icon: Castle,
+    color: "navy",
+    href: "https://pretriageestructuralvenezuela.netlify.app",
+  },
+
 ] as const;
 
 const COLOR_CLASSES: Record<string, { bar: string; icon: string; btn: string }> = {
