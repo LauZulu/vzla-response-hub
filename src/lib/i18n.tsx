@@ -217,7 +217,7 @@ const en: Dict = {
   "cta.rot3": "34 lives saved so far. Let's make it 50.",
 
   "footer.contact": "WhatsApp · Email · Telegram",
-  "footer.rights": "No data sold · Open source · Internationally backed",
+  "footer.rights": "No data sold · Open source · Citizen-led initiative",
 };
 
 const dicts: Record<Lang, Dict> = { es, en };
