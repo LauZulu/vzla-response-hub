@@ -68,6 +68,7 @@ function Hub() {
         <Tools />
         <Emergency />
         <Push />
+        <Prepare />
         <Trust />
       </main>
       <Footer />
