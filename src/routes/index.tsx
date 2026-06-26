@@ -353,9 +353,9 @@ const EMERGENCY_NUMBERS = [
 ];
 
 const OFFICIAL_CHANNELS = [
-  { label: "Protección Civil Venezuela", href: "https://www.proteccioncivil.gob.ve" },
+  { label: "Protección Civil Venezuela", href: "https://www.pcivil.gob.ve/" },
   { label: "Ministerio de Salud", href: "https://www.mpps.gob.ve" },
-  { label: "FUNVISIS (sismología)", href: "https://www.funvisis.gob.ve" },
+  { label: "FUNVISIS (sismología)", href: "http://www.funvisis.gob.ve/" },
   { label: "Cruz Roja Venezuela", href: "https://www.cruzrojavenezolana.org" },
 ];
 
