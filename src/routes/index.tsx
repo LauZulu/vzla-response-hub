@@ -463,7 +463,15 @@ function Footer() {
             <span className="font-serif">{t("nav.logo")}</span>
           </div>
           <div className="text-muted-foreground text-xs">{t("footer.rights")}</div>
-          <div className="text-muted-foreground text-xs">{t("footer.contact")}</div>
+          <a
+            href="https://chat.whatsapp.com/FTBI2oLHtuaEVnbEbjUHbl"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1.5 text-muted-foreground text-xs hover:text-foreground transition"
+          >
+            <MessageCircle className="size-3" />
+            {t("footer.whatsapp")}
+          </a>
         </div>
         <div className="border-t border-border/70 pt-5 space-y-2">
           <p className="text-[12px] text-muted-foreground">
