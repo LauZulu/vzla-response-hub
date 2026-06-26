@@ -211,6 +211,13 @@ const en: Dict = {
     "Rapid structural damage assessment based on Bulletin 61 of the National Academy of Engineering. Identifies collapse risk. Useful for engineers, inspectors and citizens.",
   "tool.triage.cta": "Assess a structure",
 
+  "tool.shelters.title": "Aid collection points and shelters",
+  "tool.shelters.desc":
+    "Collaborative map to register and locate aid collection points and shelters available in Venezuela. Report verified locations so help reaches where it is needed.",
+  "tool.shelters.cta": "View map or report",
+
+
+
 
 
   "tools.disclaimer": "These tools are independent, citizen-led, and nonpartisan.",
