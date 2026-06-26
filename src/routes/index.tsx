@@ -4,6 +4,7 @@ import {
   Map,
   Users,
   Camera,
+  Search,
   ShieldCheck,
   Radio,
   MessageCircle,
