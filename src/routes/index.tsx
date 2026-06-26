@@ -408,39 +408,25 @@ function Tools() {
 
 function Push() {
   const { t } = useI18n();
-  const challenges = ["push.c1", "push.c2", "push.c3", "push.c4"];
-  const buys = ["push.b1", "push.b2", "push.b3", "push.b4"];
-
   return (
     <section className="mx-auto max-w-6xl px-4 py-16 sm:py-24">
-      <h2 className="font-serif text-2xl sm:text-3xl max-w-2xl mb-10">{t("push.title")}</h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <div className="rounded-2xl border border-border bg-card p-6 sm:p-8">
-          <div className="inline-flex items-center gap-2 text-xs uppercase tracking-wider text-coral font-medium">
-            <span className="size-1.5 rounded-full bg-coral" /> {t("push.challenge")}
-          </div>
-          <ul className="mt-5 space-y-3">
-            {challenges.map((k) => (
-              <li key={k} className="flex gap-3 text-[15px] leading-relaxed">
-                <span className="mt-2 size-1 rounded-full bg-coral/70 shrink-0" />
-                <span>{t(k)}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
-        <div className="rounded-2xl border border-border bg-card p-6 sm:p-8">
-          <div className="inline-flex items-center gap-2 text-xs uppercase tracking-wider text-teal font-medium">
-            <span className="size-1.5 rounded-full bg-teal" /> {t("push.buys")}
-          </div>
-          <ul className="mt-5 space-y-3">
-            {buys.map((k) => (
-              <li key={k} className="flex gap-3 text-[15px] leading-relaxed">
-                <span className="mt-2 size-1 rounded-full bg-teal/70 shrink-0" />
-                <span>{t(k)}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
+      <h2 className="font-serif text-2xl sm:text-3xl max-w-2xl mb-6">{t("donate.title")}</h2>
+      <div className="rounded-2xl border border-border bg-card p-6 sm:p-8 max-w-3xl">
+        <p className="text-[14px] leading-relaxed text-foreground/90">{t("donate.body")}</p>
+        <button
+          type="button"
+          disabled
+          aria-disabled="true"
+          className="mt-6 inline-flex items-center justify-center rounded-xl bg-coral text-white px-5 py-3 text-sm font-medium opacity-50 cursor-not-allowed select-none"
+        >
+          {t("donate.cta")}
+        </button>
+        <p className="mt-4 text-[12px] text-muted-foreground">
+          {t("donate.note")}{" "}
+          <a href="mailto:l.zuluaga@youngaileadershub.org" className="underline underline-offset-2 hover:text-foreground">
+            l.zuluaga@youngaileadershub.org
+          </a>
+        </p>
       </div>
     </section>
   );
