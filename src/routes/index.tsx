@@ -13,6 +13,8 @@ import {
   Globe,
   ArrowRight,
   Mail,
+  Phone,
+  ExternalLink,
 } from "lucide-react";
 import { I18nProvider, useI18n, type Lang } from "@/lib/i18n";
 
