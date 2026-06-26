@@ -32,38 +32,24 @@ const es: Dict = {
   "story.body":
     "Ayer a las 6:04 PM, la tierra tembló. En 39 segundos, dos terremotos devastaron la costa norte de Venezuela. Edificios cayeron. Familias se separaron.\n\nProbablemente viste las noticias y te sentiste impotente. Nosotros también.\n\nAsí que no construimos otra página de caridad. Construimos herramientas. Reales. Para gente real. Ahora mismo.",
 
-  "tools.title": "Lo que puedes hacer ahora",
-  "tools.sub": "Seis acciones. Cada una real. Cada una toma pocos minutos.",
+  "tools.title": "Soluciones activas en este momento",
+  "tools.sub":
+    "Herramientas construidas por comunidades tech. Funcionando ahora. Usa una. Si construiste otra, contáctanos.",
 
-  "tool.find.title": "Encontrar desaparecidos",
-  "tool.find.desc": "La IA empareja rostros. Ayuda a familias a reunirse.",
-  "tool.find.cta": "Buscar ahora",
-  "tool.find.micro": "Toma 2 min",
+  "tool.map.title": "Mapa de daños estructurales",
+  "tool.map.desc":
+    "Seguimiento en tiempo real de edificios afectados por el terremoto. Ciudadanos reportan daños clasificados por colapso total, daño severo y daño parcial. Rescatistas lo usan para priorizar operaciones.",
+  "tool.map.cta": "Acceder al mapa",
 
-  "tool.donate.title": "Donar ahora",
-  "tool.donate.desc": "Pago seguro. Próxima persona ayudada en: 3 minutos.",
-  "tool.donate.cta": "Donar $25",
-  "tool.donate.micro": "Stripe · Wise · Cripto",
+  "tool.missing.title": "Reporte de personas desaparecidas",
+  "tool.missing.desc":
+    "Plataforma ciudadana para reportar y buscar personas desaparecidas. Los usuarios crean reportes con nombre, ubicación y foto. Cuando alguien es localizado, se actualiza el estado en tiempo real.",
+  "tool.missing.cta": "Buscar o reportar",
 
-  "tool.volunteer.title": "Voluntariate",
-  "tool.volunteer.desc": "Te emparejamos con un equipo según tus habilidades.",
-  "tool.volunteer.cta": "Apuntarme",
-  "tool.volunteer.micro": "Únete a 500+ ayudantes",
-
-  "tool.updates.title": "Recibir actualizaciones reales",
-  "tool.updates.desc": "Notificaciones cuando haya progreso, no spam.",
-  "tool.updates.cta": "Activar alertas",
-  "tool.updates.micro": "1 toque, cancelable",
-
-  "tool.impact.title": "Ver el impacto",
-  "tool.impact.desc": "Dashboard de transparencia. Cada peso registrado.",
-  "tool.impact.cta": "Abrir dashboard",
-  "tool.impact.micro": "Datos en vivo",
-
-  "tool.offline.title": "Usar las herramientas sin conexión",
-  "tool.offline.desc": "Descarga el toolkit. Funciona sin internet.",
-  "tool.offline.cta": "Descargar",
-  "tool.offline.micro": "Para zonas sin señal",
+  "tools.disclaimer": "Estas herramientas son independientes, ciudadanas y no partidistas.",
+  "tools.contribute.title": "¿Tu comunidad construyó una herramienta para esta emergencia?",
+  "tools.contribute.sub": "Contáctanos para incluirla aquí.",
+  "tools.contribute.cta": "Escribirnos",
 
   "social.title": "Quiénes ya están ayudando",
   "social.ago": "hace {n} horas",
