@@ -463,84 +463,134 @@ function Emergency() {
 
 function Push() {
   const { t } = useI18n();
+
+  const moneyItems = [
+    {
+      id: "a",
+      name: t("help.money.a.name"),
+      details: t("help.money.a.details"),
+      pill: t("help.money.a.pill"),
+      pillTone: "green" as const,
+    },
+    {
+      id: "b",
+      name: t("help.money.b.name"),
+      details: t("help.money.b.details"),
+      pill: t("help.money.b.pill"),
+      pillTone: "green" as const,
+    },
+    {
+      id: "c",
+      name: t("help.money.c.name"),
+      details: t("help.money.c.details"),
+      pill: t("help.money.c.pill"),
+      pillTone: "blue" as const,
+      note: t("help.money.c.note"),
+    },
+  ];
+
+  const pillClass = (tone: "green" | "blue") =>
+    tone === "green"
+      ? "bg-healing/15 text-healing"
+      : "bg-trust/15 text-trust";
+
   return (
     <section className="mx-auto max-w-6xl px-4 py-16 sm:py-24">
-      <div className="max-w-2xl mb-10">
+      <div className="max-w-2xl mb-8">
         <h2 className="font-serif text-2xl sm:text-3xl">{t("help.title")}</h2>
-        <p className="mt-2 text-[14px] text-muted-foreground leading-relaxed">{t("help.sub")}</p>
+        <p className="mt-2 text-[15px] text-muted-foreground leading-relaxed">{t("help.sub")}</p>
       </div>
 
-      <div className="flex flex-col gap-5 max-w-3xl">
-        {/* Monetary */}
-        <article className="relative rounded-2xl border border-border bg-card p-6 sm:p-8">
+      {/* Emotional context */}
+      <div className="rounded-2xl bg-teal/10 border border-teal/20 p-6 sm:p-7 mb-8">
+        <p className="text-[15px] leading-relaxed text-foreground">{t("help.emotional")}</p>
+      </div>
+
+      <div className="grid gap-5 md:grid-cols-3">
+        {/* CARD 1: Money */}
+        <article className="relative rounded-2xl border border-border bg-card p-6 flex flex-col">
           <span className="absolute left-0 top-8 h-12 w-1 rounded-r bg-teal" aria-hidden />
-          <h3 className="font-serif text-xl font-bold">{t("help.money.title")}</h3>
-          <p className="mt-2 text-[14px] text-foreground/90 leading-relaxed">{t("help.money.intro")}</p>
+          <HeartHandshake className="size-6 text-teal" />
+          <h3 className="mt-3 font-serif text-[18px] font-bold">{t("help.money.card.title")}</h3>
+          <p className="mt-1 text-[14px] text-muted-foreground leading-relaxed">{t("help.money.card.sub")}</p>
 
-          <div className="mt-6 flex flex-col divide-y divide-border">
-            <div className="pb-5">
-              <p className="text-[15px] font-bold">{t("help.money.a.name")}</p>
-              <p className="text-[13px] text-muted-foreground mt-0.5">{t("help.money.a.sub")}</p>
-              <p className="mt-2 text-[14px] leading-relaxed whitespace-pre-line">{t("help.money.a.details")}</p>
-            </div>
-            <div className="py-5">
-              <p className="text-[15px] font-bold">{t("help.money.b.name")}</p>
-              <p className="text-[13px] text-muted-foreground mt-0.5">{t("help.money.b.sub")}</p>
-              <p className="mt-2 text-[14px] leading-relaxed whitespace-pre-line">{t("help.money.b.details")}</p>
-            </div>
-            <div className="pt-5">
-              <p className="text-[15px] font-bold">{t("help.money.c.name")}</p>
-              <p className="text-[13px] text-muted-foreground mt-0.5">{t("help.money.c.sub")}</p>
-              <p className="mt-2 text-[14px] leading-relaxed whitespace-pre-line">{t("help.money.c.details")}</p>
-              <p className="mt-3 text-[12px] text-muted-foreground leading-relaxed">{t("help.money.c.note")}</p>
-            </div>
-          </div>
+          <Accordion type="single" collapsible className="mt-4">
+            {moneyItems.map((it) => (
+              <AccordionItem key={it.id} value={it.id} className="border-b last:border-b-0">
+                <AccordionTrigger className="py-3 text-left">
+                  <span className="flex items-center gap-2 flex-wrap pr-2">
+                    <span className="text-[14px] font-medium">{it.name}</span>
+                    <span className={`inline-block rounded-full px-2 py-0.5 text-[11px] font-medium ${pillClass(it.pillTone)}`}>
+                      {it.pill}
+                    </span>
+                  </span>
+                </AccordionTrigger>
+                <AccordionContent>
+                  <p className="text-[13px] leading-relaxed whitespace-pre-line text-foreground/90">{it.details}</p>
+                  {it.note && (
+                    <p className="mt-2 text-[12px] text-muted-foreground leading-relaxed">{it.note}</p>
+                  )}
+                </AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
 
-
-          <p className="mt-5 text-[12px] text-muted-foreground leading-relaxed">{t("help.money.verify")}</p>
+          <p className="mt-4 text-[12px] text-muted-foreground leading-relaxed">{t("help.money.verify")}</p>
         </article>
 
-        {/* Physical supplies */}
-        <article className="relative rounded-2xl border border-border bg-card p-6 sm:p-8">
+        {/* CARD 2: Supplies */}
+        <article className="relative rounded-2xl border border-border bg-card p-6 flex flex-col">
           <span className="absolute left-0 top-8 h-12 w-1 rounded-r bg-coral" aria-hidden />
-          <h3 className="font-serif text-xl font-bold">{t("help.supplies.title")}</h3>
-          <p className="mt-2 text-[14px] text-foreground/90 leading-relaxed">{t("help.supplies.intro")}</p>
-          <p className="mt-3 text-[14px] leading-relaxed">
-            <span className="font-bold">{t("help.supplies.addressLabel")}</span>{" "}
-            <span className="font-bold">{t("help.supplies.address")}</span>
-          </p>
-          <p className="mt-3 text-[14px] leading-relaxed text-foreground/90">{t("help.supplies.needs")}</p>
+          <Package className="size-6 text-coral" />
+          <h3 className="mt-3 font-serif text-[18px] font-bold">{t("help.supplies.card.title")}</h3>
+          <p className="mt-1 text-[14px] text-muted-foreground leading-relaxed">{t("help.supplies.card.sub")}</p>
+
+          <div className="mt-4 text-[14px] leading-relaxed">
+            <p className="font-bold">{t("help.supplies.org")}</p>
+            <p>{t("help.supplies.address")}</p>
+          </div>
+
+          <Accordion type="single" collapsible className="mt-3">
+            <AccordionItem value="needs" className="border-b-0">
+              <AccordionTrigger className="py-3 text-left text-[14px] font-medium">
+                {t("help.supplies.expand")}
+              </AccordionTrigger>
+              <AccordionContent>
+                <p className="text-[13px] leading-relaxed whitespace-pre-line text-foreground/90">
+                  {t("help.supplies.needsList")}
+                </p>
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
         </article>
 
-        {/* People search */}
-        <article className="relative rounded-2xl border border-border bg-card p-6 sm:p-8">
+        {/* CARD 3: People */}
+        <article className="relative rounded-2xl border border-border bg-card p-6 flex flex-col">
           <span className="absolute left-0 top-8 h-12 w-1 rounded-r bg-trust" aria-hidden />
-          <h3 className="font-serif text-xl font-bold">{t("help.people.title")}</h3>
-          <p className="mt-2 text-[14px] text-foreground/90 leading-relaxed">{t("help.people.intro")}</p>
+          <Users className="size-6 text-trust" />
+          <h3 className="mt-3 font-serif text-[18px] font-bold">{t("help.people.card.title")}</h3>
+          <p className="mt-1 text-[14px] text-muted-foreground leading-relaxed">{t("help.people.card.sub")}</p>
 
-          <div className="mt-5 flex flex-col gap-4">
-            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 border-b border-border/60 pb-4">
-              <p className="text-[14px] leading-relaxed">{t("help.people.row1")}</p>
-              <a
-                href="https://desaparecidosterremotovenezuela.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="shrink-0 inline-flex items-center gap-1.5 rounded-full bg-trust text-trust-foreground px-4 py-2 text-sm font-medium hover:opacity-90 transition"
-              >
-                {t("help.people.cta")}
-                <ArrowRight className="size-3.5" />
-              </a>
-            </div>
-            <p className="text-[14px] leading-relaxed border-b border-border/60 pb-4">{t("help.people.row2")}</p>
-            <p className="text-[14px] leading-relaxed">{t("help.people.row3")}</p>
-          </div>
+          <a
+            href="https://desaparecidosterremotovenezuela.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-5 inline-flex items-center justify-center gap-1.5 rounded-full bg-trust text-trust-foreground px-4 py-2.5 text-sm font-medium hover:opacity-90 transition"
+          >
+            {t("help.people.btn")}
+            <ArrowRight className="size-3.5" />
+          </a>
+
+          <p className="mt-3 text-[14px] text-muted-foreground leading-relaxed">{t("help.people.belowBtn")}</p>
+          <p className="mt-3 text-[13px] text-muted-foreground leading-relaxed">{t("help.people.crossRoja")}</p>
         </article>
       </div>
 
-      <p className="mt-6 text-[12px] text-muted-foreground max-w-3xl leading-relaxed">{t("help.disclaimer")}</p>
+      <p className="mt-8 text-[12px] text-muted-foreground text-center leading-relaxed">{t("help.disclaimer")}</p>
     </section>
   );
 }
+
 
 /* ───────────────────────── Prepare ───────────────────────── */
 
