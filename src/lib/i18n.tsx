@@ -32,38 +32,24 @@ const es: Dict = {
   "story.body":
     "Ayer a las 6:04 PM, la tierra tembló. En 39 segundos, dos terremotos devastaron la costa norte de Venezuela. Edificios cayeron. Familias se separaron.\n\nProbablemente viste las noticias y te sentiste impotente. Nosotros también.\n\nAsí que no construimos otra página de caridad. Construimos herramientas. Reales. Para gente real. Ahora mismo.",
 
-  "tools.title": "Lo que puedes hacer ahora",
-  "tools.sub": "Seis acciones. Cada una real. Cada una toma pocos minutos.",
+  "tools.title": "Soluciones activas en este momento",
+  "tools.sub":
+    "Herramientas construidas por comunidades tech. Funcionando ahora. Usa una. Si construiste otra, contáctanos.",
 
-  "tool.find.title": "Encontrar desaparecidos",
-  "tool.find.desc": "La IA empareja rostros. Ayuda a familias a reunirse.",
-  "tool.find.cta": "Buscar ahora",
-  "tool.find.micro": "Toma 2 min",
+  "tool.map.title": "Mapa de daños estructurales",
+  "tool.map.desc":
+    "Seguimiento en tiempo real de edificios afectados por el terremoto. Ciudadanos reportan daños clasificados por colapso total, daño severo y daño parcial. Rescatistas lo usan para priorizar operaciones.",
+  "tool.map.cta": "Acceder al mapa",
 
-  "tool.donate.title": "Donar ahora",
-  "tool.donate.desc": "Pago seguro. Próxima persona ayudada en: 3 minutos.",
-  "tool.donate.cta": "Donar $25",
-  "tool.donate.micro": "Stripe · Wise · Cripto",
+  "tool.missing.title": "Reporte de personas desaparecidas",
+  "tool.missing.desc":
+    "Plataforma ciudadana para reportar y buscar personas desaparecidas. Los usuarios crean reportes con nombre, ubicación y foto. Cuando alguien es localizado, se actualiza el estado en tiempo real.",
+  "tool.missing.cta": "Buscar o reportar",
 
-  "tool.volunteer.title": "Voluntariate",
-  "tool.volunteer.desc": "Te emparejamos con un equipo según tus habilidades.",
-  "tool.volunteer.cta": "Apuntarme",
-  "tool.volunteer.micro": "Únete a 500+ ayudantes",
-
-  "tool.updates.title": "Recibir actualizaciones reales",
-  "tool.updates.desc": "Notificaciones cuando haya progreso, no spam.",
-  "tool.updates.cta": "Activar alertas",
-  "tool.updates.micro": "1 toque, cancelable",
-
-  "tool.impact.title": "Ver el impacto",
-  "tool.impact.desc": "Dashboard de transparencia. Cada peso registrado.",
-  "tool.impact.cta": "Abrir dashboard",
-  "tool.impact.micro": "Datos en vivo",
-
-  "tool.offline.title": "Usar las herramientas sin conexión",
-  "tool.offline.desc": "Descarga el toolkit. Funciona sin internet.",
-  "tool.offline.cta": "Descargar",
-  "tool.offline.micro": "Para zonas sin señal",
+  "tools.disclaimer": "Estas herramientas son independientes, ciudadanas y no partidistas.",
+  "tools.contribute.title": "¿Tu comunidad construyó una herramienta para esta emergencia?",
+  "tools.contribute.sub": "Contáctanos para incluirla aquí.",
+  "tools.contribute.cta": "Escribirnos",
 
   "social.title": "Quiénes ya están ayudando",
   "social.ago": "hace {n} horas",
@@ -135,38 +121,24 @@ const en: Dict = {
   "story.body":
     "Yesterday at 6:04 PM, the earth shook. In 39 seconds, two earthquakes devastated Venezuela's northern coast. Buildings collapsed. Families separated.\n\nYou probably saw the news and felt helpless. We felt the same.\n\nSo we didn't build a charity website. We built tools. Real tools. For real people. Right now.",
 
-  "tools.title": "What you can do right now",
-  "tools.sub": "Six actions. Each real. Each takes minutes.",
+  "tools.title": "Active solutions right now",
+  "tools.sub":
+    "Tools built by tech communities. Live now. Use one. If you built another, contact us.",
 
-  "tool.find.title": "Find Missing People",
-  "tool.find.desc": "AI matches faces. Helps families reunite.",
-  "tool.find.cta": "Search now",
-  "tool.find.micro": "Takes 2 min",
+  "tool.map.title": "Structural damage map",
+  "tool.map.desc":
+    "Real-time tracking of buildings affected by the earthquake. Citizens report damage classified by total collapse, severe damage, and partial damage. Rescue teams use it to prioritize operations.",
+  "tool.map.cta": "Open the map",
 
-  "tool.donate.title": "Donate Directly",
-  "tool.donate.desc": "Secure payment. Next person helped in: 3 minutes.",
-  "tool.donate.cta": "Donate $25",
-  "tool.donate.micro": "Stripe · Wise · Crypto",
+  "tool.missing.title": "Missing persons reports",
+  "tool.missing.desc":
+    "Citizen platform to report and search for missing people. Users create reports with name, location, and photo. When someone is found, the status updates in real time.",
+  "tool.missing.cta": "Search or report",
 
-  "tool.volunteer.title": "Volunteer",
-  "tool.volunteer.desc": "We match you with a team based on your skills.",
-  "tool.volunteer.cta": "Sign up",
-  "tool.volunteer.micro": "Join 500+ helpers",
-
-  "tool.updates.title": "Get Real Updates",
-  "tool.updates.desc": "Notifications when there's progress, not spam.",
-  "tool.updates.cta": "Turn on alerts",
-  "tool.updates.micro": "1 tap, opt-out anytime",
-
-  "tool.impact.title": "See Impact",
-  "tool.impact.desc": "Full transparency dashboard. Every peso logged.",
-  "tool.impact.cta": "Open dashboard",
-  "tool.impact.micro": "Live data",
-
-  "tool.offline.title": "Use Tools Offline",
-  "tool.offline.desc": "Download the toolkit. Works without internet.",
-  "tool.offline.cta": "Download",
-  "tool.offline.micro": "For low-signal zones",
+  "tools.disclaimer": "These tools are independent, citizen-led, and nonpartisan.",
+  "tools.contribute.title": "Did your community build a tool for this emergency?",
+  "tools.contribute.sub": "Contact us to include it here.",
+  "tools.contribute.cta": "Write to us",
 
   "social.title": "Who's already helping",
   "social.ago": "{n} hours ago",

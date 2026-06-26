@@ -1,17 +1,14 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useMemo, useState } from "react";
 import {
-  Search,
-  Heart,
+  Map,
   Users,
-  Bell,
-  BarChart3,
-  Download,
   ShieldCheck,
   Radio,
   MessageCircle,
   Globe,
   ArrowRight,
+  Mail,
 } from "lucide-react";
 import { I18nProvider, useI18n, type Lang } from "@/lib/i18n";
 
@@ -292,22 +289,24 @@ function Story() {
 
 /* ───────────────────────── Tools ───────────────────────── */
 
-const TOOLS = [
-  { key: "find", icon: Search, color: "coral" },
-  { key: "donate", icon: Heart, color: "teal" },
-  { key: "volunteer", icon: Users, color: "trust" },
-  { key: "updates", icon: Bell, color: "healing" },
-  { key: "impact", icon: BarChart3, color: "amber" },
-  { key: "offline", icon: Download, color: "violet" },
+const SOLUTIONS = [
+  {
+    key: "map",
+    icon: Map,
+    color: "coral",
+    href: "https://terremotovenezuela.com",
+  },
+  {
+    key: "missing",
+    icon: Users,
+    color: "teal",
+    href: "https://desaparecidosterremotovenezuela.com",
+  },
 ] as const;
 
 const COLOR_CLASSES: Record<string, { bar: string; icon: string; btn: string }> = {
   coral: { bar: "bg-coral", icon: "text-coral", btn: "bg-coral text-coral-foreground" },
   teal: { bar: "bg-teal", icon: "text-teal", btn: "bg-teal text-teal-foreground" },
-  trust: { bar: "bg-trust", icon: "text-trust", btn: "bg-trust text-trust-foreground" },
-  healing: { bar: "bg-healing", icon: "text-healing", btn: "bg-healing text-healing-foreground" },
-  amber: { bar: "bg-amber", icon: "text-amber", btn: "bg-amber text-amber-foreground" },
-  violet: { bar: "bg-violet", icon: "text-violet", btn: "bg-violet text-violet-foreground" },
 };
 
 function Tools() {
@@ -316,34 +315,57 @@ function Tools() {
     <section id="tools" className="mx-auto max-w-6xl px-4 py-16 sm:py-24">
       <div className="max-w-2xl mb-10">
         <h2 className="font-serif text-2xl sm:text-3xl">{t("tools.title")}</h2>
-        <p className="mt-2 text-muted-foreground">{t("tools.sub")}</p>
+        <p className="mt-2 text-[15px] text-muted-foreground leading-relaxed">{t("tools.sub")}</p>
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-        {TOOLS.map(({ key, icon: Icon, color }) => {
+
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        {SOLUTIONS.map(({ key, icon: Icon, color, href }) => {
           const c = COLOR_CLASSES[color];
           return (
             <article
               key={key}
-              className="group relative flex flex-col rounded-2xl border border-border bg-card p-6 transition hover:-translate-y-0.5 hover:shadow-[0_10px_40px_-20px_rgb(0_0_0/0.25)]"
+              className="relative flex flex-col rounded-2xl border border-border bg-card p-6 sm:p-8 transition hover:-translate-y-0.5 hover:shadow-[0_10px_40px_-20px_rgb(0_0_0/0.25)]"
             >
-              <span className={`absolute left-0 top-6 h-10 w-1 rounded-r ${c.bar}`} aria-hidden />
-              <div className={`mb-4 inline-flex size-10 items-center justify-center rounded-xl bg-muted ${c.icon}`}>
+              <span className={`absolute left-0 top-8 h-12 w-1 rounded-r ${c.bar}`} aria-hidden />
+              <div className={`mb-5 inline-flex size-11 items-center justify-center rounded-xl bg-muted ${c.icon}`}>
                 <Icon className="size-5" strokeWidth={1.6} />
               </div>
-              <h3 className="font-serif text-xl">{t(`tool.${key}.title`)}</h3>
-              <p className="mt-1.5 text-sm text-muted-foreground">{t(`tool.${key}.desc`)}</p>
-              <div className="mt-6 flex items-center justify-between gap-3">
-                <button
+              <h3 className="font-serif text-xl font-bold">{t(`tool.${key}.title`)}</h3>
+              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                {t(`tool.${key}.desc`)}
+              </p>
+              <div className="mt-6">
+                <a
+                  href={href}
+                  target="_blank"
+                  rel="noreferrer"
                   className={`inline-flex items-center gap-1.5 rounded-full px-4 py-2 text-sm font-medium ${c.btn} hover:opacity-90 transition`}
                 >
                   {t(`tool.${key}.cta`)}
                   <ArrowRight className="size-3.5" />
-                </button>
-                <span className="text-[11px] text-muted-foreground">{t(`tool.${key}.micro`)}</span>
+                </a>
               </div>
             </article>
           );
         })}
+      </div>
+
+      <p className="mt-6 text-[13px] text-muted-foreground">{t("tools.disclaimer")}</p>
+
+      <div className="mt-8 rounded-2xl border border-border bg-transparent p-6 sm:p-8 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-5">
+        <div>
+          <h3 className="font-serif text-base sm:text-[17px] leading-snug">
+            {t("tools.contribute.title")}
+          </h3>
+          <p className="mt-1.5 text-sm text-muted-foreground">{t("tools.contribute.sub")}</p>
+        </div>
+        <a
+          href="mailto:hub@yalvenezuela.org"
+          className="inline-flex shrink-0 items-center gap-1.5 rounded-full border border-foreground/80 px-4 py-2 text-sm font-medium text-foreground hover:bg-foreground hover:text-background transition"
+        >
+          <Mail className="size-3.5" />
+          {t("tools.contribute.cta")}
+        </a>
       </div>
     </section>
   );
