@@ -176,37 +176,6 @@ function Ripples() {
   );
 }
 
-/* ───────────────────────── Impact ───────────────────────── */
-
-function Impact() {
-  const { t } = useI18n();
-  const cards = [
-    { value: "235+", label: t("impact.deaths") },
-    { value: "4.300+", label: t("impact.injured") },
-    { value: "200+", label: t("impact.missing") },
-  ];
-
-  return (
-    <section className="mx-auto max-w-6xl px-4 py-16 sm:py-20">
-      <h2 className="font-serif text-2xl sm:text-3xl">{t("impact.title")}</h2>
-      <p className="mt-2 text-[13px] text-muted-foreground">{t("impact.sub")}</p>
-
-      <div className="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4">
-        {cards.map((c) => (
-          <div
-            key={c.label}
-            className="rounded-2xl border border-border bg-card p-6 sm:p-8"
-          >
-            <div className="tnum font-serif text-4xl sm:text-5xl font-bold">{c.value}</div>
-            <div className="mt-2 text-sm text-muted-foreground">{c.label}</div>
-          </div>
-        ))}
-      </div>
-
-      <p className="mt-6 text-[12px] text-muted-foreground">{t("impact.source")}</p>
-    </section>
-  );
-}
 
 
 /* ───────────────────────── Story ───────────────────────── */
