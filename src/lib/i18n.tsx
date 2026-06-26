@@ -51,6 +51,11 @@ const es: Dict = {
     "Herramienta de inteligencia artificial que facilita la identificación de personas a partir de imágenes compartidas en redes sociales y grupos de mensajería durante la emergencia.",
   "tool.vision.cta": "Usar herramienta",
 
+  "tool.search.title": "Venezuela te busca",
+  "tool.search.desc":
+    "Registro público de personas desaparecidas tras el terremoto. Permite registrar y buscar personas con foto, nombre, edad y ubicación. Más de 22.000 personas registradas hasta ahora.",
+  "tool.search.cta": "Buscar o registrar",
+
   "tools.disclaimer": "Estas herramientas son independientes, ciudadanas y no partidistas.",
   "tools.contribute.title": "¿Tu comunidad construyó una herramienta para esta emergencia?",
   "tools.contribute.sub": "Contáctanos para incluirla aquí.",
