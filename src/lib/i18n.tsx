@@ -92,6 +92,13 @@ const es: Dict = {
   "donate.cta": "Enlace de donación próximamente",
   "donate.note": "Mientras habilitamos el canal, escríbenos a",
 
+  "emergency.title": "Información oficial y números de emergencia",
+  "emergency.subtitle": "Líneas verificadas. Algunos números pueden estar congestionados.",
+  "emergency.numbers": "Números de emergencia",
+  "emergency.channels": "Canales oficiales",
+  "emergency.disclaimer":
+    "Verifica siempre la información antes de difundirla. Esta plataforma no reemplaza a las autoridades oficiales.",
+
   "trust.title": "Esto es real.",
   "trust.body":
     "Este hub centraliza herramientas construidas por comunidades tech independientes en respuesta al terremoto del 24 de junio de 2026.",
