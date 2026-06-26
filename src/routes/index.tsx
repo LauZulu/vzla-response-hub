@@ -309,12 +309,19 @@ const SOLUTIONS = [
     color: "trust",
     href: "https://lo-la-has-visto-48680439362.us-west1.run.app",
   },
+  {
+    key: "search",
+    icon: Search,
+    color: "healing",
+    href: "https://venezuela-te-busca-app.hellogafaro.workers.dev",
+  },
 ] as const;
 
 const COLOR_CLASSES: Record<string, { bar: string; icon: string; btn: string }> = {
   coral: { bar: "bg-coral", icon: "text-coral", btn: "bg-coral text-coral-foreground" },
   teal: { bar: "bg-teal", icon: "text-teal", btn: "bg-teal text-teal-foreground" },
   trust: { bar: "bg-trust", icon: "text-trust", btn: "bg-trust text-trust-foreground" },
+  healing: { bar: "bg-healing", icon: "text-healing", btn: "bg-healing text-healing-foreground" },
 };
 
 function Tools() {
