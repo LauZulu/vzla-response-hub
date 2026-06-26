@@ -62,7 +62,7 @@ const es: Dict = {
 
   "tools.disclaimer": "Estas herramientas son independientes, ciudadanas y no partidistas.",
   "tools.contribute.title": "¿Tu comunidad construyó una herramienta para esta emergencia?",
-  "tools.contribute.sub": "Contáctanos para incluirla aquí.",
+  "tools.contribute.sub": "Contáctanos para incluirla aquí o para ser parte de la comunidad AI for Good.",
   "tools.contribute.cta": "Escribirnos",
 
   "social.title": "Quiénes ya están ayudando",
@@ -165,7 +165,7 @@ const en: Dict = {
 
   "tools.disclaimer": "These tools are independent, citizen-led, and nonpartisan.",
   "tools.contribute.title": "Did your community build a tool for this emergency?",
-  "tools.contribute.sub": "Contact us to include it here.",
+  "tools.contribute.sub": "Contact us to include it here or to be part of the AI for Good community.",
   "tools.contribute.cta": "Write to us",
 
   "social.title": "Who's already helping",
