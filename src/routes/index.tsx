@@ -13,6 +13,8 @@ import {
   Globe,
   ArrowRight,
   Mail,
+  Phone,
+  ExternalLink,
 } from "lucide-react";
 import { I18nProvider, useI18n, type Lang } from "@/lib/i18n";
 
@@ -56,6 +58,7 @@ function Hub() {
         <Impact />
         <Story />
         <Tools />
+        <Emergency />
         <Push />
         <Trust />
       </main>
@@ -403,8 +406,78 @@ function Tools() {
   );
 }
 
+/* ───────────────────────── Emergency ───────────────────────── */
+
+const EMERGENCY_NUMBERS = [
+  { entity: "Movistar", number: "911", tel: "911" },
+  { entity: "Digitel", number: "112", tel: "112" },
+  { entity: "Movilnet", number: "*1", tel: "*1" },
+  { entity: "CANTV (línea fija)", number: "171", tel: "171" },
+  { entity: "Aeroambulancias", number: "(0212) 993.25.41", tel: "+582129932541" },
+  { entity: "Rescarven", number: "(0212) 993.69.11", tel: "+582129936911" },
+  { entity: "Ambulancia Metropolitano", number: "(0212) 545.45.45", tel: "+582125454545" },
+];
+
+const OFFICIAL_CHANNELS = [
+  { label: "Protección Civil Venezuela", href: "https://www.proteccioncivil.gob.ve" },
+  { label: "Ministerio de Salud", href: "https://www.mpps.gob.ve" },
+  { label: "FUNVISIS (sismología)", href: "https://www.funvisis.gob.ve" },
+  { label: "Cruz Roja Venezuela", href: "https://www.cruzrojavenezolana.org" },
+];
+
+function Emergency() {
+  const { t } = useI18n();
+  return (
+    <section className="mx-auto max-w-6xl px-4 py-16 sm:py-24">
+      <h2 className="font-serif text-2xl sm:text-3xl max-w-2xl">{t("emergency.title")}</h2>
+      <p className="mt-3 text-[14px] text-muted-foreground max-w-2xl">{t("emergency.subtitle")}</p>
+
+      <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="rounded-2xl border border-border bg-card p-6 sm:p-8">
+          <div className="inline-flex items-center gap-2 text-xs uppercase tracking-wider text-coral font-medium mb-5">
+            <Phone className="size-3.5" /> {t("emergency.numbers")}
+          </div>
+          <ul className="flex flex-col gap-3 text-[14px]">
+            {EMERGENCY_NUMBERS.map((n) => (
+              <li key={n.entity} className="flex items-baseline justify-between gap-4 border-b border-border/60 pb-3 last:border-b-0 last:pb-0">
+                <span className="font-semibold">{n.entity}</span>
+                <a href={`tel:${n.tel}`} className="text-foreground/90 hover:text-coral transition tabular-nums">
+                  {n.number}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div className="rounded-2xl border border-border bg-card p-6 sm:p-8">
+          <div className="inline-flex items-center gap-2 text-xs uppercase tracking-wider text-teal font-medium mb-5">
+            <Globe className="size-3.5" /> {t("emergency.channels")}
+          </div>
+          <ul className="flex flex-col gap-3 text-[14px]">
+            {OFFICIAL_CHANNELS.map((c) => (
+              <li key={c.label} className="border-b border-border/60 pb-3 last:border-b-0 last:pb-0">
+                <a
+                  href={c.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 hover:text-teal transition"
+                >
+                  {c.label}
+                  <ExternalLink className="size-3.5 opacity-60" />
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+
+      <p className="mt-6 text-[12px] text-muted-foreground max-w-2xl">{t("emergency.disclaimer")}</p>
+    </section>
+  );
+}
 
 /* ───────────────────────── Push ───────────────────────── */
+
 
 function Push() {
   const { t } = useI18n();
