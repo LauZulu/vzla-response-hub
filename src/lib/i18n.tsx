@@ -140,6 +140,11 @@ const en: Dict = {
     "Citizen platform to report and search for missing people. Users create reports with name, location, and photo. When someone is found, the status updates in real time.",
   "tool.missing.cta": "Search or report",
 
+  "tool.vision.title": "AI-powered visual identification",
+  "tool.vision.desc":
+    "AI tool that helps identify people from images shared on social media and messaging groups during the emergency.",
+  "tool.vision.cta": "Use the tool",
+
   "tools.disclaimer": "These tools are independent, citizen-led, and nonpartisan.",
   "tools.contribute.title": "Did your community build a tool for this emergency?",
   "tools.contribute.sub": "Contact us to include it here.",
