@@ -65,6 +65,11 @@ const es: Dict = {
     "Digitaliza las listas de personas ingresadas en hospitales y centros de salud. Busca por nombre o cédula para saber si tu familiar está siendo atendido y en qué centro se encuentra.",
   "tool.hospitals.cta": "Buscar en hospitales",
 
+  "tool.pets.title": "Mascotas perdidas y encontradas",
+  "tool.pets.desc":
+    "Plataforma de emergencia para reportar y buscar mascotas extraviadas tras el terremoto. Publica sin registro. Más de 800 reportes activos entre perdidos y encontrados.",
+  "tool.pets.cta": "Buscar o reportar mascota",
+
   "tools.disclaimer": "Estas herramientas son independientes, ciudadanas y no partidistas.",
   "tools.contribute.title": "¿Tu comunidad construyó una herramienta para esta emergencia?",
   "tools.contribute.sub": "Contáctanos para incluirla aquí o para ser parte de la comunidad AI for Good.",
