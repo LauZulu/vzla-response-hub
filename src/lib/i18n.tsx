@@ -109,7 +109,11 @@ const es: Dict = {
 
 const en: Dict = {
   "nav.convenedBy":
-    "Convened by Young AI Leaders Venezuela & Regional Hubs · UN AI for Good Initiative · ITU Digital Innovation Hub",
+    "Initiative coordinated by Young AI Leaders Bogotá Hub in alliance with regional tech communities. Part of the UN AI for Good and ITU network.",
+  "footer.creditPrefix": "Platform created by ",
+  "footer.creditName": "Laura Zuluaga",
+  "footer.join":
+    "Tech communities and organizations that want to join: l.zuluaga@youngaileadershub.org",
   "nav.logo": "VZLA Response Hub",
   "lang.toggle": "ES | EN",
 
