@@ -46,6 +46,11 @@ const es: Dict = {
     "Plataforma ciudadana para reportar y buscar personas desaparecidas. Los usuarios crean reportes con nombre, ubicación y foto. Cuando alguien es localizado, se actualiza el estado en tiempo real.",
   "tool.missing.cta": "Buscar o reportar",
 
+  "tool.vision.title": "Identificación visual con IA",
+  "tool.vision.desc":
+    "Herramienta de inteligencia artificial que facilita la identificación de personas a partir de imágenes compartidas en redes sociales y grupos de mensajería durante la emergencia.",
+  "tool.vision.cta": "Usar herramienta",
+
   "tools.disclaimer": "Estas herramientas son independientes, ciudadanas y no partidistas.",
   "tools.contribute.title": "¿Tu comunidad construyó una herramienta para esta emergencia?",
   "tools.contribute.sub": "Contáctanos para incluirla aquí.",
