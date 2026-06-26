@@ -145,6 +145,11 @@ const en: Dict = {
     "AI tool that helps identify people from images shared on social media and messaging groups during the emergency.",
   "tool.vision.cta": "Use the tool",
 
+  "tool.search.title": "Venezuela te busca",
+  "tool.search.desc":
+    "Public registry of people missing after the earthquake. Register or search for people with photo, name, age, and location. Over 22,000 people registered so far.",
+  "tool.search.cta": "Search or register",
+
   "tools.disclaimer": "These tools are independent, citizen-led, and nonpartisan.",
   "tools.contribute.title": "Did your community build a tool for this emergency?",
   "tools.contribute.sub": "Contact us to include it here.",
