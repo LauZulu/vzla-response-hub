@@ -71,6 +71,8 @@ const es: Dict = {
   "tools.contribute.title": "¿Tu comunidad construyó una herramienta para esta emergencia?",
   "tools.contribute.sub": "Contáctanos para incluirla aquí o para ser parte de la comunidad AI for Good.",
   "tools.contribute.cta": "Escribirnos",
+  "tools.contribute.whatsapp": "Conocer la comunidad AI for Good",
+  "tools.contribute.coord": "Unirse al grupo de coordinación",
 
   "social.title": "Quiénes ya están ayudando",
   "social.ago": "hace {n} horas",
