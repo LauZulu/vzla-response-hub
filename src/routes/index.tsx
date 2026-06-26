@@ -3,6 +3,7 @@ import { useEffect, useMemo, useState } from "react";
 import {
   Map,
   Users,
+  Camera,
   ShieldCheck,
   Radio,
   MessageCircle,
