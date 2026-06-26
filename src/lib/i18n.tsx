@@ -178,6 +178,11 @@ const en: Dict = {
     "Digitizes the lists of people admitted to hospitals and health centers. Search by name or ID to find out if your relative is being treated and at which center.",
   "tool.hospitals.cta": "Search hospitals",
 
+  "tool.pets.title": "Lost and found pets",
+  "tool.pets.desc":
+    "Emergency platform to report and search for pets lost after the earthquake. Post without registering. Over 800 active reports between lost and found.",
+  "tool.pets.cta": "Search or report a pet",
+
   "tools.disclaimer": "These tools are independent, citizen-led, and nonpartisan.",
   "tools.contribute.title": "Did your community build a tool for this emergency?",
   "tools.contribute.sub": "Contact us to include it here or to be part of the AI for Good community.",
