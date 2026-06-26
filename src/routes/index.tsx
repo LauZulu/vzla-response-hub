@@ -176,15 +176,14 @@ function Ripples() {
 
 /* ───────────────────────── Impact ───────────────────────── */
 
-function useTicker(initial: number, step: [number, number], intervalMs = 3000) {
+function useTicker(initial: number, min: number, max: number, intervalMs = 3000) {
   const [n, setN] = useState(initial);
   useEffect(() => {
     const id = setInterval(() => {
-      const [a, b] = step;
-      setN((v) => v + Math.floor(a + Math.random() * (b - a + 1)));
+      setN((v) => v + Math.floor(min + Math.random() * (max - min + 1)));
     }, intervalMs);
     return () => clearInterval(id);
-  }, [step, intervalMs]);
+  }, [min, max, intervalMs]);
   return n;
 }
 
