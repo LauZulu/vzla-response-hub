@@ -72,6 +72,13 @@ const es: Dict = {
     "Evaluación rápida de daños estructurales basada en el Boletín 61 de la Academia Nacional de Ingeniería. Identifica riesgo de colapso. Útil para ingenieros, inspectores y ciudadanos.",
   "tool.triage.cta": "Evaluar estructura",
 
+  "tool.shelters.title": "Centros de acopio y refugios",
+  "tool.shelters.desc":
+    "Mapa colaborativo para registrar y localizar centros de acopio de ayuda y refugios disponibles en Venezuela. Reporta puntos verificados para que la ayuda llegue donde se necesita.",
+  "tool.shelters.cta": "Ver mapa o reportar",
+
+
+
 
 
   "tools.disclaimer": "Estas herramientas son independientes, ciudadanas y no partidistas.",
@@ -203,6 +210,13 @@ const en: Dict = {
   "tool.triage.desc":
     "Rapid structural damage assessment based on Bulletin 61 of the National Academy of Engineering. Identifies collapse risk. Useful for engineers, inspectors and citizens.",
   "tool.triage.cta": "Assess a structure",
+
+  "tool.shelters.title": "Aid collection points and shelters",
+  "tool.shelters.desc":
+    "Collaborative map to register and locate aid collection points and shelters available in Venezuela. Report verified locations so help reaches where it is needed.",
+  "tool.shelters.cta": "View map or report",
+
+
 
 
 

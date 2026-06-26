@@ -2,11 +2,14 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useMemo, useState } from "react";
 import {
   Map as MapIcon,
+  MapPin,
   Users,
   Camera,
   Search,
   Building2,
   Castle,
+
+
 
   PawPrint,
   ShieldCheck,
@@ -253,6 +256,12 @@ const SOLUTIONS = [
     color: "navy",
     href: "https://pretriageestructuralvenezuela.netlify.app",
   },
+  {
+    key: "shelters",
+    icon: MapPin,
+    color: "darkgreen",
+    href: "https://acopios-refugios.vercel.app",
+  },
 
 ] as const;
 
@@ -264,6 +273,8 @@ const COLOR_CLASSES: Record<string, { bar: string; icon: string; btn: string }> 
   violet: { bar: "bg-violet", icon: "text-violet", btn: "bg-violet text-violet-foreground" },
   amber: { bar: "bg-amber", icon: "text-amber", btn: "bg-amber text-amber-foreground" },
   navy: { bar: "bg-[#11243E]", icon: "text-[#11243E]", btn: "bg-[#11243E] text-white" },
+  darkgreen: { bar: "bg-[#2E7D32]", icon: "text-[#2E7D32]", btn: "bg-[#2E7D32] text-white" },
+
 
 };
 
