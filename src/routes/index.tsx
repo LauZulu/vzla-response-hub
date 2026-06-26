@@ -58,6 +58,8 @@ function Hub() {
         <Impact />
         <Story />
         <Tools />
+        <Tools />
+        <Emergency />
         <Push />
         <Trust />
       </main>
