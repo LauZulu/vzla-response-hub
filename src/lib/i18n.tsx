@@ -93,13 +93,8 @@ const es: Dict = {
   "donate.note": "Mientras habilitamos el canal, escríbenos a",
 
   "trust.title": "Esto es real.",
-  "trust.l1": "Dashboard de transparencia en vivo",
-  "trust.l2": "Seguridad y privacidad (HTTPS, cifrado)",
-  "trust.l3":
-    "Young AI Leaders Venezuela Hub · Finalistas MIT Reality Hack · No tomamos tu dinero, registramos cada peso.",
-  "trust.audit": "Auditado por contadores independientes",
-  "trust.code": "Ver el código",
-  "trust.updated": "Última actualización: hace 23 minutos",
+  "trust.body":
+    "Este hub centraliza herramientas construidas por comunidades tech independientes en respuesta al terremoto del 24 de junio de 2026.",
 
   "cta.button": "Donar / Ayudar / Compartir",
   "cta.rot1": "200+ personas siguen desaparecidas",
