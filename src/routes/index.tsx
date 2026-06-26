@@ -6,6 +6,7 @@ import {
   Camera,
   Search,
   Building2,
+  PawPrint,
   ShieldCheck,
   Radio,
   MessageCircle,
@@ -322,6 +323,12 @@ const SOLUTIONS = [
     color: "violet",
     href: "https://hospitalesenvenezuela.com",
   },
+  {
+    key: "pets",
+    icon: PawPrint,
+    color: "amber",
+    href: "https://www.huellascan.com/terremoto",
+  },
 ] as const;
 
 const COLOR_CLASSES: Record<string, { bar: string; icon: string; btn: string }> = {
@@ -330,6 +337,7 @@ const COLOR_CLASSES: Record<string, { bar: string; icon: string; btn: string }> 
   trust: { bar: "bg-trust", icon: "text-trust", btn: "bg-trust text-trust-foreground" },
   healing: { bar: "bg-healing", icon: "text-healing", btn: "bg-healing text-healing-foreground" },
   violet: { bar: "bg-violet", icon: "text-violet", btn: "bg-violet text-violet-foreground" },
+  amber: { bar: "bg-amber", icon: "text-amber", btn: "bg-amber text-amber-foreground" },
 };
 
 function Tools() {
