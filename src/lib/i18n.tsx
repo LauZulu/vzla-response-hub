@@ -22,16 +22,13 @@ const es: Dict = {
   "hero.sub3": "Elige abajo.",
   "hero.cta": "Ver cómo ayudar",
 
-  "impact.title": "Impacto en esta hora",
-  "impact.updated": "Última actualización: hace 2 minutos",
-  "impact.located": "Personas localizadas",
-  "impact.locatedMicro": "Desde ayer en la mañana",
-  "impact.rescues": "Rescates coordinados",
-  "impact.rescuesMicro": "Vidas salvadas con mejores decisiones",
-  "impact.lives": "Vidas salvadas (estimadas)",
-  "impact.livesMicro": "Solo con nuestras herramientas",
-  "impact.donated": "Donado en 48 horas",
-  "impact.donatedMicro": "De 3.247 personas como tú",
+  "impact.title": "Cifras de la emergencia",
+  "impact.sub": "Fuentes oficiales. Datos pueden cambiar conforme avanza la respuesta.",
+  "impact.deaths": "Fallecidos confirmados",
+  "impact.injured": "Personas heridas",
+  "impact.missing": "Personas desaparecidas",
+  "impact.source": "Cifras reportadas por el gobierno de Venezuela.",
+
 
   "story.body":
     "El 24 de junio de 2026, a las 6:04 PM, la tierra tembló. En 39 segundos, dos terremotos devastaron la costa norte de Venezuela. Edificios cayeron. Familias se separaron.\n\nProbablemente viste las noticias y te sentiste impotente. Nosotros también.\n\nAsí que no construimos otra página de caridad. Reunimos herramientas reales, construidas por comunidades tech, para gente real. Ahora mismo.",
