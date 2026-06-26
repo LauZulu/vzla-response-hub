@@ -293,7 +293,7 @@ function Story() {
 const SOLUTIONS = [
   {
     key: "map",
-    icon: Map,
+    icon: MapIcon,
     color: "coral",
     href: "https://terremotovenezuela.com",
   },
