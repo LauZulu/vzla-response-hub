@@ -443,30 +443,9 @@ function Trust() {
           <ShieldCheck className="size-5 text-teal" />
           <h2 className="font-serif text-2xl">{t("trust.title")}</h2>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-          {["trust.l1", "trust.l2", "trust.l3"].map((k) => (
-            <a
-              key={k}
-              href="#"
-              className="block rounded-xl border border-border bg-card p-5 text-sm hover:border-foreground/40 transition"
-            >
-              {t(k)}
-              <span className="mt-3 inline-flex items-center gap-1 text-xs text-muted-foreground">
-                <ArrowRight className="size-3" />
-              </span>
-            </a>
-          ))}
-        </div>
-        <div className="mt-6 flex flex-wrap gap-x-6 gap-y-2 text-xs text-muted-foreground">
-          <span>{t("trust.audit")}</span>
-          <a href="#" className="underline-offset-2 hover:underline">
-            {t("trust.code")}
-          </a>
-          <span className="inline-flex items-center gap-1.5">
-            <span className="size-1.5 rounded-full bg-teal animate-pulse" />
-            {t("trust.updated")}
-          </span>
-        </div>
+        <p className="max-w-3xl text-[15px] leading-relaxed text-foreground/90">
+          {t("trust.body")}
+        </p>
       </div>
     </section>
   );
