@@ -93,13 +93,8 @@ const es: Dict = {
   "donate.note": "Mientras habilitamos el canal, escríbenos a",
 
   "trust.title": "Esto es real.",
-  "trust.l1": "Dashboard de transparencia en vivo",
-  "trust.l2": "Seguridad y privacidad (HTTPS, cifrado)",
-  "trust.l3":
-    "Young AI Leaders Venezuela Hub · Finalistas MIT Reality Hack · No tomamos tu dinero, registramos cada peso.",
-  "trust.audit": "Auditado por contadores independientes",
-  "trust.code": "Ver el código",
-  "trust.updated": "Última actualización: hace 23 minutos",
+  "trust.body":
+    "Este hub centraliza herramientas construidas por comunidades tech independientes en respuesta al terremoto del 24 de junio de 2026.",
 
   "cta.button": "Donar / Ayudar / Compartir",
   "cta.rot1": "200+ personas siguen desaparecidas",
@@ -199,13 +194,8 @@ const en: Dict = {
   "donate.note": "While we enable the channel, write to us at",
 
   "trust.title": "This is real.",
-  "trust.l1": "Live transparency dashboard",
-  "trust.l2": "Security & privacy (HTTPS, encryption)",
-  "trust.l3":
-    "Young AI Leaders Venezuela Hub · MIT Reality Hack finalists · We don't take your money. We log every peso.",
-  "trust.audit": "Audited by independent accountants",
-  "trust.code": "See the code",
-  "trust.updated": "Last updated: 23 minutes ago",
+  "trust.body":
+    "This hub centralizes tools built by independent tech communities in response to the June 24, 2026 earthquake.",
 
   "cta.button": "Donate / Help / Share",
   "cta.rot1": "200+ people are still missing",
