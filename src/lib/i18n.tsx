@@ -46,6 +46,11 @@ const es: Dict = {
     "Plataforma ciudadana para reportar y buscar personas desaparecidas. Los usuarios crean reportes con nombre, ubicación y foto. Cuando alguien es localizado, se actualiza el estado en tiempo real.",
   "tool.missing.cta": "Buscar o reportar",
 
+  "tool.vision.title": "Identificación visual con IA",
+  "tool.vision.desc":
+    "Herramienta de inteligencia artificial que facilita la identificación de personas a partir de imágenes compartidas en redes sociales y grupos de mensajería durante la emergencia.",
+  "tool.vision.cta": "Usar herramienta",
+
   "tools.disclaimer": "Estas herramientas son independientes, ciudadanas y no partidistas.",
   "tools.contribute.title": "¿Tu comunidad construyó una herramienta para esta emergencia?",
   "tools.contribute.sub": "Contáctanos para incluirla aquí.",
@@ -134,6 +139,11 @@ const en: Dict = {
   "tool.missing.desc":
     "Citizen platform to report and search for missing people. Users create reports with name, location, and photo. When someone is found, the status updates in real time.",
   "tool.missing.cta": "Search or report",
+
+  "tool.vision.title": "AI-powered visual identification",
+  "tool.vision.desc":
+    "AI tool that helps identify people from images shared on social media and messaging groups during the emergency.",
+  "tool.vision.cta": "Use the tool",
 
   "tools.disclaimer": "These tools are independent, citizen-led, and nonpartisan.",
   "tools.contribute.title": "Did your community build a tool for this emergency?",

@@ -3,6 +3,7 @@ import { useEffect, useMemo, useState } from "react";
 import {
   Map,
   Users,
+  Camera,
   ShieldCheck,
   Radio,
   MessageCircle,
@@ -302,11 +303,18 @@ const SOLUTIONS = [
     color: "teal",
     href: "https://desaparecidosterremotovenezuela.com",
   },
+  {
+    key: "vision",
+    icon: Camera,
+    color: "trust",
+    href: "https://lo-la-has-visto-48680439362.us-west1.run.app",
+  },
 ] as const;
 
 const COLOR_CLASSES: Record<string, { bar: string; icon: string; btn: string }> = {
   coral: { bar: "bg-coral", icon: "text-coral", btn: "bg-coral text-coral-foreground" },
   teal: { bar: "bg-teal", icon: "text-teal", btn: "bg-teal text-teal-foreground" },
+  trust: { bar: "bg-trust", icon: "text-trust", btn: "bg-trust text-trust-foreground" },
 };
 
 function Tools() {
@@ -318,7 +326,8 @@ function Tools() {
         <p className="mt-2 text-[15px] text-muted-foreground leading-relaxed">{t("tools.sub")}</p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+
         {SOLUTIONS.map(({ key, icon: Icon, color, href }) => {
           const c = COLOR_CLASSES[color];
           return (
