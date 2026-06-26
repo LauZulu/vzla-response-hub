@@ -34,7 +34,7 @@ const es: Dict = {
   "impact.donatedMicro": "De 3.247 personas como tú",
 
   "story.body":
-    "Ayer a las 6:04 PM, la tierra tembló. En 39 segundos, dos terremotos devastaron la costa norte de Venezuela. Edificios cayeron. Familias se separaron.\n\nProbablemente viste las noticias y te sentiste impotente. Nosotros también.\n\nAsí que no construimos otra página de caridad. Construimos herramientas. Reales. Para gente real. Ahora mismo.",
+    "El 24 de junio de 2026, a las 6:04 PM, la tierra tembló. En 39 segundos, dos terremotos devastaron la costa norte de Venezuela. Edificios cayeron. Familias se separaron.\n\nProbablemente viste las noticias y te sentiste impotente. Nosotros también.\n\nAsí que no construimos otra página de caridad. Reunimos herramientas reales, construidas por comunidades tech, para gente real. Ahora mismo.",
 
   "tools.title": "Soluciones activas en este momento",
   "tools.sub":
