@@ -179,17 +179,6 @@ function Ripples() {
 
 /* ───────────────────────── Impact ───────────────────────── */
 
-function useTicker(initial: number, min: number, max: number, intervalMs = 3000) {
-  const [n, setN] = useState(initial);
-  useEffect(() => {
-    const id = setInterval(() => {
-      setN((v) => v + Math.floor(min + Math.random() * (max - min + 1)));
-    }, intervalMs);
-    return () => clearInterval(id);
-  }, [min, max, intervalMs]);
-  return n;
-}
-
 function Impact() {
   const { t } = useI18n();
   const cards = [
@@ -220,40 +209,6 @@ function Impact() {
   );
 }
 
-
-function ImpactCard({
-  value,
-  label,
-  micro,
-  color,
-}: {
-  value: string;
-  label: string;
-  micro: string;
-  color: "teal" | "healing" | "trust" | "amber";
-}) {
-  const ring = {
-    teal: "before:bg-teal",
-    healing: "before:bg-healing",
-    trust: "before:bg-trust",
-    amber: "before:bg-amber",
-  }[color];
-  const text = {
-    teal: "text-teal",
-    healing: "text-healing",
-    trust: "text-trust",
-    amber: "text-amber",
-  }[color];
-  return (
-    <div
-      className={`relative overflow-hidden rounded-2xl border border-border bg-card p-5 sm:p-6 before:absolute before:left-0 before:top-0 before:h-full before:w-1 ${ring}`}
-    >
-      <div className={`tnum font-serif text-3xl sm:text-4xl ${text}`}>{value}</div>
-      <div className="mt-2 text-sm font-medium">{label}</div>
-      <div className="mt-1 text-xs text-muted-foreground">{micro}</div>
-    </div>
-  );
-}
 
 /* ───────────────────────── Story ───────────────────────── */
 
