@@ -297,13 +297,24 @@ function Tools() {
           </h3>
           <p className="mt-1.5 text-sm text-muted-foreground">{t("tools.contribute.sub")}</p>
         </div>
-        <a
-          href="mailto:l.zuluaga@youngaileadershub.org"
-          className="inline-flex shrink-0 items-center gap-1.5 rounded-full border border-foreground/80 px-4 py-2 text-sm font-medium text-foreground hover:bg-foreground hover:text-background transition"
-        >
-          <Mail className="size-3.5" />
-          {t("tools.contribute.cta")}
-        </a>
+        <div className="flex flex-col sm:flex-row shrink-0 gap-2">
+          <a
+            href="mailto:l.zuluaga@youngaileadershub.org"
+            className="inline-flex items-center justify-center gap-1.5 rounded-full border border-foreground/80 px-4 py-2 text-sm font-medium text-foreground hover:bg-foreground hover:text-background transition"
+          >
+            <Mail className="size-3.5" />
+            {t("tools.contribute.cta")}
+          </a>
+          <a
+            href="https://chat.whatsapp.com/FTBI2oLHtuaEVnbEbjUHbl?mode=gi_t"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center gap-1.5 rounded-full bg-teal text-teal-foreground px-4 py-2 text-sm font-medium hover:opacity-90 transition"
+          >
+            <MessageCircle className="size-3.5" />
+            {t("tools.contribute.whatsapp")}
+          </a>
+        </div>
       </div>
     </section>
   );
