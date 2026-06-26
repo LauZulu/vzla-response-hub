@@ -120,7 +120,7 @@ const en: Dict = {
   "lang.toggle": "ES | EN",
 
   "hero.kicker": "Venezuela Earthquake · Jun 24, 2026 · 6:04 PM",
-  "hero.headline": "235 people died. 4,300 injured. 200+ missing. RIGHT NOW.",
+  "hero.headline": "253+ people deceased. 4,300+ injured. 157+ missing. RIGHT NOW",
   "hero.live": "This second, people are being located",
   "hero.sub1": "We built AI tools to find them.",
   "hero.sub2": "You can help.",
