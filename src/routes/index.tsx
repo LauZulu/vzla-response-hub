@@ -280,45 +280,74 @@ const COLOR_CLASSES: Record<string, { bar: string; icon: string; btn: string }> 
 
 function Tools() {
   const { t } = useI18n();
+  const [query, setQuery] = useState("");
+
+  const filtered = useMemo(() => {
+    const q = query.trim().toLowerCase();
+    if (!q) return SOLUTIONS;
+    return SOLUTIONS.filter(({ key }) => {
+      const title = t(`tool.${key}.title`).toLowerCase();
+      const desc = t(`tool.${key}.desc`).toLowerCase();
+      return title.includes(q) || desc.includes(q);
+    });
+  }, [query, t]);
+
   return (
     <section id="tools" className="mx-auto max-w-6xl px-4 py-16 sm:py-24">
-      <div className="max-w-2xl mb-10">
+      <div className="max-w-2xl mb-8">
         <h2 className="font-serif text-2xl sm:text-3xl">{t("tools.title")}</h2>
         <p className="mt-2 text-[15px] text-muted-foreground leading-relaxed">{t("tools.sub")}</p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-
-        {SOLUTIONS.map(({ key, icon: Icon, color, href }) => {
-          const c = COLOR_CLASSES[color];
-          return (
-            <article
-              key={key}
-              className="relative flex flex-col rounded-2xl border border-border bg-card p-6 sm:p-8 transition hover:-translate-y-0.5 hover:shadow-[0_10px_40px_-20px_rgb(0_0_0/0.25)]"
-            >
-              <span className={`absolute left-0 top-8 h-12 w-1 rounded-r ${c.bar}`} aria-hidden />
-              <div className={`mb-5 inline-flex size-11 items-center justify-center rounded-xl bg-muted ${c.icon}`}>
-                <Icon className="size-5" strokeWidth={1.6} />
-              </div>
-              <h3 className="font-serif text-xl font-bold">{t(`tool.${key}.title`)}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                {t(`tool.${key}.desc`)}
-              </p>
-              <div className="mt-6">
-                <a
-                  href={href}
-                  target="_blank"
-                  rel="noreferrer"
-                  className={`inline-flex items-center gap-1.5 rounded-full px-4 py-2 text-sm font-medium ${c.btn} hover:opacity-90 transition`}
-                >
-                  {t(`tool.${key}.cta`)}
-                  <ArrowRight className="size-3.5" />
-                </a>
-              </div>
-            </article>
-          );
-        })}
+      <div className="relative mb-8 max-w-xl">
+        <Search className="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 size-4 text-muted-foreground" strokeWidth={1.6} />
+        <input
+          type="search"
+          value={query}
+          onChange={(e) => setQuery(e.target.value)}
+          placeholder={t("tools.search.placeholder")}
+          aria-label={t("tools.search.placeholder")}
+          className="w-full rounded-full border border-border bg-card pl-11 pr-4 py-3 text-sm font-sans placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:border-transparent transition"
+        />
       </div>
+
+      {filtered.length === 0 ? (
+        <p className="text-sm text-muted-foreground py-8">{t("tools.search.empty")}</p>
+      ) : (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+
+          {filtered.map(({ key, icon: Icon, color, href }) => {
+            const c = COLOR_CLASSES[color];
+            return (
+              <article
+                key={key}
+                className="relative flex flex-col rounded-2xl border border-border bg-card p-6 sm:p-8 transition hover:-translate-y-0.5 hover:shadow-[0_10px_40px_-20px_rgb(0_0_0/0.25)]"
+              >
+                <span className={`absolute left-0 top-8 h-12 w-1 rounded-r ${c.bar}`} aria-hidden />
+                <div className={`mb-5 inline-flex size-11 items-center justify-center rounded-xl bg-muted ${c.icon}`}>
+                  <Icon className="size-5" strokeWidth={1.6} />
+                </div>
+                <h3 className="font-serif text-xl font-bold">{t(`tool.${key}.title`)}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                  {t(`tool.${key}.desc`)}
+                </p>
+                <div className="mt-6">
+                  <a
+                    href={href}
+                    target="_blank"
+                    rel="noreferrer"
+                    className={`inline-flex items-center gap-1.5 rounded-full px-4 py-2 text-sm font-medium ${c.btn} hover:opacity-90 transition`}
+                  >
+                    {t(`tool.${key}.cta`)}
+                    <ArrowRight className="size-3.5" />
+                  </a>
+                </div>
+              </article>
+            );
+          })}
+        </div>
+      )}
+
 
       <p className="mt-6 text-[13px] text-muted-foreground">{t("tools.disclaimer")}</p>
 
