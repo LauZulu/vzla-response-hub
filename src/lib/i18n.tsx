@@ -235,6 +235,23 @@ const en: Dict = {
   "footer.contact": "WhatsApp · Email · Telegram",
   "footer.whatsapp": "WhatsApp coordination group",
   "footer.rights": "No data sold · Open source · Citizen-led initiative",
+
+  "prep.title": "Be ready. Prevention saves lives.",
+  "prep.sub": "Essential verified information. Share it with your family.",
+  "prep.during.title": "During an earthquake",
+  "prep.during.body":
+    "Stay calm. Move away from windows, mirrors, and objects that can fall. If you're indoors, get under a sturdy table or next to a column. Protect your head and neck with your arms. Do not use elevators. Do not run outside during the shaking — most injuries come from objects falling from facades. If you're outdoors, move away from buildings, poles, and power lines. If you're in a vehicle, stop in an open area away from bridges and elevated structures.",
+  "prep.kit.title": "Essential emergency kit",
+  "prep.kit.body":
+    "Drinking water: at least 3 liters per person per day, for at least 3 days. Non-perishable food: canned goods, energy bars, nuts. First-aid kit: gauze, alcohol, bandages, painkillers, personal medication. Flashlight with spare batteries. Battery-powered portable radio. Whistle to call for help if trapped. Important documents in a waterproof bag: ID, passport, policies. Portable phone charger. Cash in small bills. Thermal blanket. Spare keys. Dust mask.",
+  "prep.after.title": "After the earthquake",
+  "prep.after.body":
+    "Be ready for aftershocks — they can occur hours or days later. Check for gas leaks or pipe damage; if you smell gas do not light matches or switch on electricity. Stay away from damaged buildings even if they look stable. Do not enter structures with visible cracks. If trapped, tap on a pipe or wall so rescuers can locate you — don't shout, to conserve energy. Use text messages instead of calls, lines get saturated. Meet your family at the previously agreed meeting point. Listen only to official sources, do not spread rumors.",
+  "prep.source":
+    "Source: Civil Protection and International Red Cross protocols. Share this information with your family and neighbors.",
+  "prep.share": "Share this guide on WhatsApp",
+  "prep.shareMsg":
+    "Essential earthquake information: what to do during and after, and what your emergency kit should include.",
 };
 
 const dicts: Record<Lang, Dict> = { es, en };
