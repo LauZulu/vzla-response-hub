@@ -8,7 +8,6 @@ import {
   Building2,
   PawPrint,
   ShieldCheck,
-  ShieldCheck,
   MessageCircle,
   Globe,
   ArrowRight,
