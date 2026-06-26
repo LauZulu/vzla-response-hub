@@ -54,7 +54,6 @@ function Hub() {
         <Impact />
         <Story />
         <Tools />
-        <SocialProof />
         <Push />
         <Trust />
       </main>
