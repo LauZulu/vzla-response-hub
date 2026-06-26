@@ -54,7 +54,7 @@ function Hub() {
       <TopBar />
       <main>
         <Hero />
-        <Impact />
+
         <Story />
         <Tools />
         <Emergency />
