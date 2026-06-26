@@ -1,17 +1,14 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useMemo, useState } from "react";
 import {
-  Search,
-  Heart,
+  Map,
   Users,
-  Bell,
-  BarChart3,
-  Download,
   ShieldCheck,
   Radio,
   MessageCircle,
   Globe,
   ArrowRight,
+  Mail,
 } from "lucide-react";
 import { I18nProvider, useI18n, type Lang } from "@/lib/i18n";
 
