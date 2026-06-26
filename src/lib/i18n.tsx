@@ -194,13 +194,8 @@ const en: Dict = {
   "donate.note": "While we enable the channel, write to us at",
 
   "trust.title": "This is real.",
-  "trust.l1": "Live transparency dashboard",
-  "trust.l2": "Security & privacy (HTTPS, encryption)",
-  "trust.l3":
-    "Young AI Leaders Venezuela Hub · MIT Reality Hack finalists · We don't take your money. We log every peso.",
-  "trust.audit": "Audited by independent accountants",
-  "trust.code": "See the code",
-  "trust.updated": "Last updated: 23 minutes ago",
+  "trust.body":
+    "This hub centralizes tools built by independent tech communities in response to the June 24, 2026 earthquake.",
 
   "cta.button": "Donate / Help / Share",
   "cta.rot1": "200+ people are still missing",
