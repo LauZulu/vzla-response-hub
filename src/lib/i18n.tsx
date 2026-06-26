@@ -110,6 +110,23 @@ const es: Dict = {
   "footer.contact": "WhatsApp · Email · Telegram",
   "footer.whatsapp": "Grupo de coordinación en WhatsApp",
   "footer.rights": "Sin datos vendidos · Código abierto · Iniciativa ciudadana",
+
+  "prep.title": "Prepárate. La prevención salva vidas.",
+  "prep.sub": "Información esencial verificada. Compártela con tu familia.",
+  "prep.during.title": "Durante un terremoto",
+  "prep.during.body":
+    "Mantén la calma. Aléjate de ventanas, espejos y objetos que puedan caer. Si estás dentro de un edificio, ubícate bajo una mesa resistente o junto a una columna. Protege tu cabeza y cuello con los brazos. No uses ascensores. No salgas corriendo a la calle durante el movimiento, la mayoría de lesiones ocurren por objetos que caen de fachadas. Si estás en la calle, aléjate de edificios, postes y cables eléctricos. Si estás en un vehículo, detente en un lugar abierto lejos de puentes y estructuras elevadas.",
+  "prep.kit.title": "Kit de emergencia esencial",
+  "prep.kit.body":
+    "Agua potable: mínimo 3 litros por persona por día, para al menos 3 días. Alimentos no perecederos: enlatados, barras energéticas, frutos secos. Botiquín: gasas, alcohol, vendas, analgésicos, medicamentos personales. Linterna con baterías extra. Radio portátil a pilas. Silbato para pedir ayuda si quedas atrapado. Documentos importantes en bolsa impermeable: cédula, pasaporte, pólizas. Cargador portátil para celular. Dinero en efectivo en billetes pequeños. Cobija térmica o manta. Copia de llaves. Mascarilla contra polvo.",
+  "prep.after.title": "Después del terremoto",
+  "prep.after.body":
+    "Prepárate para réplicas, pueden ocurrir horas o días después. Revisa si hay fugas de gas o daños en tuberías, si hueles gas no enciendas fósforos ni electricidad. Aléjate de edificios dañados aunque parezcan estables. No entres a estructuras con grietas visibles. Si quedaste atrapado, golpea una tubería o pared para que te localicen, no grites para conservar energía. Usa mensajes de texto en vez de llamadas, las líneas se saturan. Reúnete con tu familia en el punto de encuentro previamente acordado. Escucha solo fuentes oficiales, no difundas rumores.",
+  "prep.source":
+    "Fuente: Protocolos de Protección Civil y Cruz Roja Internacional. Comparte esta información con tu familia y vecinos.",
+  "prep.share": "Compartir esta guía por WhatsApp",
+  "prep.shareMsg":
+    "Información esencial sobre terremotos: qué hacer durante y después, y qué debe tener tu kit de emergencia.",
 };
 
 const en: Dict = {
