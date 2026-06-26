@@ -6,6 +6,7 @@ import {
   Camera,
   Search,
   Building2,
+  PawPrint,
   ShieldCheck,
   Radio,
   MessageCircle,
