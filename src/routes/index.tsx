@@ -189,10 +189,10 @@ function useTicker(initial: number, min: number, max: number, intervalMs = 3000)
 
 function Impact() {
   const { t, fmtNum, fmtMoney } = useI18n();
-  const located = useTicker(847, [1, 3], 2800);
-  const rescues = useTicker(123, [0, 1], 9000);
-  const lives = useTicker(34, [0, 1], 18000);
-  const donated = useTicker(47300, [5, 40], 3500);
+  const located = useTicker(847, 1, 3, 2800);
+  const rescues = useTicker(123, 0, 1, 9000);
+  const lives = useTicker(34, 0, 1, 18000);
+  const donated = useTicker(47300, 5, 40, 3500);
 
   const cards = [
     {
