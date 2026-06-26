@@ -34,7 +34,7 @@ const es: Dict = {
   "impact.donatedMicro": "De 3.247 personas como tú",
 
   "story.body":
-    "Ayer a las 6:04 PM, la tierra tembló. En 39 segundos, dos terremotos devastaron la costa norte de Venezuela. Edificios cayeron. Familias se separaron.\n\nProbablemente viste las noticias y te sentiste impotente. Nosotros también.\n\nAsí que no construimos otra página de caridad. Construimos herramientas. Reales. Para gente real. Ahora mismo.",
+    "El 24 de junio de 2026, a las 6:04 PM, la tierra tembló. En 39 segundos, dos terremotos devastaron la costa norte de Venezuela. Edificios cayeron. Familias se separaron.\n\nProbablemente viste las noticias y te sentiste impotente. Nosotros también.\n\nAsí que no construimos otra página de caridad. Reunimos herramientas reales, construidas por comunidades tech, para gente real. Ahora mismo.",
 
   "tools.title": "Soluciones activas en este momento",
   "tools.sub":
@@ -142,7 +142,7 @@ const en: Dict = {
   "impact.donatedMicro": "From 3,247 people like you",
 
   "story.body":
-    "Yesterday at 6:04 PM, the earth shook. In 39 seconds, two earthquakes devastated Venezuela's northern coast. Buildings collapsed. Families separated.\n\nYou probably saw the news and felt helpless. We felt the same.\n\nSo we didn't build a charity website. We built tools. Real tools. For real people. Right now.",
+    "On June 24, 2026, at 6:04 PM, the earth shook. In 39 seconds, two earthquakes devastated Venezuela's northern coast. Buildings collapsed. Families separated.\n\nYou probably saw the news and felt helpless. We felt the same.\n\nSo we didn't build another charity website. We gathered real tools, built by tech communities, for real people. Right now.",
 
   "tools.title": "Active solutions right now",
   "tools.sub":
