@@ -60,6 +60,11 @@ const es: Dict = {
     "Registro público de personas desaparecidas tras el terremoto. Permite registrar y buscar personas con foto, nombre, edad y ubicación. Más de 22.000 personas registradas hasta ahora.",
   "tool.search.cta": "Buscar o registrar",
 
+  "tool.hospitals.title": "Hospitales en Venezuela",
+  "tool.hospitals.desc":
+    "Digitaliza las listas de personas ingresadas en hospitales y centros de salud. Busca por nombre o cédula para saber si tu familiar está siendo atendido y en qué centro se encuentra.",
+  "tool.hospitals.cta": "Buscar en hospitales",
+
   "tools.disclaimer": "Estas herramientas son independientes, ciudadanas y no partidistas.",
   "tools.contribute.title": "¿Tu comunidad construyó una herramienta para esta emergencia?",
   "tools.contribute.sub": "Contáctanos para incluirla aquí o para ser parte de la comunidad AI for Good.",
