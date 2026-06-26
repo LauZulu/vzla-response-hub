@@ -200,6 +200,13 @@ const en: Dict = {
   "donate.cta": "Donation link coming soon",
   "donate.note": "While we enable the channel, write to us at",
 
+  "emergency.title": "Official information and emergency numbers",
+  "emergency.subtitle": "Verified lines. Some numbers may be congested.",
+  "emergency.numbers": "Emergency numbers",
+  "emergency.channels": "Official channels",
+  "emergency.disclaimer":
+    "Always verify information before sharing. This platform does not replace official authorities.",
+
   "trust.title": "This is real.",
   "trust.body":
     "This hub centralizes tools built by independent tech communities in response to the June 24, 2026 earthquake.",
