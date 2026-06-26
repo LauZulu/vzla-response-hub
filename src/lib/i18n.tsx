@@ -121,38 +121,24 @@ const en: Dict = {
   "story.body":
     "Yesterday at 6:04 PM, the earth shook. In 39 seconds, two earthquakes devastated Venezuela's northern coast. Buildings collapsed. Families separated.\n\nYou probably saw the news and felt helpless. We felt the same.\n\nSo we didn't build a charity website. We built tools. Real tools. For real people. Right now.",
 
-  "tools.title": "What you can do right now",
-  "tools.sub": "Six actions. Each real. Each takes minutes.",
+  "tools.title": "Active solutions right now",
+  "tools.sub":
+    "Tools built by tech communities. Live now. Use one. If you built another, contact us.",
 
-  "tool.find.title": "Find Missing People",
-  "tool.find.desc": "AI matches faces. Helps families reunite.",
-  "tool.find.cta": "Search now",
-  "tool.find.micro": "Takes 2 min",
+  "tool.map.title": "Structural damage map",
+  "tool.map.desc":
+    "Real-time tracking of buildings affected by the earthquake. Citizens report damage classified by total collapse, severe damage, and partial damage. Rescue teams use it to prioritize operations.",
+  "tool.map.cta": "Open the map",
 
-  "tool.donate.title": "Donate Directly",
-  "tool.donate.desc": "Secure payment. Next person helped in: 3 minutes.",
-  "tool.donate.cta": "Donate $25",
-  "tool.donate.micro": "Stripe · Wise · Crypto",
+  "tool.missing.title": "Missing persons reports",
+  "tool.missing.desc":
+    "Citizen platform to report and search for missing people. Users create reports with name, location, and photo. When someone is found, the status updates in real time.",
+  "tool.missing.cta": "Search or report",
 
-  "tool.volunteer.title": "Volunteer",
-  "tool.volunteer.desc": "We match you with a team based on your skills.",
-  "tool.volunteer.cta": "Sign up",
-  "tool.volunteer.micro": "Join 500+ helpers",
-
-  "tool.updates.title": "Get Real Updates",
-  "tool.updates.desc": "Notifications when there's progress, not spam.",
-  "tool.updates.cta": "Turn on alerts",
-  "tool.updates.micro": "1 tap, opt-out anytime",
-
-  "tool.impact.title": "See Impact",
-  "tool.impact.desc": "Full transparency dashboard. Every peso logged.",
-  "tool.impact.cta": "Open dashboard",
-  "tool.impact.micro": "Live data",
-
-  "tool.offline.title": "Use Tools Offline",
-  "tool.offline.desc": "Download the toolkit. Works without internet.",
-  "tool.offline.cta": "Download",
-  "tool.offline.micro": "For low-signal zones",
+  "tools.disclaimer": "These tools are independent, citizen-led, and nonpartisan.",
+  "tools.contribute.title": "Did your community build a tool for this emergency?",
+  "tools.contribute.sub": "Contact us to include it here.",
+  "tools.contribute.cta": "Write to us",
 
   "social.title": "Who's already helping",
   "social.ago": "{n} hours ago",
