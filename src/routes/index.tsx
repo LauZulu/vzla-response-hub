@@ -437,7 +437,71 @@ function Push() {
   );
 }
 
+/* ───────────────────────── Prepare ───────────────────────── */
+
+const PREP_ITEMS = [
+  { key: "during", icon: AlertTriangle, color: "coral" },
+  { key: "kit", icon: Briefcase, color: "teal" },
+  { key: "after", icon: HomeIcon, color: "trust" },
+] as const;
+
+function Prepare() {
+  const { t } = useI18n();
+  const shareUrl =
+    typeof window !== "undefined" ? `${window.location.origin}${window.location.pathname}#prepare` : "";
+  const waHref = `https://wa.me/?text=${encodeURIComponent(`${t("prep.shareMsg")} ${shareUrl}`.trim())}`;
+
+  return (
+    <section id="prepare" className="mx-auto max-w-6xl px-4 py-16 sm:py-24">
+      <div className="max-w-2xl mb-10">
+        <h2 className="font-serif text-2xl sm:text-3xl">{t("prep.title")}</h2>
+        <p className="mt-2 text-[14px] text-muted-foreground leading-relaxed">{t("prep.sub")}</p>
+      </div>
+
+      <Accordion type="single" collapsible className="flex flex-col gap-4 max-w-3xl">
+        {PREP_ITEMS.map(({ key, icon: Icon, color }) => {
+          const c = COLOR_CLASSES[color];
+          return (
+            <AccordionItem
+              key={key}
+              value={key}
+              className="relative rounded-2xl border border-border bg-card px-6 sm:px-8 border-b"
+            >
+              <span className={`absolute left-0 top-6 h-12 w-1 rounded-r ${c.bar}`} aria-hidden />
+              <AccordionTrigger className="py-5 hover:no-underline">
+                <div className="flex items-center gap-3">
+                  <span className={`inline-flex size-9 items-center justify-center rounded-lg bg-muted ${c.icon}`}>
+                    <Icon className="size-4" strokeWidth={1.6} />
+                  </span>
+                  <span className="font-serif text-lg font-bold text-left">{t(`prep.${key}.title`)}</span>
+                </div>
+              </AccordionTrigger>
+              <AccordionContent className="text-[14px] leading-relaxed text-foreground/90 pl-12 pr-2">
+                {t(`prep.${key}.body`)}
+              </AccordionContent>
+            </AccordionItem>
+          );
+        })}
+      </Accordion>
+
+      <div className="mt-8 max-w-3xl flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+        <p className="text-[12px] text-muted-foreground">{t("prep.source")}</p>
+        <a
+          href={waHref}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex shrink-0 items-center justify-center gap-1.5 rounded-full border border-foreground/80 px-4 py-2 text-sm font-medium text-foreground hover:bg-foreground hover:text-background transition"
+        >
+          <MessageCircle className="size-3.5" />
+          {t("prep.share")}
+        </a>
+      </div>
+    </section>
+  );
+}
+
 /* ───────────────────────── Trust ───────────────────────── */
+
 
 function Trust() {
   const { t } = useI18n();
