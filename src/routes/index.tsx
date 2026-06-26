@@ -303,11 +303,18 @@ const SOLUTIONS = [
     color: "teal",
     href: "https://desaparecidosterremotovenezuela.com",
   },
+  {
+    key: "vision",
+    icon: Camera,
+    color: "trust",
+    href: "https://lo-la-has-visto-48680439362.us-west1.run.app",
+  },
 ] as const;
 
 const COLOR_CLASSES: Record<string, { bar: string; icon: string; btn: string }> = {
   coral: { bar: "bg-coral", icon: "text-coral", btn: "bg-coral text-coral-foreground" },
   teal: { bar: "bg-teal", icon: "text-teal", btn: "bg-teal text-teal-foreground" },
+  trust: { bar: "bg-trust", icon: "text-trust", btn: "bg-trust text-trust-foreground" },
 };
 
 function Tools() {
