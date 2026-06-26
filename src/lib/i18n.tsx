@@ -36,6 +36,10 @@ const es: Dict = {
   "tools.title": "Soluciones activas en este momento",
   "tools.sub":
     "Herramientas construidas por comunidades tech. Funcionando ahora. Usa una. Si construiste otra, contáctanos.",
+  "tools.search.placeholder": "Buscar por palabra clave (ej: desaparecidos, hospitales, mapa...)",
+  "tools.search.empty": "No se encontraron soluciones con ese término.",
+
+
 
   "tool.map.title": "Mapa de daños estructurales",
   "tool.map.desc":
