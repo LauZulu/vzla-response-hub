@@ -239,6 +239,14 @@ const es: Dict = {
   "help.supplies.cat.shelter.items": "Cobijas, carpas, colchonetas, lonas plásticas, sacos de dormir, cuerdas, frazadas.",
   "help.supplies.cat.clothing.title": "Ropa",
   "help.supplies.cat.clothing.items": "Ropa en buen estado y limpia, para todas las edades. Abrigos, cobijas, calzado.",
+
+  "help.supplies.moreBogota.title": "Más puntos en Bogotá",
+  "help.supplies.otherCities.title": "Otras ciudades de Colombia",
+  "help.supplies.international.title": "Centros de acopio internacionales",
+  "help.supplies.pets.title": "Donación para mascotas (Puntos Laika Bogotá)",
+  "help.supplies.pets.needs": "Qué reciben: alimento húmedo y seco (perros y gatos), arena sanitaria, medicamentos básicos, mantas, guacales, collares, platitos.",
+  "help.supplies.pets.also": "También reciben en: CLINIHOGAR (Calle 50 #14-34 Teusaquillo) y La Panadería Rusa (Chapinero, Zona Rosa).",
+
   "help.people.card.title": "Busca o reporta personas",
   "help.people.card.sub": "Si perdiste contacto con alguien, búscalo aquí. Si encontraste a alguien, repórtalo.",
   "help.people.btn": "Buscar persona",
