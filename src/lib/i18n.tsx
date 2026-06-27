@@ -620,7 +620,7 @@ const en: Dict = {
     "This hub centralizes tools built by independent tech communities in response to the June 24, 2026 earthquake.",
 
   "cta.button": "Donate / Help / Share",
-  "cta.rot1": "200+ people are still missing",
+  "cta.rot1": "50,000+ people reported missing",
   "cta.rot2": "Your help matters. Right now.",
   "cta.rot3": "34 lives saved so far. Let's make it 50.",
 
@@ -657,7 +657,7 @@ const en: Dict = {
   "quick.damage.note": "Verified team · Photo + GPS",
   "quick.damage.sub": "Inside Venezuela: use VenApp (official government app)",
   "quick.donate.label": "I want to donate",
-  "quick.donate.note": "Colombian Red Cross · Direct online donation · Secure card payment",
+  "quick.donate.note": "Colombian Red Cross · Direct online donation · Secure payment",
   "quick.donate.sub": "Also: GlobalGiving, Caritas, World Central Kitchen",
   "quick.emergency": "Medical emergency? Call 0800-0-000-911",
 
@@ -687,7 +687,7 @@ const en: Dict = {
 
   // New tool
   "tool.vresiste.title": "Venezuela Resiste",
-  "tool.vresiste.desc": "Citizen initiative that centralizes information on damage, shelters and needs in one browsable view. Built and maintained by volunteers.",
+  "tool.vresiste.desc": "Single view with damage, shelters and needs reported by citizens. Browsable by zone and emergency type.",
   "tool.vresiste.cta": "Open platform",
 
   "tool.sismoayuda.title": "SismoAyuda VE — Structural assessment",
@@ -702,13 +702,13 @@ const en: Dict = {
 
   "tool.filosos.title": "Community aid network",
   "tool.filosos.desc":
-    "Request or offer help in real time. Report emergencies, share resources and find assistance nearby. Includes child reports and supply distribution.",
-  "tool.filosos.cta": "Open",
+    "Request or offer help nearby. Report emergencies, unaccompanied children and supply needs by zone. Real-time citizen network.",
+  "tool.filosos.cta": "Request or offer help",
 
   "tool.ayudahumvzla.title": "Ayuda humanitaria Venezuela",
   "tool.ayudahumvzla.desc":
     "Centralized platform to donate, register as a volunteer or register your collection center. Coordinates supply distribution and support requests in one place.",
-  "tool.ayudahumvzla.cta": "Open",
+  "tool.ayudahumvzla.cta": "Donate or volunteer",
 
   // Layer 3
   "build.layer.title": "Got technical skills?",
