@@ -141,6 +141,12 @@ const es: Dict = {
     "Equipo desplegado en Venezuela proporcionando comidas calientes a comunidades afectadas y equipos de rescate. Fundada por el chef José Andrés.",
   "tool.wck.cta": "Donar",
 
+  "tool.entrepanas.title": "entrepanas — Trazabilidad de donaciones",
+  "tool.entrepanas.desc":
+    "Plataforma que muestra a dónde llega realmente tu ayuda. Los destinatarios verificados publican recibos, facturas y fotos de lo que se compró con cada donación. entrepanas nunca toca los fondos — van directo al destinatario. Construida durante el Build for Venezuela Hackathon.",
+  "tool.entrepanas.cta": "Explorar destinatarios",
+
+
   "tool.code4vzla.title": "Code for Venezuela",
   "tool.code4vzla.desc":
     "ONG que conecta tecnólogos con las necesidades más urgentes de Venezuela. Años de experiencia construyendo plataformas de datos para respuesta humanitaria.",
@@ -420,6 +426,12 @@ const en: Dict = {
   "tool.wck.desc":
     "Team deployed in Venezuela providing hot meals to affected communities and rescue crews. Founded by chef José Andrés.",
   "tool.wck.cta": "Donate",
+
+  "tool.entrepanas.title": "entrepanas — Donation traceability",
+  "tool.entrepanas.desc":
+    "Platform that shows where your help actually lands. Verified recipients post receipts, invoices and photos of what was bought with each donation. entrepanas never touches the funds — they go straight to the recipient. Built during the Build for Venezuela Hackathon.",
+  "tool.entrepanas.cta": "Explore recipients",
+
 
   "tool.code4vzla.title": "Code for Venezuela",
   "tool.code4vzla.desc":
