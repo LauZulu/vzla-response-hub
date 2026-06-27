@@ -78,7 +78,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { name: "theme-color", content: "#1D9E75" },
-      { title: "Venezuela Earthquake Response Hub" },
+      { title: "VZLA Response Hub" },
       {
         name: "description",
         content:
