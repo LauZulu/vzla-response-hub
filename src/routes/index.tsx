@@ -396,11 +396,12 @@ const SECTIONS: Section[] = [
       {
         id: "shelters-main",
         tools: [
+          { key: "ayudahumvzla", icon: Package, color: "#003893", href: "https://www.ayudahumanitariavenezuela.com", trust: "community", featured: true, updated: { kind: "active" } },
           { key: "shelters", icon: MapPin, color: "#2E7D32", href: "https://acopios-refugios.vercel.app", trust: "community", updated: { kind: "active" } },
           { key: "ayudave", icon: HeartHandshake, color: "#003893", href: "https://ayudahumanitariavenezuela.com", trust: "community", updated: { kind: "active" } },
-          { key: "ayudahumvzla", icon: Package, color: "#003893", href: "https://www.ayudahumanitariavenezuela.com", trust: "community", updated: { kind: "active" } },
           { key: "pets", icon: PawPrint, color: "#BA7517", href: "https://www.huellascan.com/terremoto", trust: "community", updated: { kind: "active" } },
         ],
+
       },
     ],
   },
