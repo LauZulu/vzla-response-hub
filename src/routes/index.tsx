@@ -31,6 +31,7 @@ import {
   Hammer,
   Link2,
   Building,
+  Stethoscope,
   type LucideIcon,
 } from "lucide-react";
 import {
@@ -376,6 +377,7 @@ const SECTIONS: Section[] = [
         id: "comms-main",
         tools: [
           { key: "recursos", icon: ListChecks, color: "#4D7C0F", href: "https://recursos-venezuela.netlify.app", trust: "verified", recommended: true, updated: { kind: "active" } },
+          { key: "sosreservadoc", icon: Stethoscope, color: "#DC2626", href: "https://sos.reservadoc.com", trust: "verified", updated: { kind: "active" } },
           { key: "talk360", icon: PhoneCall, color: "#7C3AED", href: "https://talk360.com", trust: "unverified", updated: { kind: "recent", date: "25 jun 2026" } },
           { key: "hospitals", icon: Building2, color: "#534AB7", href: "https://hospitalesenvenezuela.com", trust: "community", updated: { kind: "active" } },
         ],
