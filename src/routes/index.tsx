@@ -900,7 +900,7 @@ function Push() {
         <p className="text-[15px] leading-relaxed text-foreground">{t("help.emotional")}</p>
       </div>
 
-      <div className="grid gap-5 md:grid-cols-3">
+      <div className="grid gap-5 md:grid-cols-2">
         {/* CARD 1: Money */}
         <article className="relative rounded-2xl border border-border bg-card p-6 flex flex-col">
           <span className="absolute left-0 top-8 h-12 w-1 rounded-r bg-teal" aria-hidden />
