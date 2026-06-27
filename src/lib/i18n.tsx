@@ -314,6 +314,16 @@ const es: Dict = {
     "Plataforma de teleconsultas gratuitas para descongestionar hospitales en Venezuela. Si eres médico puedes registrarte para atender pacientes remotamente desde cualquier país. Impulsada por Andrés Bilbao, cofundador de Rappi.",
   "tool.sosreservadoc.cta": "Atender o consultar",
 
+  "tool.filosos.title": "Red de ayuda comunitaria",
+  "tool.filosos.desc":
+    "Solicita u ofrece ayuda en tiempo real. Reporta emergencias, comparte recursos y encuentra asistencia cerca de ti. Incluye reporte de niños y distribución de insumos.",
+  "tool.filosos.cta": "Acceder",
+
+  "tool.ayudahumvzla.title": "Ayuda humanitaria Venezuela",
+  "tool.ayudahumvzla.desc":
+    "Plataforma centralizada para donar, registrarte como voluntario o registrar tu centro de acopio. Coordina la distribución de insumos y solicitudes de apoyo en un solo lugar.",
+  "tool.ayudahumvzla.cta": "Acceder",
+
 
   // Capa 3
   "build.layer.title": "¿Tienes habilidades técnicas?",
@@ -631,6 +641,16 @@ const en: Dict = {
   "tool.sosreservadoc.desc":
     "Free teleconsultation platform to relieve pressure on hospitals in Venezuela. If you are a doctor, sign up to treat patients remotely from any country. Backed by Andrés Bilbao, co-founder of Rappi.",
   "tool.sosreservadoc.cta": "Treat or consult",
+
+  "tool.filosos.title": "Community aid network",
+  "tool.filosos.desc":
+    "Request or offer help in real time. Report emergencies, share resources and find assistance nearby. Includes child reports and supply distribution.",
+  "tool.filosos.cta": "Open",
+
+  "tool.ayudahumvzla.title": "Ayuda humanitaria Venezuela",
+  "tool.ayudahumvzla.desc":
+    "Centralized platform to donate, register as a volunteer or register your collection center. Coordinates supply distribution and support requests in one place.",
+  "tool.ayudahumvzla.cta": "Open",
 
   // Layer 3
   "build.layer.title": "Got technical skills?",
