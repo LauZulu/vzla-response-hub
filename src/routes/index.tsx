@@ -475,7 +475,7 @@ function ToolCard({ tool }: { tool: Tool }) {
         {tool.recommended && <RecommendedBadge />}
         <TrustBadge kind={tool.trust} />
       </div>
-      <div className="mb-4 inline-flex size-11 items-center justify-center rounded-xl bg-muted" style={{ color: tool.color }}>
+      <div className="mb-4 inline-flex size-11 items-center justify-center rounded-xl bg-muted" style={{ color: tool.color }} aria-hidden>
         <Icon className="size-5" strokeWidth={1.6} />
       </div>
       <h3 className="font-serif text-[18px] font-bold pr-2 mt-8">{t(`tool.${tool.key}.title`)}</h3>
@@ -486,11 +486,12 @@ function ToolCard({ tool }: { tool: Tool }) {
           href={tool.href}
           target="_blank"
           rel="noreferrer"
-          className="inline-flex items-center gap-1.5 rounded-full px-4 py-2 text-sm font-medium text-white hover:opacity-90 transition"
+          aria-label={`${t(`tool.${tool.key}.cta`)} — ${t(`tool.${tool.key}.title`)} (${t("a11y.newTab")})`}
+          className="inline-flex items-center gap-1.5 rounded-full px-4 py-2 text-sm font-medium text-white hover:opacity-90 transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
           style={{ backgroundColor: tool.color }}
         >
           {t(`tool.${tool.key}.cta`)}
-          <ArrowRight className="size-3.5" />
+          <ArrowRight className="size-3.5" aria-hidden />
         </a>
       </div>
     </article>
