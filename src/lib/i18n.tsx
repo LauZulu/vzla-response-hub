@@ -64,41 +64,41 @@ const es: Dict = {
   "tool.map.title": "Mapa de daños estructurales",
   "tool.map.desc":
     "Seguimiento en tiempo real de edificios afectados por el terremoto. Ciudadanos reportan daños clasificados por colapso total, daño severo y daño parcial. Rescatistas lo usan para priorizar operaciones.",
-  "tool.map.cta": "Acceder al mapa",
+  "tool.map.cta": "Ver mapa",
 
   "tool.missing.title": "Reporte de personas desaparecidas",
   "tool.missing.desc":
     "Plataforma ciudadana para reportar y buscar personas desaparecidas. Los usuarios crean reportes con nombre, ubicación y foto. Cuando alguien es localizado, se actualiza el estado en tiempo real.",
-  "tool.missing.cta": "Buscar o reportar",
+  "tool.missing.cta": "Buscar persona",
 
   "tool.vision.title": "Identificación visual con IA",
   "tool.vision.desc":
-    "Herramienta de inteligencia artificial que facilita la identificación de personas a partir de imágenes compartidas en redes sociales y grupos de mensajería durante la emergencia.",
-  "tool.vision.cta": "Usar herramienta",
+    "Sube una foto de alguien que buscas o que encontraste. La IA compara con imágenes publicadas en redes y grupos de mensajería para facilitar la identificación.",
+  "tool.vision.cta": "Identificar persona",
 
   "tool.search.title": "Venezuela te busca",
   "tool.search.desc":
     "Registro público de personas desaparecidas tras el terremoto. Permite registrar y buscar personas con foto, nombre, edad y ubicación. Más de 22.000 personas registradas hasta ahora.",
-  "tool.search.cta": "Buscar o registrar",
+  "tool.search.cta": "Buscar persona",
 
   "tool.hospitals.title": "Hospitales en Venezuela",
   "tool.hospitals.desc":
-    "Digitaliza las listas de personas ingresadas en hospitales y centros de salud. Busca por nombre o cédula para saber si tu familiar está siendo atendido y en qué centro se encuentra.",
+    "Busca si tu familiar está ingresado en un hospital. Digitaliza listas de pacientes por nombre o cédula. Cubre centros de salud en las zonas afectadas.",
   "tool.hospitals.cta": "Buscar en hospitales",
 
   "tool.pets.title": "Mascotas perdidas y encontradas",
   "tool.pets.desc":
-    "Plataforma de emergencia para reportar y buscar mascotas extraviadas tras el terremoto. Publica sin registro. Más de 800 reportes activos entre perdidos y encontrados.",
+    "Reporta o busca mascotas extraviadas tras el terremoto. Sin registro. Fotos y ubicación. Más de 800 reportes activos.",
   "tool.pets.cta": "Buscar o reportar mascota",
 
   "tool.triage.title": "Pre-triage estructural",
   "tool.triage.desc":
-    "Evaluación rápida de daños estructurales basada en el Boletín 61 de la Academia Nacional de Ingeniería. Identifica riesgo de colapso. Útil para ingenieros, inspectores y ciudadanos.",
+    "Responde un formulario sobre el estado de tu edificio y recibe una evaluación preliminar de riesgo de colapso. Basado en protocolo de ingeniería venezolana (Boletín 61 ANIH).",
   "tool.triage.cta": "Evaluar estructura",
 
   "tool.shelters.title": "Centros de acopio y refugios",
   "tool.shelters.desc":
-    "Mapa colaborativo para registrar y localizar centros de acopio de ayuda y refugios disponibles en Venezuela. Reporta puntos verificados para que la ayuda llegue donde se necesita.",
+    "Mapa para encontrar o registrar puntos de acopio y refugios activos en Venezuela. Verificado por ciudadanos.",
   "tool.shelters.cta": "Ver mapa o reportar",
 
   "tool.ayudave.title": "AyudaVE — Ayuda humanitaria",
