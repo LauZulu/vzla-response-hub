@@ -30,6 +30,7 @@ import {
   Terminal,
   Hammer,
   Link2,
+  Building,
   type LucideIcon,
 } from "lucide-react";
 import {
@@ -362,6 +363,7 @@ const SECTIONS: Section[] = [
           { key: "sosvzla", icon: MapPinned, color: "#1E3A5F", href: "https://sosvenezuela2026.com", trust: "community", updated: { kind: "active" } },
           { key: "triage", icon: Castle, color: "#11243E", href: "https://pretriageestructuralvenezuela.netlify.app", trust: "unverified", updated: { kind: "recent", date: "25 jun 2026" } },
           { key: "vresiste", icon: MapPinned, color: "#0E7490", href: "https://terremotove.netlify.app", trust: "community", updated: { kind: "recent", date: "25 jun 2026" } },
+          { key: "sismoayuda", icon: Building, color: "#1E3A5F", href: "https://www.sismoayudave.com", trust: "verified", updated: { kind: "active" } },
         ],
       },
     ],

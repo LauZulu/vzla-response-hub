@@ -292,6 +292,11 @@ const es: Dict = {
   "tool.vresiste.desc": "Iniciativa ciudadana que centraliza información sobre daños, refugios y necesidades en una sola vista navegable. Construida y mantenida por voluntarios.",
   "tool.vresiste.cta": "Abrir plataforma",
 
+  "tool.sismoayuda.title": "SismoAyuda VE — Evaluación estructural",
+  "tool.sismoayuda.desc":
+    "Sube fotos de los daños de tu edificio y un ingeniero civil voluntario las revisa remotamente. Recibes un informe de habitabilidad por email con clasificación y recomendaciones. Gratis, sin registro, con estándares técnicos ATC-20 y EMS-98.",
+  "tool.sismoayuda.cta": "Reportar mi edificación",
+
   // Capa 3
   "build.layer.title": "¿Tienes habilidades técnicas?",
   "build.layer.sub": "Puedes construir herramientas que salven vidas este fin de semana.",
@@ -586,6 +591,11 @@ const en: Dict = {
   "tool.vresiste.title": "Venezuela Resiste",
   "tool.vresiste.desc": "Citizen initiative that centralizes information on damage, shelters and needs in one browsable view. Built and maintained by volunteers.",
   "tool.vresiste.cta": "Open platform",
+
+  "tool.sismoayuda.title": "SismoAyuda VE — Structural assessment",
+  "tool.sismoayuda.desc":
+    "Upload photos of damage to your building and a volunteer civil engineer reviews them remotely. You get a habitability report by email with classification and recommendations. Free, no signup, using ATC-20 and EMS-98 technical standards.",
+  "tool.sismoayuda.cta": "Report my building",
 
   // Layer 3
   "build.layer.title": "Got technical skills?",
