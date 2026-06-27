@@ -123,6 +123,7 @@ function SectionDivider() {
 
 function TopBar() {
   const { t, lang, setLang } = useI18n();
+  const updated = useClientDateTime(lang);
   return (
     <header className="sticky top-0 z-40 border-b border-border/70 bg-background/85 backdrop-blur">
       <div className="bg-muted/60 text-[11px] sm:text-xs text-muted-foreground">
@@ -131,15 +132,20 @@ function TopBar() {
           <span className="truncate">{t("nav.convenedBy")}</span>
         </div>
       </div>
-      <div className="mx-auto max-w-6xl px-4 h-12 flex items-center justify-between">
-        <a href="#" className="flex items-center gap-2 group" aria-label={t("nav.logo")}>
-          <span className="relative inline-flex size-2.5">
+      <div className="mx-auto max-w-6xl px-4 h-12 flex items-center justify-between gap-3">
+        <a href="#" className="flex items-center gap-2 group min-w-0" aria-label={t("nav.logo")}>
+          <span className="relative inline-flex size-2.5 shrink-0">
             <span className="absolute inset-0 rounded-full bg-coral animate-ping opacity-60" />
             <span className="relative inline-flex size-2.5 rounded-full bg-coral" />
           </span>
-          <span className="font-serif text-sm tracking-tight">{t("nav.logo")}</span>
+          <span className="font-serif text-sm tracking-tight truncate">{t("nav.logo")}</span>
         </a>
-        <LangToggle lang={lang} setLang={setLang} />
+        <div className="flex items-center gap-3 shrink-0">
+          <span className="hidden sm:inline text-[11px] text-muted-foreground tnum">
+            {t("nav.lastUpdate")}: {updated || "—"}
+          </span>
+          <LangToggle lang={lang} setLang={setLang} />
+        </div>
       </div>
     </header>
   );
