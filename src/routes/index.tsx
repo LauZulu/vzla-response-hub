@@ -457,7 +457,7 @@ function UpdatedIndicator({ updated }: { updated: Updated }) {
     : updated.kind === "inactive" ? t("tools.updated.inactive")
     : t("tools.updated.recent", { date: updated.date });
   return (
-    <p className="mt-2 inline-flex items-center gap-1.5" style={{ fontSize: "11px", color: "#9CA3AF" }}>
+    <p className="mt-2 inline-flex items-center gap-1.5" style={{ fontSize: "11px", color: "#6B7280" }}>
       <span className="inline-block size-1.5 rounded-full" style={{ backgroundColor: dotColor }} aria-hidden />
       {label}
     </p>
