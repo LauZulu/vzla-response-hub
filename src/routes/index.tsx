@@ -775,7 +775,7 @@ function Push() {
       details: t("help.money.d.details"),
       pill: t("help.money.d.pill"),
       pillTone: "green" as const,
-      cta: { href: "https://ayuda.cruzrojacolombiana.org", label: t("help.money.d.cta") },
+      cta: { href: "https://ayuda.cruzrojacolombiana.org/#afrus-container", label: t("help.money.d.cta") },
     },
   ];
 
