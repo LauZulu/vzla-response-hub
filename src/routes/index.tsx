@@ -316,8 +316,10 @@ type Tool = {
   href: string;
   trust: Trust;
   recommended?: boolean;
+  featured?: boolean;
   updated: Updated;
 };
+
 
 type Subgroup = {
   id: string;
@@ -343,12 +345,13 @@ const SECTIONS: Section[] = [
         titleKey: "tools.subgroup.people.title",
         noteKey: "tools.subgroup.people.note",
         tools: [
+          { key: "missing", icon: Users, color: "#1D9E75", href: "https://desaparecidosterremotovenezuela.com", trust: "community", featured: true, updated: { kind: "active" } },
           { key: "search", icon: Search, color: "#3B6D11", href: "https://venezuelatebusca.com", trust: "verified", recommended: true, updated: { kind: "active" } },
-          { key: "missing", icon: Users, color: "#1D9E75", href: "https://desaparecidosterremotovenezuela.com", trust: "community", updated: { kind: "active" } },
           { key: "redayuda", icon: ShieldCheck, color: "#DC2626", href: "https://redayudavenezuela.com", trust: "community", updated: { kind: "active" } },
           { key: "filosos", icon: Heart, color: "#D32F2F", href: "https://filosos.site", trust: "community", updated: { kind: "active" } },
           { key: "vision", icon: Camera, color: "#185FA5", href: "https://lo-la-has-visto-48680439362.us-west1.run.app", trust: "unverified", updated: { kind: "recent", date: "25 jun 2026" } },
         ],
+
       },
     ],
   },
@@ -393,11 +396,12 @@ const SECTIONS: Section[] = [
       {
         id: "shelters-main",
         tools: [
+          { key: "ayudahumvzla", icon: Package, color: "#003893", href: "https://www.ayudahumanitariavenezuela.com", trust: "community", featured: true, updated: { kind: "active" } },
           { key: "shelters", icon: MapPin, color: "#2E7D32", href: "https://acopios-refugios.vercel.app", trust: "community", updated: { kind: "active" } },
           { key: "ayudave", icon: HeartHandshake, color: "#003893", href: "https://ayudahumanitariavenezuela.com", trust: "community", updated: { kind: "active" } },
-          { key: "ayudahumvzla", icon: Package, color: "#003893", href: "https://www.ayudahumanitariavenezuela.com", trust: "community", updated: { kind: "active" } },
           { key: "pets", icon: PawPrint, color: "#BA7517", href: "https://www.huellascan.com/terremoto", trust: "community", updated: { kind: "active" } },
         ],
+
       },
     ],
   },
@@ -458,6 +462,19 @@ function RecommendedBadge() {
   );
 }
 
+function FeaturedBadge() {
+  const { t } = useI18n();
+  return (
+    <span
+      className="inline-flex items-center text-white"
+      style={{ backgroundColor: "#1D9E75", fontSize: "12px", padding: "4px 8px", fontWeight: 600, borderRadius: "4px" }}
+    >
+      {t("tools.featured")}
+    </span>
+  );
+}
+
+
 function UpdatedIndicator({ updated }: { updated: Updated }) {
   const { t } = useI18n();
   const dotColor =
@@ -481,8 +498,10 @@ function ToolCard({ tool }: { tool: Tool }) {
     <article className="relative flex flex-col rounded-2xl border border-border bg-card p-6 sm:p-7 transition hover:-translate-y-0.5 hover:shadow-[0_10px_40px_-20px_rgb(0_0_0/0.25)]">
       <span className="absolute left-0 top-8 h-12 w-1 rounded-r" style={{ backgroundColor: tool.color }} aria-hidden />
       <div className="absolute right-3 top-3 flex flex-wrap justify-end gap-1.5 max-w-[60%]">
+        {tool.featured && <FeaturedBadge />}
         {tool.recommended && <RecommendedBadge />}
         <TrustBadge kind={tool.trust} />
+
       </div>
       <div className="mb-4 inline-flex size-11 items-center justify-center rounded-xl bg-muted" style={{ color: tool.color }} aria-hidden>
         <Icon className="size-5" strokeWidth={1.6} />
