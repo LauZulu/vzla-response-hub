@@ -1089,26 +1089,6 @@ function Push() {
           </Accordion>
         </article>
 
-        {/* CARD 3: People */}
-        <article className="relative rounded-2xl border border-border bg-card p-6 flex flex-col">
-          <span className="absolute left-0 top-8 h-12 w-1 rounded-r bg-trust" aria-hidden />
-          <Users className="size-6 text-trust" />
-          <h3 className="mt-3 font-serif text-[18px] font-bold">{t("help.people.card.title")}</h3>
-          <p className="mt-1 text-[14px] text-muted-foreground leading-relaxed">{t("help.people.card.sub")}</p>
-
-          <a
-            href="https://desaparecidosterremotovenezuela.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-5 inline-flex items-center justify-center gap-1.5 rounded-full bg-trust text-trust-foreground px-4 py-2.5 text-sm font-medium hover:opacity-90 transition"
-          >
-            {t("help.people.btn")}
-            <ArrowRight className="size-3.5" />
-          </a>
-
-          <p className="mt-3 text-[14px] text-muted-foreground leading-relaxed">{t("help.people.belowBtn")}</p>
-          <p className="mt-3 text-[13px] text-muted-foreground leading-relaxed">{t("help.people.crossRoja")}</p>
-        </article>
       </div>
 
       <p className="mt-8 text-[12px] text-muted-foreground text-center leading-relaxed">{t("help.disclaimer")}</p>
