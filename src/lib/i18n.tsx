@@ -421,47 +421,43 @@ const en: Dict = {
   "tool.map.title": "Structural damage map",
   "tool.map.desc":
     "Real-time tracking of buildings affected by the earthquake. Citizens report damage classified by total collapse, severe damage, and partial damage. Rescue teams use it to prioritize operations.",
-  "tool.map.cta": "Open the map",
+  "tool.map.cta": "View map",
 
   "tool.missing.title": "Missing persons reports",
   "tool.missing.desc":
     "Citizen platform to report and search for missing people. Users create reports with name, location, and photo. When someone is found, the status updates in real time.",
-  "tool.missing.cta": "Search or report",
+  "tool.missing.cta": "Search for a person",
 
   "tool.vision.title": "AI-powered visual identification",
   "tool.vision.desc":
-    "AI tool that helps identify people from images shared on social media and messaging groups during the emergency.",
-  "tool.vision.cta": "Use the tool",
+    "Upload a photo of someone you're looking for or someone you found. AI compares it with images published on social media and messaging groups to help identify them.",
+  "tool.vision.cta": "Identify person",
 
   "tool.search.title": "Venezuela te busca",
   "tool.search.desc":
     "Public registry of people missing after the earthquake. Register or search for people with photo, name, age, and location. Over 22,000 people registered so far.",
-  "tool.search.cta": "Search or register",
+  "tool.search.cta": "Search for a person",
 
   "tool.hospitals.title": "Hospitals in Venezuela",
   "tool.hospitals.desc":
-    "Digitizes the lists of people admitted to hospitals and health centers. Search by name or ID to find out if your relative is being treated and at which center.",
+    "Find out if your relative is admitted to a hospital. Digitized patient lists by name or ID. Covers health centers in the affected areas.",
   "tool.hospitals.cta": "Search hospitals",
 
   "tool.pets.title": "Lost and found pets",
   "tool.pets.desc":
-    "Emergency platform to report and search for pets lost after the earthquake. Post without registering. Over 800 active reports between lost and found.",
+    "Report or search for pets lost after the earthquake. No registration required. Photos and location. Over 800 active reports.",
   "tool.pets.cta": "Search or report a pet",
 
   "tool.triage.title": "Structural pre-triage",
   "tool.triage.desc":
-    "Rapid structural damage assessment based on Bulletin 61 of the National Academy of Engineering. Identifies collapse risk. Useful for engineers, inspectors and citizens.",
+    "Answer a questionnaire about your building's condition and receive a preliminary collapse risk assessment. Based on Venezuelan engineering protocol (Bulletin 61 ANIH).",
   "tool.triage.cta": "Assess a structure",
 
   "tool.shelters.title": "Aid collection points and shelters",
   "tool.shelters.desc":
-    "Collaborative map to register and locate aid collection points and shelters available in Venezuela. Report verified locations so help reaches where it is needed.",
+    "Map to find or register active aid collection points and shelters in Venezuela. Verified by citizens.",
   "tool.shelters.cta": "View map or report",
 
-  "tool.ayudave.title": "AyudaVE — Humanitarian aid",
-  "tool.ayudave.desc":
-    "Platform to donate, sign up as a volunteer, or register your collection center in under a minute. Connects donors, volunteers and aid centers in one place.",
-  "tool.ayudave.cta": "Donate or volunteer",
 
 
   "tool.redayuda.title": "Red Ayuda Venezuela",
