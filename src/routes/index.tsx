@@ -664,6 +664,8 @@ function Tools() {
 /* ───────────────────────── Emergency ───────────────────────── */
 
 const EMERGENCY_NUMBERS = [
+  { entity: "Protección Civil", number: "166", tel: "166" },
+  { entity: "Bomberos", number: "167", tel: "167" },
   { entity: "Movistar", number: "911", tel: "911" },
   { entity: "Digitel", number: "112", tel: "112" },
   { entity: "Movilnet", number: "*1", tel: "*1" },
