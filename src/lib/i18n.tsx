@@ -278,7 +278,7 @@ const es: Dict = {
   "quick.damage.note": "Equipo verificado · Foto + GPS",
   "quick.damage.sub": "Dentro de Venezuela: usa VenApp (app oficial del gobierno)",
   "quick.donate.label": "Quiero donar",
-  "quick.donate.note": "Cruz Roja Internacional · Apelación de emergencia por $50M para 300.000 personas",
+  "quick.donate.note": "Cruz Roja Colombiana · Donacion directa online · Pago seguro con tarjeta",
   "quick.donate.sub": "También: GlobalGiving, Cáritas, World Central Kitchen",
   "quick.emergency": "¿Tienes una emergencia médica? Llama al 0800-0-000-911",
 
@@ -613,7 +613,7 @@ const en: Dict = {
   "quick.damage.note": "Verified team · Photo + GPS",
   "quick.damage.sub": "Inside Venezuela: use VenApp (official government app)",
   "quick.donate.label": "I want to donate",
-  "quick.donate.note": "IFRC · $50M emergency appeal for 300,000 people",
+  "quick.donate.note": "Colombian Red Cross · Direct online donation · Secure card payment",
   "quick.donate.sub": "Also: GlobalGiving, Caritas, World Central Kitchen",
   "quick.emergency": "Medical emergency? Call 0800-0-000-911",
 
