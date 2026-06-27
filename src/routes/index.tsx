@@ -777,6 +777,36 @@ function Push() {
       pillTone: "green" as const,
       cta: { href: "https://ayuda.cruzrojacolombiana.org/#afrus-container", label: t("help.money.d.cta") },
     },
+    {
+      id: "e",
+      name: t("help.money.e.name"),
+      details: t("help.money.e.details"),
+      pill: t("help.money.e.pill"),
+      pillTone: "green" as const,
+      cta: { href: "https://caritasvenezuela.org/donaciones/", label: t("help.money.e.cta") },
+    },
+    {
+      id: "f",
+      name: t("help.money.f.name"),
+      details: t("help.money.f.details"),
+      pill: t("help.money.f.pill"),
+      pillTone: "blue" as const,
+      cta: { href: "https://www.gofundme.com/f/emergency-relief-for-venezuela-earthquake-victims", label: t("help.money.f.cta") },
+    },
+    {
+      id: "g",
+      name: t("help.money.g.name"),
+      details: t("help.money.g.details"),
+      pill: t("help.money.g.pill"),
+      pillTone: "blue" as const,
+    },
+    {
+      id: "h",
+      name: t("help.money.h.name"),
+      details: t("help.money.h.details"),
+      pill: t("help.money.h.pill"),
+      pillTone: "teal" as const,
+    },
   ];
 
 
