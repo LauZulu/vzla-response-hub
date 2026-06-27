@@ -101,6 +101,12 @@ const es: Dict = {
     "Mapa colaborativo para registrar y localizar centros de acopio de ayuda y refugios disponibles en Venezuela. Reporta puntos verificados para que la ayuda llegue donde se necesita.",
   "tool.shelters.cta": "Ver mapa o reportar",
 
+  "tool.ayudave.title": "AyudaVE — Ayuda humanitaria",
+  "tool.ayudave.desc":
+    "Plataforma para donar, registrarte como voluntario o registrar tu centro de acopio en menos de un minuto. Conecta donantes, voluntarios y centros de ayuda en un solo lugar.",
+  "tool.ayudave.cta": "Donar o ser voluntario",
+
+
   "tool.redayuda.title": "Red Ayuda Venezuela",
   "tool.redayuda.desc":
     "Avisa que estás a salvo, busca personas y coordina ayuda entre comunidades. Funciona como red ciudadana descentralizada.",
@@ -386,6 +392,12 @@ const en: Dict = {
   "tool.shelters.desc":
     "Collaborative map to register and locate aid collection points and shelters available in Venezuela. Report verified locations so help reaches where it is needed.",
   "tool.shelters.cta": "View map or report",
+
+  "tool.ayudave.title": "AyudaVE — Humanitarian aid",
+  "tool.ayudave.desc":
+    "Platform to donate, sign up as a volunteer, or register your collection center in under a minute. Connects donors, volunteers and aid centers in one place.",
+  "tool.ayudave.cta": "Donate or volunteer",
+
 
   "tool.redayuda.title": "Red Ayuda Venezuela",
   "tool.redayuda.desc":
