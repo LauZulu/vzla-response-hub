@@ -272,9 +272,12 @@ const es: Dict = {
   "emergency.disclaimer":
     "Verifica siempre la información antes de difundirla. Esta plataforma no reemplaza a las autoridades oficiales.",
 
-  "trust.title": "Esto es real.",
+  "trust.title": "Sobre este hub",
   "trust.body":
-    "Este hub centraliza herramientas construidas por comunidades tech independientes en respuesta al terremoto del 24 de junio de 2026.",
+    "VZLA Response Hub centraliza herramientas construidas por comunidades tech independientes en respuesta al terremoto del 24 de junio de 2026. No gestionamos dinero. No somos gobierno. Conectamos personas con soluciones que funcionan.",
+  "footer.about.coord": "Iniciativa coordinada por Young AI Leaders Bogotá Hub",
+  "footer.about.network": "Parte de la red UN AI for Good e ITU",
+  "footer.btn.yal": "Conocer Young AI Leaders",
 
   "cta.button": "Donar / Ayudar / Compartir",
   "cta.rot1": "50.000+ personas reportadas como desaparecidas",
