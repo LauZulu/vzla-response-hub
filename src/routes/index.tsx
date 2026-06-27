@@ -78,10 +78,12 @@ function Hub() {
         <Hero />
 
         <Story />
+        <QuickAccess />
         <Tools />
         <Emergency />
         <Push />
         <Prepare />
+        <BuildLayer />
         <Trust />
       </main>
       <Footer />
@@ -90,6 +92,7 @@ function Hub() {
     </div>
   );
 }
+
 
 /* ───────────────────────── Top bar ───────────────────────── */
 
