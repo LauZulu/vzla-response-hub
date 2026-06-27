@@ -462,6 +462,19 @@ function RecommendedBadge() {
   );
 }
 
+function FeaturedBadge() {
+  const { t } = useI18n();
+  return (
+    <span
+      className="inline-flex items-center text-white"
+      style={{ backgroundColor: "#1D9E75", fontSize: "12px", padding: "4px 8px", fontWeight: 600, borderRadius: "4px" }}
+    >
+      {t("tools.featured")}
+    </span>
+  );
+}
+
+
 function UpdatedIndicator({ updated }: { updated: Updated }) {
   const { t } = useI18n();
   const dotColor =
