@@ -647,9 +647,12 @@ const en: Dict = {
   "emergency.disclaimer":
     "Always verify information before sharing. This platform does not replace official authorities.",
 
-  "trust.title": "This is real.",
+  "trust.title": "About this hub",
   "trust.body":
-    "This hub centralizes tools built by independent tech communities in response to the June 24, 2026 earthquake.",
+    "VZLA Response Hub centralizes tools built by independent tech communities in response to the June 24, 2026 earthquake. We don't handle money. We are not the government. We connect people with solutions that work.",
+  "footer.about.coord": "Coordinated by Young AI Leaders Bogotá Hub",
+  "footer.about.network": "Part of the UN AI for Good and ITU network",
+  "footer.btn.yal": "Discover Young AI Leaders",
 
   "cta.button": "Donate / Help / Share",
   "cta.rot1": "50,000+ people reported missing",
