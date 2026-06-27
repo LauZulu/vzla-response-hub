@@ -318,7 +318,7 @@ function QuickAccess() {
         <p className="mt-2 text-[15px] text-muted-foreground leading-relaxed">{t("quick.sub")}</p>
       </div>
 
-      <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
         {QUICK_BUTTONS.map(({ key, icon: Icon, href, bg, border, fg }) => (
           <div key={key} className="flex flex-col">
             <a
