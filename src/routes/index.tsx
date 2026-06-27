@@ -84,19 +84,36 @@ function Hub() {
       <TopBar />
       <main>
         <Hero />
-
+        <SectionDivider />
         <Story />
+        <SectionDivider />
         <QuickAccess />
+        <SectionDivider />
         <Tools />
+        <SectionDivider />
         <Emergency />
+        <SectionDivider />
         <Push />
+        <SectionDivider />
         <Prepare />
-        
+        <SectionDivider />
         <Trust />
       </main>
       <Footer />
       <StickyCTA />
       <WhatsAppButton />
+    </div>
+  );
+}
+
+function SectionDivider() {
+  return (
+    <div className="mx-auto max-w-6xl px-4 py-6" aria-hidden>
+      <div className="flex items-center gap-3">
+        <div className="h-px flex-1 bg-border" />
+        <div className="size-2 rounded-full bg-coral" />
+        <div className="h-px flex-1 bg-border" />
+      </div>
     </div>
   );
 }
