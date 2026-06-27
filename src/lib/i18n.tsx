@@ -16,6 +16,11 @@ const es: Dict = {
 
   "hero.kicker": "Terremoto Venezuela · 24 jun 2026 · 6:04 PM",
   "hero.headline": "920+ personas fallecidas. 4.500+ heridas. 50.000+ reportadas como desaparecidas. 172 personas atrapadas bajo escombros. 383 edificios afectados. AHORA",
+  "hero.stat.dead.label": "fallecidos",
+  "hero.stat.injured.label": "heridos",
+  "hero.stat.missing.label": "desaparecidos",
+  "hero.stat.trapped.label": "atrapados bajo escombros",
+  "hero.now": "AHORA",
   "hero.live": "En este segundo, hay personas siendo localizadas",
   "hero.sub1": "Comunidades tech construyeron herramientas reales.",
   "hero.sub2": "Tú puedes ayudar.",
@@ -24,6 +29,7 @@ const es: Dict = {
   "hero.cta.tools": "Ver soluciones activas",
   "hero.cta.donate": "Donar ahora",
   "hero.cta.prepare": "Qué hacer ante un sismo",
+  "nav.lastUpdate": "Última actualización",
 
   "impact.title": "Cifras de la emergencia",
   "impact.sub": "Fuentes oficiales. Datos pueden cambiar conforme avanza la respuesta.",
@@ -34,7 +40,7 @@ const es: Dict = {
 
 
   "story.body":
-    "El 24 de junio de 2026, a las 6:04 PM, la tierra tembló. En 39 segundos, dos terremotos devastaron la costa norte de Venezuela. Edificios cayeron. Familias se separaron.\n\nProbablemente viste las noticias y sentiste que no podías hacer nada. Nosotros también.\n\nEntonces comunidades tech de toda la región se activaron. En horas, construyeron herramientas reales: mapas de daños, registros de desaparecidos, sistemas de búsqueda con inteligencia artificial. Hechas por ciudadanos, para ciudadanos. Funcionando ahora mismo.\n\nTú también puedes ser parte.",
+    "El 24 de junio de 2026, dos terremotos devastaron Venezuela en 39 segundos. Comunidades tech de toda la región respondieron en horas. Estas son sus herramientas.",
 
   "tools.title": "Soluciones activas en este momento",
   "tools.sub":
@@ -266,9 +272,12 @@ const es: Dict = {
   "emergency.disclaimer":
     "Verifica siempre la información antes de difundirla. Esta plataforma no reemplaza a las autoridades oficiales.",
 
-  "trust.title": "Esto es real.",
+  "trust.title": "Sobre este hub",
   "trust.body":
-    "Este hub centraliza herramientas construidas por comunidades tech independientes en respuesta al terremoto del 24 de junio de 2026.",
+    "VZLA Response Hub centraliza herramientas construidas por comunidades tech independientes en respuesta al terremoto del 24 de junio de 2026. No gestionamos dinero. No somos gobierno. Conectamos personas con soluciones que funcionan.",
+  "footer.about.coord": "Iniciativa coordinada por Young AI Leaders Bogotá Hub",
+  "footer.about.network": "Parte de la red UN AI for Good e ITU",
+  "footer.btn.yal": "Conocer Young AI Leaders",
 
   "cta.button": "Donar / Ayudar / Compartir",
   "cta.rot1": "50.000+ personas reportadas como desaparecidas",
@@ -382,6 +391,11 @@ const en: Dict = {
 
   "hero.kicker": "Venezuela Earthquake · Jun 24, 2026 · 6:04 PM",
   "hero.headline": "920+ people deceased. 4,500+ injured. 50,000+ reported missing. 172 people trapped under rubble. 383 buildings affected. RIGHT NOW",
+  "hero.stat.dead.label": "deceased",
+  "hero.stat.injured.label": "injured",
+  "hero.stat.missing.label": "missing",
+  "hero.stat.trapped.label": "trapped under rubble",
+  "hero.now": "RIGHT NOW",
   "hero.live": "This second, people are being located",
   "hero.sub1": "Tech communities built real tools.",
   "hero.sub2": "You can help.",
@@ -390,6 +404,7 @@ const en: Dict = {
   "hero.cta.tools": "See active solutions",
   "hero.cta.donate": "Donate now",
   "hero.cta.prepare": "What to do in an earthquake",
+  "nav.lastUpdate": "Last updated",
 
   "impact.title": "Emergency figures",
   "impact.sub": "Official sources. Numbers may change as the response evolves.",
@@ -400,7 +415,7 @@ const en: Dict = {
 
 
   "story.body":
-    "On June 24, 2026, at 6:04 PM, the earth shook. In 39 seconds, two earthquakes devastated Venezuela's northern coast. Buildings collapsed. Families separated.\n\nYou probably saw the news and felt like there was nothing you could do. We felt the same.\n\nThen tech communities across the region mobilized. In hours, they built real tools: damage maps, missing-person registries, AI-powered search systems. Made by citizens, for citizens. Running right now.\n\nYou can be part of it too.",
+    "On June 24, 2026, two earthquakes devastated Venezuela in 39 seconds. Tech communities across the region responded within hours. These are their tools.",
 
   "tools.title": "Active solutions right now",
   "tools.sub":
@@ -632,9 +647,12 @@ const en: Dict = {
   "emergency.disclaimer":
     "Always verify information before sharing. This platform does not replace official authorities.",
 
-  "trust.title": "This is real.",
+  "trust.title": "About this hub",
   "trust.body":
-    "This hub centralizes tools built by independent tech communities in response to the June 24, 2026 earthquake.",
+    "VZLA Response Hub centralizes tools built by independent tech communities in response to the June 24, 2026 earthquake. We don't handle money. We are not the government. We connect people with solutions that work.",
+  "footer.about.coord": "Coordinated by Young AI Leaders Bogotá Hub",
+  "footer.about.network": "Part of the UN AI for Good and ITU network",
+  "footer.btn.yal": "Discover Young AI Leaders",
 
   "cta.button": "Donate / Help / Share",
   "cta.rot1": "50,000+ people reported missing",

@@ -84,14 +84,19 @@ function Hub() {
       <TopBar />
       <main>
         <Hero />
-
+        <SectionDivider />
         <Story />
+        <SectionDivider />
         <QuickAccess />
+        <SectionDivider />
         <Tools />
+        <SectionDivider />
         <Emergency />
+        <SectionDivider />
         <Push />
+        <SectionDivider />
         <Prepare />
-        
+        <SectionDivider />
         <Trust />
       </main>
       <Footer />
@@ -101,11 +106,24 @@ function Hub() {
   );
 }
 
+function SectionDivider() {
+  return (
+    <div className="mx-auto max-w-6xl px-4 py-6" aria-hidden>
+      <div className="flex items-center gap-3">
+        <div className="h-px flex-1 bg-border" />
+        <div className="size-2 rounded-full bg-coral" />
+        <div className="h-px flex-1 bg-border" />
+      </div>
+    </div>
+  );
+}
+
 
 /* ───────────────────────── Top bar ───────────────────────── */
 
 function TopBar() {
   const { t, lang, setLang } = useI18n();
+  const updated = useClientDateTime(lang);
   return (
     <header className="sticky top-0 z-40 border-b border-border/70 bg-background/85 backdrop-blur">
       <div className="bg-muted/60 text-[11px] sm:text-xs text-muted-foreground">
@@ -114,15 +132,20 @@ function TopBar() {
           <span className="truncate">{t("nav.convenedBy")}</span>
         </div>
       </div>
-      <div className="mx-auto max-w-6xl px-4 h-12 flex items-center justify-between">
-        <a href="#" className="flex items-center gap-2 group" aria-label={t("nav.logo")}>
-          <span className="relative inline-flex size-2.5">
+      <div className="mx-auto max-w-6xl px-4 h-12 flex items-center justify-between gap-3">
+        <a href="#" className="flex items-center gap-2 group min-w-0" aria-label={t("nav.logo")}>
+          <span className="relative inline-flex size-2.5 shrink-0">
             <span className="absolute inset-0 rounded-full bg-coral animate-ping opacity-60" />
             <span className="relative inline-flex size-2.5 rounded-full bg-coral" />
           </span>
-          <span className="font-serif text-sm tracking-tight">{t("nav.logo")}</span>
+          <span className="font-serif text-sm tracking-tight truncate">{t("nav.logo")}</span>
         </a>
-        <LangToggle lang={lang} setLang={setLang} />
+        <div className="flex items-center gap-3 shrink-0">
+          <span className="hidden sm:inline text-[11px] text-muted-foreground tnum">
+            {t("nav.lastUpdate")}: {updated || "—"}
+          </span>
+          <LangToggle lang={lang} setLang={setLang} />
+        </div>
       </div>
     </header>
   );
@@ -155,6 +178,12 @@ function LangToggle({ lang, setLang }: { lang: Lang; setLang: (l: Lang) => void 
 
 function Hero() {
   const { t } = useI18n();
+  const stats = [
+    { n: "920+", label: t("hero.stat.dead.label") },
+    { n: "4.500+", label: t("hero.stat.injured.label") },
+    { n: "50.000+", label: t("hero.stat.missing.label") },
+    { n: "172", label: t("hero.stat.trapped.label") },
+  ];
   return (
     <section className="relative overflow-hidden border-b border-border">
       <Ripples />
@@ -162,9 +191,28 @@ function Hero() {
         <p className="text-xs uppercase tracking-[0.18em] text-coral font-medium">
           {t("hero.kicker")}
         </p>
-        <h1 className="mt-4 font-serif text-3xl sm:text-5xl md:text-6xl leading-[1.05] text-balance">
-          {t("hero.headline")}
-        </h1>
+
+        <h1 className="sr-only">{t("hero.headline")}</h1>
+
+        <ul className="mt-6 grid grid-cols-2 gap-x-6 gap-y-5 sm:gap-x-10 sm:gap-y-6 sm:max-w-2xl">
+          {stats.map((s) => (
+            <li key={s.label} className="flex flex-col">
+              <span className="font-serif font-bold text-3xl sm:text-5xl md:text-6xl leading-none tnum">
+                {s.n}
+              </span>
+              <span className="mt-2 text-xs sm:text-sm uppercase tracking-wider text-muted-foreground">
+                {s.label}
+              </span>
+            </li>
+          ))}
+        </ul>
+
+        <p
+          className="mt-6 font-serif font-bold text-3xl sm:text-5xl leading-none"
+          style={{ color: "#D85A30" }}
+        >
+          {t("hero.now")}
+        </p>
 
         <div className="mt-6 inline-flex items-center gap-2 rounded-full border border-border bg-card px-3 py-1.5 text-sm">
           <span className="relative inline-flex size-2">
@@ -182,19 +230,19 @@ function Hero() {
         <div className="mt-8 flex flex-col sm:flex-row gap-2 sm:gap-3">
           <a
             href="#tools"
-            className="inline-flex items-center justify-center rounded-full bg-teal text-white px-5 py-3 text-sm font-medium hover:opacity-90 transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+            className="inline-flex w-full sm:w-auto items-center justify-center rounded-full bg-teal text-white px-5 py-3 text-sm font-medium hover:opacity-90 transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
           >
             {t("hero.cta.tools")}
           </a>
           <a
             href="#donar"
-            className="inline-flex items-center justify-center rounded-full border border-teal text-teal px-5 py-3 text-sm font-medium hover:bg-teal/10 transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+            className="inline-flex w-full sm:w-auto items-center justify-center rounded-full border border-teal text-teal px-5 py-3 text-sm font-medium hover:bg-teal/10 transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
           >
             {t("hero.cta.donate")}
           </a>
           <a
             href="#preparacion"
-            className="inline-flex items-center justify-center rounded-full border border-teal text-teal px-5 py-3 text-sm font-medium hover:bg-teal/10 transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+            className="inline-flex w-full sm:w-auto items-center justify-center rounded-full border border-teal text-teal px-5 py-3 text-sm font-medium hover:bg-teal/10 transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
           >
             {t("hero.cta.prepare")}
           </a>
@@ -270,7 +318,7 @@ function QuickAccess() {
         <p className="mt-2 text-[15px] text-muted-foreground leading-relaxed">{t("quick.sub")}</p>
       </div>
 
-      <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
         {QUICK_BUTTONS.map(({ key, icon: Icon, href, bg, border, fg }) => (
           <div key={key} className="flex flex-col">
             <a
@@ -585,16 +633,18 @@ function Tools() {
         <p className="mt-2 text-[15px] text-muted-foreground leading-relaxed">{t("tools.sub2")}</p>
       </div>
 
-      <div className="relative mb-8 max-w-xl">
-        <Search className="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 size-4 text-muted-foreground" strokeWidth={1.6} />
-        <input
-          type="search"
-          value={query}
-          onChange={(e) => setQuery(e.target.value)}
-          placeholder={t("tools.search.placeholder")}
-          aria-label={t("tools.search.placeholder")}
-          className="w-full rounded-full border border-border bg-card pl-11 pr-4 py-3 text-sm font-sans placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:border-transparent transition"
-        />
+      <div className="sticky top-[68px] z-20 -mx-4 px-4 py-2 bg-background/95 backdrop-blur mb-6 sm:mb-8">
+        <div className="relative max-w-xl">
+          <Search className="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 size-4 text-muted-foreground" strokeWidth={1.6} />
+          <input
+            type="search"
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
+            placeholder={t("tools.search.placeholder")}
+            aria-label={t("tools.search.placeholder")}
+            className="w-full rounded-full border border-border bg-card pl-11 pr-4 py-3 text-sm font-sans placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:border-transparent transition"
+          />
+        </div>
       </div>
 
       {totalFiltered === 0 ? (
@@ -850,7 +900,7 @@ function Push() {
         <p className="text-[15px] leading-relaxed text-foreground">{t("help.emotional")}</p>
       </div>
 
-      <div className="grid gap-5 md:grid-cols-3">
+      <div className="grid gap-5 md:grid-cols-2">
         {/* CARD 1: Money */}
         <article className="relative rounded-2xl border border-border bg-card p-6 flex flex-col">
           <span className="absolute left-0 top-8 h-12 w-1 rounded-r bg-teal" aria-hidden />
@@ -1039,26 +1089,6 @@ function Push() {
           </Accordion>
         </article>
 
-        {/* CARD 3: People */}
-        <article className="relative rounded-2xl border border-border bg-card p-6 flex flex-col">
-          <span className="absolute left-0 top-8 h-12 w-1 rounded-r bg-trust" aria-hidden />
-          <Users className="size-6 text-trust" />
-          <h3 className="mt-3 font-serif text-[18px] font-bold">{t("help.people.card.title")}</h3>
-          <p className="mt-1 text-[14px] text-muted-foreground leading-relaxed">{t("help.people.card.sub")}</p>
-
-          <a
-            href="https://desaparecidosterremotovenezuela.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-5 inline-flex items-center justify-center gap-1.5 rounded-full bg-trust text-trust-foreground px-4 py-2.5 text-sm font-medium hover:opacity-90 transition"
-          >
-            {t("help.people.btn")}
-            <ArrowRight className="size-3.5" />
-          </a>
-
-          <p className="mt-3 text-[14px] text-muted-foreground leading-relaxed">{t("help.people.belowBtn")}</p>
-          <p className="mt-3 text-[13px] text-muted-foreground leading-relaxed">{t("help.people.crossRoja")}</p>
-        </article>
       </div>
 
       <p className="mt-8 text-[12px] text-muted-foreground text-center leading-relaxed">{t("help.disclaimer")}</p>
@@ -1166,17 +1196,11 @@ function Footer() {
             <span className="font-serif">{t("nav.logo")}</span>
           </div>
           <div className="text-muted-foreground text-xs">{t("footer.rights")}</div>
-          <a
-            href="https://chat.whatsapp.com/FTBI2oLHtuaEVnbEbjUHbl"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 text-muted-foreground text-xs hover:text-foreground transition"
-          >
-            <MessageCircle className="size-3" />
-            {t("footer.whatsapp")}
-          </a>
         </div>
-        <div className="border-t border-border/70 pt-5 space-y-2">
+
+        <div className="border-t border-border/70 pt-5 space-y-3">
+          <p className="text-[13px] text-foreground/90">{t("footer.about.coord")}</p>
+          <p className="text-[13px] text-foreground/90">{t("footer.about.network")}</p>
           <p className="text-[12px] text-muted-foreground">
             {t("footer.creditPrefix")}
             <a
@@ -1189,6 +1213,27 @@ function Footer() {
             </a>
           </p>
           <p className="text-[13px] text-muted-foreground">{t("footer.join")}</p>
+        </div>
+
+        <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 pt-2">
+          <a
+            href="https://chat.whatsapp.com/FTBI2oLHtuaEVnbEbjUHbl"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex w-full sm:w-auto items-center justify-center gap-1.5 rounded-full bg-teal text-teal-foreground px-5 py-2.5 text-sm font-medium hover:opacity-90 transition"
+          >
+            <MessageCircle className="size-3.5" />
+            {t("footer.whatsapp")}
+          </a>
+          <a
+            href="https://www.youngaileadershub.org"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex w-full sm:w-auto items-center justify-center gap-1.5 rounded-full border border-foreground/80 px-5 py-2.5 text-sm font-medium text-foreground hover:bg-foreground hover:text-background transition"
+          >
+            {t("footer.btn.yal")}
+            <ExternalLink className="size-3.5" />
+          </a>
         </div>
       </div>
       <div className="h-20 sm:h-0" aria-hidden />
