@@ -316,8 +316,10 @@ type Tool = {
   href: string;
   trust: Trust;
   recommended?: boolean;
+  featured?: boolean;
   updated: Updated;
 };
+
 
 type Subgroup = {
   id: string;
