@@ -275,8 +275,25 @@ const en: Dict = {
     "Tools built by tech communities. Live now. Use one. If you built another, contact us.",
   "tools.search.placeholder": "Search by keyword (e.g. missing, hospitals, map...)",
   "tools.search.empty": "No solutions found for that term.",
+  "tools.counter": "{n} active tools · Updated {date}",
 
+  "tools.cat.people": "Find people",
+  "tools.cat.maps": "Maps & structural damage",
+  "tools.cat.comms": "Resources & communication",
+  "tools.cat.donations": "Verified donations",
+  "tools.cat.build": "Build with us",
 
+  "tools.intro.donations":
+    "Always verify the campaign is legitimate. Cash donations are usually the most effective form of help — they let teams buy exactly what each area needs in the moment.",
+  "tools.intro.build":
+    "If you have technical skills, you can build tools that save lives this weekend.",
+
+  "tools.badge.verified": "Verified",
+  "tools.badge.community": "Community",
+  "tools.badge.new": "New",
+
+  "tools.footer.note":
+    "These tools are independent, citizen-led and nonpartisan. Built something that can help? Write to us at l.zuluaga@youngaileadershub.org",
 
   "tool.map.title": "Structural damage map",
   "tool.map.desc":
@@ -318,9 +335,55 @@ const en: Dict = {
     "Collaborative map to register and locate aid collection points and shelters available in Venezuela. Report verified locations so help reaches where it is needed.",
   "tool.shelters.cta": "View map or report",
 
+  "tool.redayuda.title": "Red Ayuda Venezuela",
+  "tool.redayuda.desc":
+    "Mark yourself safe, search for people, and coordinate help between communities. Works as a decentralized citizen network.",
+  "tool.redayuda.cta": "Enter the network",
 
+  "tool.sosvzla.title": "SOS Venezuela 2026",
+  "tool.sosvzla.desc":
+    "Real-time collaborative map with damage, collapse, shelter and first-aid reports. Live seismic data from USGS. Your location is never shared publicly.",
+  "tool.sosvzla.cta": "See live map",
 
+  "tool.yummy.title": "Yummy SOS",
+  "tool.yummy.desc":
+    "Report structural damage with photos and GPS. Free rides to hospitals and clinics in Caracas. Driver network activated with no commission as a humanitarian corridor during the emergency.",
+  "tool.yummy.cta": "Report or request a ride",
 
+  "tool.recursos.title": "Verified Resources",
+  "tool.recursos.desc":
+    "Hub with emergency lines, survival guides, search platforms and donation channels — all verified and updated since June 25.",
+  "tool.recursos.cta": "See resources",
+
+  "tool.talk360.title": "Talk360 — Call Venezuela",
+  "tool.talk360.desc":
+    "App to call Venezuela from abroad without roaming or international fees. Recommended by the Venezuelan diaspora as one of the few working direct communication channels.",
+  "tool.talk360.cta": "Download app",
+
+  "tool.globalgiving.title": "GlobalGiving",
+  "tool.globalgiving.desc":
+    "Verified fund that channels donations directly to local organizations in Venezuela for medical care, shelter, water and food.",
+  "tool.globalgiving.cta": "Donate",
+
+  "tool.caritas.title": "Cáritas Venezuela",
+  "tool.caritas.desc":
+    "Humanitarian network present across Venezuela. Receives donations for direct care of families affected in the most impacted areas.",
+  "tool.caritas.cta": "Donate",
+
+  "tool.wck.title": "World Central Kitchen",
+  "tool.wck.desc":
+    "Team deployed in Venezuela providing hot meals to affected communities and rescue crews. Founded by chef José Andrés.",
+  "tool.wck.cta": "Donate",
+
+  "tool.code4vzla.title": "Code for Venezuela",
+  "tool.code4vzla.desc":
+    "NGO connecting technologists with Venezuela's most urgent needs. Years of experience building data platforms for humanitarian response.",
+  "tool.code4vzla.cta": "See projects",
+
+  "tool.build4vzla.title": "Build for Venezuela — Hackathon",
+  "tool.build4vzla.desc":
+    "Online humanitarian hackathon, June 26–28. Anyone who can build can contribute. Any stack, any level.",
+  "tool.build4vzla.cta": "Join the hackathon",
 
   "tools.disclaimer": "These tools are independent, citizen-led, and nonpartisan.",
   "tools.contribute.title": "Did your community build a tool for this emergency?",
