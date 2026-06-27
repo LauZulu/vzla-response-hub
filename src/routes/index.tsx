@@ -737,7 +737,16 @@ function Emergency() {
 function Push() {
   const { t } = useI18n();
 
-  const moneyItems = [
+  const moneyItems: Array<{
+    id: string;
+    name: string;
+    details: string;
+    pill: string;
+    pillTone: "green" | "blue";
+    note?: string;
+    cta?: { href: string; label: string };
+  }> = [
+
     {
       id: "a",
       name: t("help.money.a.name"),
