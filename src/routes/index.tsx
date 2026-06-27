@@ -813,6 +813,21 @@ function Push() {
       pill: t("help.money.h.pill"),
       pillTone: "teal" as const,
     },
+    {
+      id: "i",
+      name: t("help.money.i.name"),
+      details: t("help.money.i.details"),
+      pill: t("help.money.i.pill"),
+      pillTone: "coral" as const,
+    },
+    {
+      id: "j",
+      name: t("help.money.j.name"),
+      details: t("help.money.j.details"),
+      pill: t("help.money.j.pill"),
+      pillTone: "teal" as const,
+      cta: { href: "https://riamoneytransfer.com", label: "riamoneytransfer.com" },
+    },
   ];
 
 
