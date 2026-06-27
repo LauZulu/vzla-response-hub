@@ -737,7 +737,16 @@ function Emergency() {
 function Push() {
   const { t } = useI18n();
 
-  const moneyItems = [
+  const moneyItems: Array<{
+    id: string;
+    name: string;
+    details: string;
+    pill: string;
+    pillTone: "green" | "blue";
+    note?: string;
+    cta?: { href: string; label: string };
+  }> = [
+
     {
       id: "a",
       name: t("help.money.a.name"),
@@ -760,7 +769,16 @@ function Push() {
       pillTone: "blue" as const,
       note: t("help.money.c.note"),
     },
+    {
+      id: "d",
+      name: t("help.money.d.name"),
+      details: t("help.money.d.details"),
+      pill: t("help.money.d.pill"),
+      pillTone: "green" as const,
+      cta: { href: "https://ayuda.cruzrojacolombiana.org", label: t("help.money.d.cta") },
+    },
   ];
+
 
   const pillClass = (tone: "green" | "blue") =>
     tone === "green"
@@ -803,7 +821,19 @@ function Push() {
                   {it.note && (
                     <p className="mt-2 text-[12px] text-muted-foreground leading-relaxed">{it.note}</p>
                   )}
+                  {it.cta && (
+                    <a
+                      href={it.cta.href}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="mt-3 inline-flex items-center gap-1.5 rounded-full bg-teal px-4 py-2 text-[13px] font-medium text-teal-foreground hover:opacity-90 transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+                    >
+                      {it.cta.label}
+                      <ArrowRight className="size-3.5" aria-hidden />
+                    </a>
+                  )}
                 </AccordionContent>
+
               </AccordionItem>
             ))}
           </Accordion>

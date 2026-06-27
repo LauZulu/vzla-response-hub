@@ -197,6 +197,11 @@ const es: Dict = {
   "help.money.c.pill": "Nacional e internacional",
   "help.money.c.details": "Pago móvil (Venezuela):\nBanco Mercantil / J-000579105 / (0412) 332-1367\n\nTransferencia nacional:\nBanco Mercantil\nTitular: Dividendo Voluntario para la Comunidad, A.C.\nCta. Corriente: 0105-0026-5410-2642-4518\nRIF: J-000579105\n\nCuenta en divisas (internacional):\nBanco: Mercantil Banco, S.A.\nSWIFT: MPANPAPA\nNo. de cuenta: 300016658\nTorre de las Américas, Punta Pacífica, Panamá",
   "help.money.c.note": "Mercantil realiza un aporte adicional a cada donación.",
+  "help.money.d.name": "Cruz Roja Colombiana",
+  "help.money.d.pill": "Donación online",
+  "help.money.d.details": "Dona directamente desde la página oficial de la Cruz Roja Colombiana. Pago seguro con tarjeta de crédito o débito.",
+  "help.money.d.cta": "Donar ahora",
+
   "help.money.verify": "Verifica siempre las cuentas antes de transferir.",
   "help.supplies.card.title": "Dona insumos",
   "help.supplies.card.sub": "Punto de acopio activo en Bogotá.",
@@ -527,6 +532,11 @@ const en: Dict = {
   "help.money.c.pill": "National & international",
   "help.money.c.details": "Mobile payment (Venezuela):\nBanco Mercantil / J-000579105 / (0412) 332-1367\n\nDomestic transfer:\nBanco Mercantil\nAccount holder: Dividendo Voluntario para la Comunidad, A.C.\nChecking account: 0105-0026-5410-2642-4518\nRIF: J-000579105\n\nForeign currency account (international):\nBank: Mercantil Banco, S.A.\nSWIFT: MPANPAPA\nAccount number: 300016658\nTorre de las Américas, Punta Pacífica, Panama",
   "help.money.c.note": "Mercantil contributes an additional amount to every donation.",
+  "help.money.d.name": "Colombian Red Cross",
+  "help.money.d.pill": "Online donation",
+  "help.money.d.details": "Donate directly from the official Colombian Red Cross site. Secure payment with credit or debit card.",
+  "help.money.d.cta": "Donate now",
+
   "help.money.verify": "Always verify accounts before transferring.",
   "help.supplies.card.title": "Donate supplies",
   "help.supplies.card.sub": "Active drop-off point in Bogotá.",
