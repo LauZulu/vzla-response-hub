@@ -253,13 +253,13 @@ type QuickBtn = {
 };
 
 const QUICK_BUTTONS: QuickBtn[] = [
-  { key: "search", icon: Search, href: "https://familylinks.icrc.org/organization/venezuelan-red-cross", bg: "#FEE2E2", border: "#FCA5A5", fg: "#7F1D1D" },
-  { key: "shelter", icon: MapPin, href: "https://acopios-refugios.vercel.app", bg: "#D1FAE5", border: "#86EFAC", fg: "#064E3B" },
-  { key: "damage", icon: Camera, href: "https://sos.yummyrides.com", bg: "#FFEDD5", border: "#FDBA74", fg: "#7C2D12" },
-  { key: "donate", icon: HeartHandshake, href: "https://ayuda.cruzrojacolombiana.org/#afrus-container", bg: "#FEE2E2", border: "#FCA5A5", fg: "#7F1D1D" },
+  { key: "search", icon: Search, href: "https://desaparecidosterremotovenezuela.com", bg: "#FEE2E2", border: "#FCA5A5", fg: "#7F1D1D" },
+  { key: "shelter", icon: MapPin, href: "https://www.ayudahumanitariavenezuela.com", bg: "#D1FAE5", border: "#86EFAC", fg: "#064E3B" },
+  { key: "damage", icon: Camera, href: "https://www.sismoayudave.com", bg: "#FFEDD5", border: "#FDBA74", fg: "#7C2D12" },
+  { key: "donate", icon: HeartHandshake, href: "https://ayuda.cruzrojacolombiana.org", bg: "#FEE2E2", border: "#FCA5A5", fg: "#7F1D1D" },
 ];
 
-const QUICK_SUBS: Partial<Record<QuickBtn["key"], true>> = { search: true, damage: true, donate: true };
+const QUICK_SUBS: Partial<Record<QuickBtn["key"], true>> = { search: true, shelter: true, damage: true, donate: true };
 
 function QuickAccess() {
   const { t } = useI18n();
@@ -748,7 +748,7 @@ function Push() {
     name: string;
     details: string;
     pill: string;
-    pillTone: "green" | "blue" | "teal";
+    pillTone: "green" | "blue" | "teal" | "coral";
     note?: string;
     cta?: { href: string; label: string };
   }> = [
@@ -816,9 +816,10 @@ function Push() {
   ];
 
 
-  const pillClass = (tone: "green" | "blue" | "teal") => {
+  const pillClass = (tone: "green" | "blue" | "teal" | "coral") => {
     if (tone === "green") return "bg-healing/15 text-healing";
     if (tone === "teal") return "bg-teal/15 text-teal";
+    if (tone === "coral") return "bg-coral/15 text-coral";
     return "bg-trust/15 text-trust";
   };
 
