@@ -216,6 +216,14 @@ const es: Dict = {
   "help.money.h.pill": "Sin salir de casa",
   "help.money.h.details": "Abre Rappi con dirección en Bogotá.\nEntra a Rappi Turbo.\nBusca el botón de donación o la palabra 'Bono'.\nTu aporte llega al Banco de Alimentos para los afectados.",
 
+  "help.money.i.name": "Banesco (duplica tu donacion)",
+  "help.money.i.pill": "Tu donacion x2",
+  "help.money.i.details": "Banesco duplica cada aporte y lo dona a la Cruz Roja Venezolana.\n\nCuenta: 0134-0008-37-0081096451\n\nTambien puedes donar directamente a voluntarios de Cruz Roja en Venezuela a traves de Ubii App (boton Cruz Roja en la app).",
+
+  "help.money.j.name": "Ria Money Transfer (sin comision)",
+  "help.money.j.pill": "Gratis hasta julio 15",
+  "help.money.j.details": "Envia dinero directo a tu familia en Venezuela sin comision hasta el 15 de julio de 2026. Funciona con Pago Movil, Banesco, Banco de Venezuela, Mercantil e Italcambio.\n\nriamoneytransfer.com",
+
   "help.money.verify": "Verifica siempre las cuentas antes de transferir.",
   "help.supplies.card.title": "Dona insumos",
   "help.supplies.card.sub": "Punto de acopio activo en Bogotá.",
@@ -573,6 +581,14 @@ const en: Dict = {
   "help.money.h.name": "Donate via Rappi",
   "help.money.h.pill": "From home",
   "help.money.h.details": "Open Rappi with a Bogotá address.\nGo to Rappi Turbo.\nLook for the donation button or the word 'Bono'.\nYour contribution reaches the Food Bank for those affected.",
+
+  "help.money.i.name": "Banesco (doubles your donation)",
+  "help.money.i.pill": "Your donation x2",
+  "help.money.i.details": "Banesco doubles every contribution and donates it to the Venezuelan Red Cross.\n\nAccount: 0134-0008-37-0081096451\n\nYou can also donate directly to Red Cross volunteers in Venezuela through the Ubii App (Red Cross button in the app).",
+
+  "help.money.j.name": "Ria Money Transfer (no fee)",
+  "help.money.j.pill": "Free until July 15",
+  "help.money.j.details": "Send money directly to your family in Venezuela with no fee until July 15, 2026. Works with Pago Movil, Banesco, Banco de Venezuela, Mercantil and Italcambio.\n\nriamoneytransfer.com",
 
   "help.money.verify": "Always verify accounts before transferring.",
   "help.supplies.card.title": "Donate supplies",
