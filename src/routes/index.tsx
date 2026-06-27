@@ -760,7 +760,16 @@ function Push() {
       pillTone: "blue" as const,
       note: t("help.money.c.note"),
     },
+    {
+      id: "d",
+      name: t("help.money.d.name"),
+      details: t("help.money.d.details"),
+      pill: t("help.money.d.pill"),
+      pillTone: "green" as const,
+      cta: { href: "https://ayuda.cruzrojacolombiana.org", label: t("help.money.d.cta") },
+    },
   ];
+
 
   const pillClass = (tone: "green" | "blue") =>
     tone === "green"
