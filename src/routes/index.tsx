@@ -233,7 +233,59 @@ function Story() {
   );
 }
 
-/* ───────────────────────── Tools ───────────────────────── */
+/* ───────────────────────── Quick Access (Capa 1) ───────────────────────── */
+
+type QuickBtn = {
+  key: "search" | "shelter" | "damage" | "donate";
+  icon: LucideIcon;
+  href: string;
+  bg: string;
+  border: string;
+  fg: string;
+};
+
+const QUICK_BUTTONS: QuickBtn[] = [
+  { key: "search", icon: Search, href: "https://venezuelatebusca.com", bg: "#DBEAFE", border: "#93C5FD", fg: "#1E3A8A" },
+  { key: "shelter", icon: MapPin, href: "https://acopios-refugios.vercel.app", bg: "#D1FAE5", border: "#86EFAC", fg: "#064E3B" },
+  { key: "damage", icon: Camera, href: "https://sos.yummyrides.com", bg: "#FFEDD5", border: "#FDBA74", fg: "#7C2D12" },
+  { key: "donate", icon: HeartHandshake, href: "https://www.globalgiving.org/projects/venezuela-earthquake-relief/", bg: "#FEE2E2", border: "#FCA5A5", fg: "#7F1D1D" },
+];
+
+function QuickAccess() {
+  const { t } = useI18n();
+  return (
+    <section className="mx-auto max-w-6xl px-4 pt-12 sm:pt-16 pb-2">
+      <div className="max-w-2xl mb-6">
+        <h2 className="font-serif text-2xl sm:text-3xl">{t("quick.title")}</h2>
+        <p className="mt-2 text-[15px] text-muted-foreground leading-relaxed">{t("quick.sub")}</p>
+      </div>
+
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
+        {QUICK_BUTTONS.map(({ key, icon: Icon, href, bg, border, fg }) => (
+          <div key={key} className="flex flex-col">
+            <a
+              href={href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group rounded-2xl border p-5 sm:p-6 flex flex-col items-start gap-3 transition hover:-translate-y-0.5 hover:shadow-[0_10px_30px_-15px_rgb(0_0_0/0.25)]"
+              style={{ backgroundColor: bg, borderColor: border, color: fg }}
+            >
+              <Icon size={40} strokeWidth={1.6} />
+              <span className="font-serif text-[18px] sm:text-[20px] font-bold leading-tight">
+                {t(`quick.${key}.label`)}
+              </span>
+            </a>
+            <p className="mt-2 text-[11px] text-muted-foreground px-1">{t(`quick.${key}.note`)}</p>
+          </div>
+        ))}
+      </div>
+
+      <p className="mt-6 text-[12px] text-muted-foreground">{t("quick.emergency")}</p>
+    </section>
+  );
+}
+
+/* ───────────────────────── Tools (Capa 2) ───────────────────────── */
 
 const COLOR_CLASSES: Record<string, { bar: string; icon: string; btn: string }> = {
   coral: { bar: "bg-coral", icon: "text-coral", btn: "bg-coral text-coral-foreground" },
@@ -244,95 +296,171 @@ const COLOR_CLASSES: Record<string, { bar: string; icon: string; btn: string }> 
   amber: { bar: "bg-amber", icon: "text-amber", btn: "bg-amber text-amber-foreground" },
 };
 
-type Badge = "verified" | "community" | "new";
+type Trust = "verified" | "community" | "unverified";
+type Updated = { kind: "active" } | { kind: "recent"; date: string } | { kind: "inactive" };
+
 type Tool = {
   key: string;
   icon: LucideIcon;
-  color: string; // hex
+  color: string;
   href: string;
-  badge: Badge;
+  trust: Trust;
+  recommended?: boolean;
+  updated: Updated;
 };
+
+type Subgroup = {
+  id: string;
+  titleKey?: string;
+  noteKey?: string;
+  tools: Tool[];
+};
+
 type Section = {
   id: string;
   titleKey: string;
   introKey?: string;
-  tools: Tool[];
+  subgroups: Subgroup[];
 };
 
 const SECTIONS: Section[] = [
   {
     id: "people",
     titleKey: "tools.cat.people",
-    tools: [
-      { key: "missing", icon: Users, color: "#1D9E75", href: "https://desaparecidosterremotovenezuela.com", badge: "verified" },
-      { key: "search", icon: Search, color: "#3B6D11", href: "https://venezuela-te-busca-app.hellogafaro.workers.dev", badge: "verified" },
-      { key: "vision", icon: Camera, color: "#185FA5", href: "https://lo-la-has-visto-48680439362.us-west1.run.app", badge: "community" },
-      { key: "hospitals", icon: Building2, color: "#534AB7", href: "https://hospitalesenvenezuela.com", badge: "community" },
-      { key: "pets", icon: PawPrint, color: "#BA7517", href: "https://www.huellascan.com/terremoto", badge: "community" },
-      { key: "redayuda", icon: ShieldCheck, color: "#DC2626", href: "https://redayudavenezuela.com", badge: "new" },
+    subgroups: [
+      {
+        id: "people-find",
+        titleKey: "tools.subgroup.people.title",
+        noteKey: "tools.subgroup.people.note",
+        tools: [
+          { key: "search", icon: Search, color: "#3B6D11", href: "https://venezuelatebusca.com", trust: "verified", recommended: true, updated: { kind: "active" } },
+          { key: "missing", icon: Users, color: "#1D9E75", href: "https://desaparecidosterremotovenezuela.com", trust: "community", updated: { kind: "active" } },
+          { key: "redayuda", icon: ShieldCheck, color: "#DC2626", href: "https://redayudavenezuela.com", trust: "community", updated: { kind: "active" } },
+          { key: "vision", icon: Camera, color: "#185FA5", href: "https://lo-la-has-visto-48680439362.us-west1.run.app", trust: "unverified", updated: { kind: "recent", date: "25 jun 2026" } },
+        ],
+      },
     ],
   },
   {
     id: "maps",
     titleKey: "tools.cat.maps",
-    tools: [
-      { key: "map", icon: MapIcon, color: "#D85A30", href: "https://terremotovenezuela.com", badge: "verified" },
-      { key: "triage", icon: Castle, color: "#11243E", href: "https://pretriageestructuralvenezuela.netlify.app", badge: "verified" },
-      { key: "shelters", icon: MapPin, color: "#2E7D32", href: "https://acopios-refugios.vercel.app", badge: "community" },
-      { key: "sosvzla", icon: MapPinned, color: "#1E3A5F", href: "https://sosvenezuela2026.com", badge: "new" },
-      { key: "yummy", icon: Ambulance, color: "#CA8A04", href: "https://sos.yummyrides.com", badge: "new" },
+    subgroups: [
+      {
+        id: "maps-damage",
+        titleKey: "tools.subgroup.maps.title",
+        noteKey: "tools.subgroup.maps.note",
+        tools: [
+          { key: "yummy", icon: Ambulance, color: "#CA8A04", href: "https://sos.yummyrides.com", trust: "verified", recommended: true, updated: { kind: "active" } },
+          { key: "map", icon: MapIcon, color: "#D85A30", href: "https://terremotovenezuela.com", trust: "community", updated: { kind: "active" } },
+          { key: "sosvzla", icon: MapPinned, color: "#1E3A5F", href: "https://sosvenezuela2026.com", trust: "community", updated: { kind: "active" } },
+          { key: "triage", icon: Castle, color: "#11243E", href: "https://pretriageestructuralvenezuela.netlify.app", trust: "unverified", updated: { kind: "recent", date: "25 jun 2026" } },
+          { key: "vresiste", icon: MapPinned, color: "#0E7490", href: "https://terremotove.netlify.app", trust: "community", updated: { kind: "recent", date: "25 jun 2026" } },
+        ],
+      },
     ],
   },
   {
     id: "comms",
     titleKey: "tools.cat.comms",
-    tools: [
-      { key: "recursos", icon: ListChecks, color: "#4D7C0F", href: "https://recursos-venezuela.netlify.app", badge: "verified" },
-      { key: "talk360", icon: PhoneCall, color: "#7C3AED", href: "https://talk360.com", badge: "new" },
+    subgroups: [
+      {
+        id: "comms-main",
+        tools: [
+          { key: "recursos", icon: ListChecks, color: "#4D7C0F", href: "https://recursos-venezuela.netlify.app", trust: "verified", recommended: true, updated: { kind: "active" } },
+          { key: "talk360", icon: PhoneCall, color: "#7C3AED", href: "https://talk360.com", trust: "unverified", updated: { kind: "recent", date: "25 jun 2026" } },
+          { key: "hospitals", icon: Building2, color: "#534AB7", href: "https://hospitalesenvenezuela.com", trust: "community", updated: { kind: "active" } },
+        ],
+      },
+    ],
+  },
+  {
+    id: "shelters",
+    titleKey: "tools.cat.shelters",
+    subgroups: [
+      {
+        id: "shelters-main",
+        tools: [
+          { key: "shelters", icon: MapPin, color: "#2E7D32", href: "https://acopios-refugios.vercel.app", trust: "community", updated: { kind: "active" } },
+          { key: "pets", icon: PawPrint, color: "#BA7517", href: "https://www.huellascan.com/terremoto", trust: "community", updated: { kind: "active" } },
+        ],
+      },
     ],
   },
   {
     id: "donations",
     titleKey: "tools.cat.donations",
     introKey: "tools.intro.donations",
-    tools: [
-      { key: "globalgiving", icon: Globe, color: "#059669", href: "https://www.globalgiving.org/projects/venezuela-earthquake-relief/", badge: "verified" },
-      { key: "caritas", icon: Cross, color: "#DC2626", href: "https://www.caritas.org/where-caritas-work/latin-america/venezuela/", badge: "verified" },
-      { key: "wck", icon: UtensilsCrossed, color: "#EA580C", href: "https://wck.org/", badge: "verified" },
-    ],
-  },
-  {
-    id: "build",
-    titleKey: "tools.cat.build",
-    introKey: "tools.intro.build",
-    tools: [
-      { key: "code4vzla", icon: Terminal, color: "#2563EB", href: "https://codeforvenezuela.org", badge: "verified" },
-      { key: "build4vzla", icon: Hammer, color: "#EA580C", href: "https://build4venezuela.com", badge: "new" },
+    subgroups: [
+      {
+        id: "donations-main",
+        tools: [
+          { key: "globalgiving", icon: Globe, color: "#059669", href: "https://www.globalgiving.org/projects/venezuela-earthquake-relief/", trust: "verified", recommended: true, updated: { kind: "active" } },
+          { key: "caritas", icon: Cross, color: "#DC2626", href: "https://www.caritas.org/where-caritas-work/latin-america/venezuela/", trust: "verified", updated: { kind: "active" } },
+          { key: "wck", icon: UtensilsCrossed, color: "#EA580C", href: "https://wck.org/", trust: "verified", updated: { kind: "active" } },
+        ],
+      },
     ],
   },
 ];
 
-const BADGE_COLOR: Record<Badge, string> = {
+const BUILD_TOOLS: Tool[] = [
+  { key: "code4vzla", icon: Terminal, color: "#2563EB", href: "https://codeforvenezuela.org", trust: "verified", updated: { kind: "recent", date: "24 jun 2026" } },
+  { key: "build4vzla", icon: Hammer, color: "#EA580C", href: "https://build4venezuela.com", trust: "unverified", updated: { kind: "active" } },
+];
+
+const TRUST_COLOR: Record<Trust, string> = {
   verified: "#059669",
   community: "#2563EB",
-  new: "#D97706",
+  unverified: "#6B7280",
 };
 
-const TOTAL_TOOLS = SECTIONS.reduce((n, s) => n + s.tools.length, 0);
+const RECOMMENDED_COLOR = "#B45309";
 
-function ToolBadge({ kind }: { kind: Badge }) {
+const TOTAL_TOOLS =
+  SECTIONS.reduce((n, s) => n + s.subgroups.reduce((m, g) => m + g.tools.length, 0), 0) +
+  BUILD_TOOLS.length;
+
+function TrustBadge({ kind }: { kind: Trust }) {
   const { t } = useI18n();
   const label =
-    kind === "verified" ? t("tools.badge.verified")
-    : kind === "community" ? t("tools.badge.community")
-    : t("tools.badge.new");
+    kind === "verified" ? t("tools.trust.verified")
+    : kind === "community" ? t("tools.trust.community")
+    : t("tools.trust.unverified");
   return (
     <span
-      className="absolute right-4 top-4 inline-flex items-center rounded-full text-white font-medium"
-      style={{ backgroundColor: BADGE_COLOR[kind], fontSize: "10px", padding: "2px 10px", borderRadius: "999px", fontWeight: 500 }}
+      className="inline-flex items-center rounded-full text-white"
+      style={{ backgroundColor: TRUST_COLOR[kind], fontSize: "10px", padding: "2px 8px", fontWeight: 500 }}
     >
       {label}
     </span>
+  );
+}
+
+function RecommendedBadge() {
+  const { t } = useI18n();
+  return (
+    <span
+      className="inline-flex items-center rounded-full text-white"
+      style={{ backgroundColor: RECOMMENDED_COLOR, fontSize: "10px", padding: "2px 8px", fontWeight: 600 }}
+    >
+      {t("tools.recommended")}
+    </span>
+  );
+}
+
+function UpdatedIndicator({ updated }: { updated: Updated }) {
+  const { t } = useI18n();
+  const dotColor =
+    updated.kind === "active" ? "#16A34A" : updated.kind === "inactive" ? "#9CA3AF" : "#D1D5DB";
+  const label =
+    updated.kind === "active" ? t("tools.updated.active")
+    : updated.kind === "inactive" ? t("tools.updated.inactive")
+    : t("tools.updated.recent", { date: updated.date });
+  return (
+    <p className="mt-2 inline-flex items-center gap-1.5" style={{ fontSize: "11px", color: "#9CA3AF" }}>
+      <span className="inline-block size-1.5 rounded-full" style={{ backgroundColor: dotColor }} aria-hidden />
+      {label}
+    </p>
   );
 }
 
@@ -340,15 +468,19 @@ function ToolCard({ tool }: { tool: Tool }) {
   const { t } = useI18n();
   const Icon = tool.icon;
   return (
-    <article className="relative flex flex-col rounded-2xl border border-border bg-card p-6 sm:p-8 transition hover:-translate-y-0.5 hover:shadow-[0_10px_40px_-20px_rgb(0_0_0/0.25)]">
+    <article className="relative flex flex-col rounded-2xl border border-border bg-card p-6 sm:p-7 transition hover:-translate-y-0.5 hover:shadow-[0_10px_40px_-20px_rgb(0_0_0/0.25)]">
       <span className="absolute left-0 top-8 h-12 w-1 rounded-r" style={{ backgroundColor: tool.color }} aria-hidden />
-      <ToolBadge kind={tool.badge} />
-      <div className="mb-5 inline-flex size-11 items-center justify-center rounded-xl bg-muted" style={{ color: tool.color }}>
+      <div className="absolute right-3 top-3 flex flex-wrap justify-end gap-1.5 max-w-[60%]">
+        {tool.recommended && <RecommendedBadge />}
+        <TrustBadge kind={tool.trust} />
+      </div>
+      <div className="mb-4 inline-flex size-11 items-center justify-center rounded-xl bg-muted" style={{ color: tool.color }}>
         <Icon className="size-5" strokeWidth={1.6} />
       </div>
-      <h3 className="font-serif text-xl font-bold pr-20">{t(`tool.${tool.key}.title`)}</h3>
+      <h3 className="font-serif text-[18px] font-bold pr-2 mt-8">{t(`tool.${tool.key}.title`)}</h3>
       <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{t(`tool.${tool.key}.desc`)}</p>
-      <div className="mt-6">
+      <UpdatedIndicator updated={tool.updated} />
+      <div className="mt-5">
         <a
           href={tool.href}
           target="_blank"
@@ -364,6 +496,23 @@ function ToolCard({ tool }: { tool: Tool }) {
   );
 }
 
+function useClientDateTime(lang: Lang) {
+  const [value, setValue] = useState("");
+  useEffect(() => {
+    const locale = lang === "es" ? "es-VE" : "en-US";
+    setValue(
+      new Date().toLocaleString(locale, {
+        day: "numeric",
+        month: "long",
+        year: "numeric",
+        hour: "2-digit",
+        minute: "2-digit",
+      }),
+    );
+  }, [lang]);
+  return value;
+}
+
 function Tools() {
   const { t, lang } = useI18n();
   const [query, setQuery] = useState("");
@@ -374,33 +523,33 @@ function Tools() {
     return SECTIONS
       .map((s) => ({
         ...s,
-        tools: s.tools.filter(({ key }) => {
-          const title = t(`tool.${key}.title`).toLowerCase();
-          const desc = t(`tool.${key}.desc`).toLowerCase();
-          return title.includes(q) || desc.includes(q);
-        }),
+        subgroups: s.subgroups
+          .map((g) => ({
+            ...g,
+            tools: g.tools.filter(({ key }) => {
+              const title = t(`tool.${key}.title`).toLowerCase();
+              const desc = t(`tool.${key}.desc`).toLowerCase();
+              return title.includes(q) || desc.includes(q);
+            }),
+          }))
+          .filter((g) => g.tools.length > 0),
       }))
-      .filter((s) => s.tools.length > 0);
+      .filter((s) => s.subgroups.length > 0);
   }, [query, t]);
 
-  const totalFiltered = filteredSections.reduce((n, s) => n + s.tools.length, 0);
+  const totalFiltered = filteredSections.reduce(
+    (n, s) => n + s.subgroups.reduce((m, g) => m + g.tools.length, 0),
+    0,
+  );
 
-  const today = new Date().toLocaleDateString(lang === "es" ? "es-VE" : "en-US", {
-    day: "numeric",
-    month: "long",
-    year: "numeric",
-  });
+  const datetime = useClientDateTime(lang);
 
   return (
-    <section id="tools" className="mx-auto max-w-6xl px-4 py-16 sm:py-24">
+    <section id="tools" className="mx-auto max-w-6xl px-4 pt-10 pb-16 sm:pb-24 border-t border-border mt-6">
       <div className="max-w-2xl mb-6">
-        <h2 className="font-serif text-2xl sm:text-3xl">{t("tools.title")}</h2>
-        <p className="mt-2 text-[15px] text-muted-foreground leading-relaxed">{t("tools.sub")}</p>
+        <h2 className="font-serif text-2xl sm:text-3xl">{t("tools.title2")}</h2>
+        <p className="mt-2 text-[15px] text-muted-foreground leading-relaxed">{t("tools.sub2")}</p>
       </div>
-
-      <p className="text-center text-[14px] text-muted-foreground mb-8">
-        {t("tools.counter", { n: TOTAL_TOOLS, date: today })}
-      </p>
 
       <div className="relative mb-8 max-w-xl">
         <Search className="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 size-4 text-muted-foreground" strokeWidth={1.6} />
@@ -417,11 +566,11 @@ function Tools() {
       {totalFiltered === 0 ? (
         <p className="text-sm text-muted-foreground py-8">{t("tools.search.empty")}</p>
       ) : (
-        <div className="flex flex-col">
+        <div className="flex flex-col gap-2">
           {filteredSections.map((section) => (
-            <div key={section.id} className="border-t pt-10 mt-0" style={{ borderColor: "#E5E7EB", paddingTop: "40px" }}>
+            <div key={section.id} className="pt-8 mt-2" style={{ borderTop: "1px solid #E5E7EB" }}>
               <h3
-                className="mb-5"
+                className="mb-4"
                 style={{
                   fontSize: "13px",
                   color: "#6B7280",
@@ -433,34 +582,77 @@ function Tools() {
                 {t(section.titleKey)}
               </h3>
               {section.introKey && (
-                <p
-                  className="mb-6"
-                  style={{ fontSize: "14px", color: "#6B7280", maxWidth: "700px" }}
-                >
+                <p className="mb-6" style={{ fontSize: "14px", color: "#6B7280", maxWidth: "700px" }}>
                   {t(section.introKey)}
                 </p>
               )}
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                {section.tools.map((tool) => (
-                  <ToolCard key={tool.key} tool={tool} />
-                ))}
-              </div>
+
+              {section.subgroups.map((group) => (
+                <div key={group.id} className="mb-8 last:mb-0">
+                  {group.titleKey && (
+                    <h4 className="font-serif text-[18px] font-bold mb-2">{t(group.titleKey)}</h4>
+                  )}
+                  {group.noteKey && (
+                    <div
+                      className="mb-4"
+                      style={{
+                        backgroundColor: "#F3F4F6",
+                        borderRadius: "8px",
+                        padding: "12px 16px",
+                        fontSize: "13px",
+                        color: "#374151",
+                        maxWidth: "780px",
+                        lineHeight: 1.5,
+                      }}
+                    >
+                      {t(group.noteKey)}
+                    </div>
+                  )}
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                    {group.tools.map((tool) => (
+                      <ToolCard key={tool.key} tool={tool} />
+                    ))}
+                  </div>
+                </div>
+              ))}
             </div>
           ))}
         </div>
       )}
 
-      <div
-        className="mt-10 text-center"
-        style={{ borderTop: "1px solid #E5E7EB", paddingTop: "32px" }}
-      >
+      <div className="mt-10" style={{ borderTop: "1px solid #E5E7EB", paddingTop: "24px" }}>
         <p style={{ fontSize: "13px", color: "#6B7280" }}>
-          {t("tools.footer.note")}
+          {t("tools.summary", { n: TOTAL_TOOLS, datetime: datetime || "—" })}
         </p>
       </div>
     </section>
   );
 }
+
+/* ───────────────────────── Build Layer (Capa 3) ───────────────────────── */
+
+function BuildLayer() {
+  const { t } = useI18n();
+  return (
+    <section className="border-y border-border" style={{ backgroundColor: "#F9FAFB" }}>
+      <div className="mx-auto max-w-6xl px-4 py-16 sm:py-24">
+        <div className="max-w-2xl mb-8">
+          <h2 className="font-serif text-2xl sm:text-3xl">{t("build.layer.title")}</h2>
+          <p className="mt-2 text-[15px] text-muted-foreground leading-relaxed">{t("build.layer.sub")}</p>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-4xl">
+          {BUILD_TOOLS.map((tool) => (
+            <ToolCard key={tool.key} tool={tool} />
+          ))}
+        </div>
+        <p className="mt-8 text-[13px] text-muted-foreground max-w-2xl leading-relaxed">
+          {t("build.layer.cta")}
+        </p>
+      </div>
+    </section>
+  );
+}
+
 
 /* ───────────────────────── Emergency ───────────────────────── */
 
