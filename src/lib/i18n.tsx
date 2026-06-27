@@ -555,6 +555,24 @@ const en: Dict = {
   "help.money.d.details": "Donate directly from the official Colombian Red Cross site. Secure payment with credit or debit card.",
   "help.money.d.cta": "Donate now",
 
+  "help.money.e.name": "Caritas Venezuela",
+  "help.money.e.pill": "Verified",
+  "help.money.e.details": "Donate directly at caritasvenezuela.org/donaciones/",
+  "help.money.e.cta": "Donate",
+
+  "help.money.f.name": "I Love Venezuela Foundation",
+  "help.money.f.pill": "GoFundMe",
+  "help.money.f.details": "Verified earthquake relief campaign.",
+  "help.money.f.cta": "Donate",
+
+  "help.money.g.name": "Banco de Alimentos Bogotá",
+  "help.money.g.pill": "Colombia",
+  "help.money.g.details": "Bre-B llave: 0091677852\nbancodealimentos.org.co",
+
+  "help.money.h.name": "Donate via Rappi",
+  "help.money.h.pill": "From home",
+  "help.money.h.details": "Open Rappi with a Bogotá address.\nGo to Rappi Turbo.\nLook for the donation button or the word 'Bono'.\nYour contribution reaches the Food Bank for those affected.",
+
   "help.money.verify": "Always verify accounts before transferring.",
   "help.supplies.card.title": "Donate supplies",
   "help.supplies.card.sub": "Active drop-off point in Bogotá.",
