@@ -236,7 +236,52 @@ const es: Dict = {
   "prep.share": "Compartir esta guía por WhatsApp",
   "prep.shareMsg":
     "Información esencial sobre terremotos: qué hacer durante y después, y qué debe tener tu kit de emergencia.",
+
+  // Capa 1
+  "quick.title": "¿Qué necesitas ahora?",
+  "quick.sub": "Selecciona tu situación. Te llevamos a la mejor herramienta disponible.",
+  "quick.search.label": "Busco a alguien",
+  "quick.search.note": "22.000+ reportes activos",
+  "quick.shelter.label": "Necesito refugio",
+  "quick.shelter.note": "Mapa de refugios verificados",
+  "quick.damage.label": "Reportar daños",
+  "quick.damage.note": "Con foto y GPS",
+  "quick.donate.label": "Quiero donar",
+  "quick.donate.note": "Organizaciones verificadas",
+  "quick.emergency": "¿Tienes una emergencia médica? Llama al 0800-0-000-911",
+
+  // Capa 2 (reemplaza títulos previos)
+  "tools.title2": "Todas las herramientas disponibles",
+  "tools.sub2": "Organizadas por categoría. Algunas hacen cosas similares — te indicamos cuál recomendamos y por qué.",
+  "tools.cat.shelters": "Centros de acopio y refugios",
+
+  "tools.subgroup.people.title": "Buscar personas desaparecidas",
+  "tools.subgroup.people.note": "Estas herramientas tienen funciones similares. Recomendamos Venezuela te busca por volumen de reportes (22.000+). Las demás son alternativas válidas.",
+  "tools.subgroup.maps.title": "Reportar y ver daños estructurales",
+  "tools.subgroup.maps.note": "Yummy SOS permite reporte con foto+GPS y ofrece viajes gratuitos a hospitales. SOS Venezuela 2026 tiene datos sísmicos en vivo.",
+
+  "tools.trust.verified": "Equipo verificado",
+  "tools.trust.community": "Comunidad",
+  "tools.trust.unverified": "Sin verificar",
+  "tools.recommended": "Recomendada",
+
+  "tools.updated.active": "Activo · actualizado hoy",
+  "tools.updated.recent": "Última revisión: {date}",
+  "tools.updated.inactive": "Sin actividad reciente",
+
+  "tools.summary": "{n} herramientas activas · Última actualización: {datetime} · Estas herramientas son independientes, ciudadanas y no partidistas.",
+
+  // Nuevo tool
+  "tool.vresiste.title": "Venezuela Resiste",
+  "tool.vresiste.desc": "Iniciativa ciudadana que centraliza información sobre daños, refugios y necesidades en una sola vista navegable. Construida y mantenida por voluntarios.",
+  "tool.vresiste.cta": "Abrir plataforma",
+
+  // Capa 3
+  "build.layer.title": "¿Tienes habilidades técnicas?",
+  "build.layer.sub": "Puedes construir herramientas que salven vidas este fin de semana.",
+  "build.layer.cta": "¿Construiste algo que pueda ayudar? Escríbenos a l.zuluaga@youngaileadershub.org y lo agregamos al hub.",
 };
+
 
 const en: Dict = {
   "nav.convenedBy":
@@ -470,7 +515,52 @@ const en: Dict = {
   "prep.share": "Share this guide on WhatsApp",
   "prep.shareMsg":
     "Essential earthquake information: what to do during and after, and what your emergency kit should include.",
+
+  // Layer 1
+  "quick.title": "What do you need right now?",
+  "quick.sub": "Pick your situation. We'll send you to the best available tool.",
+  "quick.search.label": "I'm looking for someone",
+  "quick.search.note": "22,000+ active reports",
+  "quick.shelter.label": "I need shelter",
+  "quick.shelter.note": "Verified shelter map",
+  "quick.damage.label": "Report damage",
+  "quick.damage.note": "With photo and GPS",
+  "quick.donate.label": "I want to donate",
+  "quick.donate.note": "Verified organizations",
+  "quick.emergency": "Medical emergency? Call 0800-0-000-911",
+
+  // Layer 2 (replaces previous titles)
+  "tools.title2": "All available tools",
+  "tools.sub2": "Organized by category. Some do similar things — we tell you which one we recommend and why.",
+  "tools.cat.shelters": "Aid points & shelters",
+
+  "tools.subgroup.people.title": "Find missing people",
+  "tools.subgroup.people.note": "These tools have similar functions. We recommend Venezuela te busca by volume of reports (22,000+). The others are valid alternatives.",
+  "tools.subgroup.maps.title": "Report and view structural damage",
+  "tools.subgroup.maps.note": "Yummy SOS allows photo+GPS reports and offers free rides to hospitals. SOS Venezuela 2026 has live seismic data.",
+
+  "tools.trust.verified": "Verified team",
+  "tools.trust.community": "Community",
+  "tools.trust.unverified": "Unverified",
+  "tools.recommended": "Recommended",
+
+  "tools.updated.active": "Active · updated today",
+  "tools.updated.recent": "Last reviewed: {date}",
+  "tools.updated.inactive": "No recent activity",
+
+  "tools.summary": "{n} active tools · Last update: {datetime} · These tools are independent, citizen-led and nonpartisan.",
+
+  // New tool
+  "tool.vresiste.title": "Venezuela Resiste",
+  "tool.vresiste.desc": "Citizen initiative that centralizes information on damage, shelters and needs in one browsable view. Built and maintained by volunteers.",
+  "tool.vresiste.cta": "Open platform",
+
+  // Layer 3
+  "build.layer.title": "Got technical skills?",
+  "build.layer.sub": "You can build tools that save lives this weekend.",
+  "build.layer.cta": "Built something that can help? Write to us at l.zuluaga@youngaileadershub.org and we'll add it to the hub.",
 };
+
 
 const dicts: Record<Lang, Dict> = { es, en };
 
