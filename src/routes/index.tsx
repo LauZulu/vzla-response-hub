@@ -29,6 +29,7 @@ import {
   UtensilsCrossed,
   Terminal,
   Hammer,
+  Link2,
   type LucideIcon,
 } from "lucide-react";
 import {
@@ -83,7 +84,7 @@ function Hub() {
         <Emergency />
         <Push />
         <Prepare />
-        <BuildLayer />
+        
         <Trust />
       </main>
       <Footer />
@@ -398,15 +399,11 @@ const SECTIONS: Section[] = [
           { key: "globalgiving", icon: Globe, color: "#059669", href: "https://www.globalgiving.org/projects/venezuela-earthquake-relief/", trust: "verified", recommended: true, updated: { kind: "active" } },
           { key: "caritas", icon: Cross, color: "#DC2626", href: "https://www.caritas.org/where-caritas-work/latin-america/venezuela/", trust: "verified", updated: { kind: "active" } },
           { key: "wck", icon: UtensilsCrossed, color: "#EA580C", href: "https://wck.org/", trust: "verified", updated: { kind: "active" } },
+          { key: "entrepanas", icon: Link2, color: "#059669", href: "https://entrepanas.org", trust: "verified", updated: { kind: "active" } },
         ],
       },
     ],
   },
-];
-
-const BUILD_TOOLS: Tool[] = [
-  { key: "code4vzla", icon: Terminal, color: "#2563EB", href: "https://codeforvenezuela.org", trust: "verified", updated: { kind: "recent", date: "24 jun 2026" } },
-  { key: "build4vzla", icon: Hammer, color: "#EA580C", href: "https://build4venezuela.com", trust: "unverified", updated: { kind: "active" } },
 ];
 
 const TRUST_COLOR: Record<Trust, string> = {
@@ -418,8 +415,7 @@ const TRUST_COLOR: Record<Trust, string> = {
 const RECOMMENDED_COLOR = "#B45309";
 
 const TOTAL_TOOLS =
-  SECTIONS.reduce((n, s) => n + s.subgroups.reduce((m, g) => m + g.tools.length, 0), 0) +
-  BUILD_TOOLS.length;
+  SECTIONS.reduce((n, s) => n + s.subgroups.reduce((m, g) => m + g.tools.length, 0), 0);
 
 function TrustBadge({ kind }: { kind: Trust }) {
   const { t } = useI18n();
@@ -631,29 +627,6 @@ function Tools() {
   );
 }
 
-/* ───────────────────────── Build Layer (Capa 3) ───────────────────────── */
-
-function BuildLayer() {
-  const { t } = useI18n();
-  return (
-    <section className="border-y border-border" style={{ backgroundColor: "#F9FAFB" }}>
-      <div className="mx-auto max-w-6xl px-4 py-16 sm:py-24">
-        <div className="max-w-2xl mb-8">
-          <h2 className="font-serif text-2xl sm:text-3xl">{t("build.layer.title")}</h2>
-          <p className="mt-2 text-[15px] text-muted-foreground leading-relaxed">{t("build.layer.sub")}</p>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-4xl">
-          {BUILD_TOOLS.map((tool) => (
-            <ToolCard key={tool.key} tool={tool} />
-          ))}
-        </div>
-        <p className="mt-8 text-[13px] text-muted-foreground max-w-2xl leading-relaxed">
-          {t("build.layer.cta")}
-        </p>
-      </div>
-    </section>
-  );
-}
 
 
 /* ───────────────────────── Emergency ───────────────────────── */
