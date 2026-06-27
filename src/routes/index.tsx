@@ -30,6 +30,7 @@ import {
   Terminal,
   Hammer,
   Link2,
+  BuildingIcon,
   type LucideIcon,
 } from "lucide-react";
 import {
