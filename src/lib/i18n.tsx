@@ -297,6 +297,12 @@ const es: Dict = {
     "Sube fotos de los daños de tu edificio y un ingeniero civil voluntario las revisa remotamente. Recibes un informe de habitabilidad por email con clasificación y recomendaciones. Gratis, sin registro, con estándares técnicos ATC-20 y EMS-98.",
   "tool.sismoayuda.cta": "Reportar mi edificación",
 
+  "tool.sosreservadoc.title": "SOS ReservaDoc — Teleconsultas médicas",
+  "tool.sosreservadoc.desc":
+    "Plataforma de teleconsultas gratuitas para descongestionar hospitales en Venezuela. Si eres médico puedes registrarte para atender pacientes remotamente desde cualquier país. Impulsada por Andrés Bilbao, cofundador de Rappi.",
+  "tool.sosreservadoc.cta": "Atender o consultar",
+
+
   // Capa 3
   "build.layer.title": "¿Tienes habilidades técnicas?",
   "build.layer.sub": "Puedes construir herramientas que salven vidas este fin de semana.",
@@ -596,6 +602,11 @@ const en: Dict = {
   "tool.sismoayuda.desc":
     "Upload photos of damage to your building and a volunteer civil engineer reviews them remotely. You get a habitability report by email with classification and recommendations. Free, no signup, using ATC-20 and EMS-98 technical standards.",
   "tool.sismoayuda.cta": "Report my building",
+
+  "tool.sosreservadoc.title": "SOS ReservaDoc — Medical teleconsultations",
+  "tool.sosreservadoc.desc":
+    "Free teleconsultation platform to relieve pressure on hospitals in Venezuela. If you are a doctor, sign up to treat patients remotely from any country. Backed by Andrés Bilbao, co-founder of Rappi.",
+  "tool.sosreservadoc.cta": "Treat or consult",
 
   // Layer 3
   "build.layer.title": "Got technical skills?",
