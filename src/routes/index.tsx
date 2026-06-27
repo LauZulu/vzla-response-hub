@@ -796,20 +796,64 @@ function Push() {
           <h3 className="mt-3 font-serif text-[18px] font-bold">{t("help.supplies.card.title")}</h3>
           <p className="mt-1 text-[14px] text-muted-foreground leading-relaxed">{t("help.supplies.card.sub")}</p>
 
+          {/* Point 1 */}
           <div className="mt-4 text-[14px] leading-relaxed">
             <p className="font-bold">{t("help.supplies.org")}</p>
             <p>{t("help.supplies.address")}</p>
           </div>
 
-          <Accordion type="single" collapsible className="mt-3">
+          {/* Point 2 */}
+          <div className="mt-4 pt-4 border-t border-border text-[14px] leading-relaxed">
+            <p className="font-bold">Legalnova + WeKip</p>
+            <p>Ed Strategic 97, Cl. 97a #9-45 Of. 403, Chapinero, Bogotá</p>
+            <p className="text-muted-foreground">(+57) 311 7101017 · legalnova.co</p>
+          </div>
+
+          {/* Point 3 */}
+          <div className="mt-4 pt-4 border-t border-border text-[14px] leading-relaxed">
+            <p className="font-bold">Fundación Caminantes de San José</p>
+            <p className="text-[13px] text-muted-foreground">{t("help.supplies.caminantes.sub")}</p>
+            <Accordion type="single" collapsible className="mt-1">
+              <AccordionItem value="caminantes" className="border-b-0">
+                <AccordionTrigger className="py-2 text-left text-[13px] font-medium">
+                  {t("help.supplies.caminantes.expand")}
+                </AccordionTrigger>
+                <AccordionContent>
+                  <ul className="text-[13px] leading-relaxed text-foreground/90 space-y-2">
+                    <li><span className="font-semibold">Cedritos:</span> Calle 142 #17A-40 Local 1 · +57 317 765 22 94</li>
+                    <li><span className="font-semibold">20 de Julio:</span> Av 1 de Mayo #8-22 · +57 320 438 3449</li>
+                    <li><span className="font-semibold">Kennedy:</span> AV CRA 86 44 SUR 10 LOC 29 · +57 350 833 4029</li>
+                    <li><span className="font-semibold">Suba:</span> CC Centro Suba, Av Calle 145 #91-19 Local 12-101 · +57 318 534 2222</li>
+                  </ul>
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
+          </div>
+
+          <Accordion type="single" collapsible className="mt-3 border-t border-border pt-1">
             <AccordionItem value="needs" className="border-b-0">
               <AccordionTrigger className="py-3 text-left text-[14px] font-medium">
                 {t("help.supplies.expand")}
               </AccordionTrigger>
               <AccordionContent>
-                <p className="text-[13px] leading-relaxed whitespace-pre-line text-foreground/90">
-                  {t("help.supplies.needsList")}
-                </p>
+                <div className="space-y-4">
+                  {[
+                    "medical",
+                    "food",
+                    "hygiene",
+                    "shelter",
+                    "clothing",
+                  ].map((cat) => (
+                    <div key={cat}>
+                      <p className="text-[13px] font-bold text-foreground">
+                        {t(`help.supplies.cat.${cat}.title`)}
+                      </p>
+                      <p className="mt-1 text-[13px] leading-relaxed text-foreground/90">
+                        {t(`help.supplies.cat.${cat}.items`)}
+                      </p>
+                    </div>
+                  ))}
+                </div>
               </AccordionContent>
             </AccordionItem>
           </Accordion>
