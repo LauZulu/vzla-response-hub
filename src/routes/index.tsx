@@ -1196,17 +1196,11 @@ function Footer() {
             <span className="font-serif">{t("nav.logo")}</span>
           </div>
           <div className="text-muted-foreground text-xs">{t("footer.rights")}</div>
-          <a
-            href="https://chat.whatsapp.com/FTBI2oLHtuaEVnbEbjUHbl"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 text-muted-foreground text-xs hover:text-foreground transition"
-          >
-            <MessageCircle className="size-3" />
-            {t("footer.whatsapp")}
-          </a>
         </div>
-        <div className="border-t border-border/70 pt-5 space-y-2">
+
+        <div className="border-t border-border/70 pt-5 space-y-3">
+          <p className="text-[13px] text-foreground/90">{t("footer.about.coord")}</p>
+          <p className="text-[13px] text-foreground/90">{t("footer.about.network")}</p>
           <p className="text-[12px] text-muted-foreground">
             {t("footer.creditPrefix")}
             <a
@@ -1219,6 +1213,27 @@ function Footer() {
             </a>
           </p>
           <p className="text-[13px] text-muted-foreground">{t("footer.join")}</p>
+        </div>
+
+        <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 pt-2">
+          <a
+            href="https://chat.whatsapp.com/FTBI2oLHtuaEVnbEbjUHbl"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex w-full sm:w-auto items-center justify-center gap-1.5 rounded-full bg-teal text-teal-foreground px-5 py-2.5 text-sm font-medium hover:opacity-90 transition"
+          >
+            <MessageCircle className="size-3.5" />
+            {t("footer.whatsapp")}
+          </a>
+          <a
+            href="https://www.youngaileadershub.org"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex w-full sm:w-auto items-center justify-center gap-1.5 rounded-full border border-foreground/80 px-5 py-2.5 text-sm font-medium text-foreground hover:bg-foreground hover:text-background transition"
+          >
+            {t("footer.btn.yal")}
+            <ExternalLink className="size-3.5" />
+          </a>
         </div>
       </div>
       <div className="h-20 sm:h-0" aria-hidden />
