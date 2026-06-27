@@ -633,16 +633,18 @@ function Tools() {
         <p className="mt-2 text-[15px] text-muted-foreground leading-relaxed">{t("tools.sub2")}</p>
       </div>
 
-      <div className="relative mb-8 max-w-xl">
-        <Search className="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 size-4 text-muted-foreground" strokeWidth={1.6} />
-        <input
-          type="search"
-          value={query}
-          onChange={(e) => setQuery(e.target.value)}
-          placeholder={t("tools.search.placeholder")}
-          aria-label={t("tools.search.placeholder")}
-          className="w-full rounded-full border border-border bg-card pl-11 pr-4 py-3 text-sm font-sans placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:border-transparent transition"
-        />
+      <div className="sticky top-[68px] z-20 -mx-4 px-4 py-2 bg-background/95 backdrop-blur mb-6 sm:mb-8">
+        <div className="relative max-w-xl">
+          <Search className="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 size-4 text-muted-foreground" strokeWidth={1.6} />
+          <input
+            type="search"
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
+            placeholder={t("tools.search.placeholder")}
+            aria-label={t("tools.search.placeholder")}
+            className="w-full rounded-full border border-border bg-card pl-11 pr-4 py-3 text-sm font-sans placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:border-transparent transition"
+          />
+        </div>
       </div>
 
       {totalFiltered === 0 ? (
