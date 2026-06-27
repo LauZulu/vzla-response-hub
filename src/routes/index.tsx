@@ -50,12 +50,12 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Real tools, real impact. 34 lives saved in 48 hours. Find missing people, coordinate rescues, donate directly.",
+          "920+ fallecidos. 50.000+ desaparecidos. Herramientas tech construidas por comunidades para ayudar a Venezuela. Busca personas, dona, reporta daños.",
       },
       { property: "og:title", content: "Venezuela Earthquake Response Hub" },
       {
         property: "og:description",
-        content: "847 located · 123 rescues · 34 lives saved · $47.3K raised. Help now.",
+        content: "920+ fallecidos. 50.000+ desaparecidos. Herramientas tech construidas por comunidades para ayudar a Venezuela. Busca personas, dona, reporta daños.",
       },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "/" },
@@ -364,12 +364,12 @@ const SECTIONS: Section[] = [
         titleKey: "tools.subgroup.maps.title",
         noteKey: "tools.subgroup.maps.note",
         tools: [
+          { key: "sismoayuda", icon: Building, color: "#1E3A5F", href: "https://www.sismoayudave.com", trust: "verified", featured: true, updated: { kind: "active" } },
           { key: "yummy", icon: Ambulance, color: "#CA8A04", href: "https://sos.yummyrides.com", trust: "verified", recommended: true, updated: { kind: "active" } },
           { key: "map", icon: MapIcon, color: "#D85A30", href: "https://terremotovenezuela.com", trust: "community", updated: { kind: "active" } },
           { key: "sosvzla", icon: MapPinned, color: "#1E3A5F", href: "https://sosvenezuela2026.com", trust: "community", updated: { kind: "active" } },
           { key: "triage", icon: Castle, color: "#11243E", href: "https://pretriageestructuralvenezuela.netlify.app", trust: "unverified", updated: { kind: "recent", date: "25 jun 2026" } },
           { key: "vresiste", icon: MapPinned, color: "#0E7490", href: "https://terremotove.netlify.app", trust: "community", updated: { kind: "recent", date: "25 jun 2026" } },
-          { key: "sismoayuda", icon: Building, color: "#1E3A5F", href: "https://www.sismoayudave.com", trust: "verified", updated: { kind: "active" } },
         ],
       },
     ],
@@ -398,7 +398,7 @@ const SECTIONS: Section[] = [
         tools: [
           { key: "ayudahumvzla", icon: Package, color: "#003893", href: "https://www.ayudahumanitariavenezuela.com", trust: "community", featured: true, updated: { kind: "active" } },
           { key: "shelters", icon: MapPin, color: "#2E7D32", href: "https://acopios-refugios.vercel.app", trust: "community", updated: { kind: "active" } },
-          { key: "ayudave", icon: HeartHandshake, color: "#003893", href: "https://ayudahumanitariavenezuela.com", trust: "community", updated: { kind: "active" } },
+          
           { key: "pets", icon: PawPrint, color: "#BA7517", href: "https://www.huellascan.com/terremoto", trust: "community", updated: { kind: "active" } },
         ],
 

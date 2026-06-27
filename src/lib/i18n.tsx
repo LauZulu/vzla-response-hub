@@ -64,47 +64,43 @@ const es: Dict = {
   "tool.map.title": "Mapa de daños estructurales",
   "tool.map.desc":
     "Seguimiento en tiempo real de edificios afectados por el terremoto. Ciudadanos reportan daños clasificados por colapso total, daño severo y daño parcial. Rescatistas lo usan para priorizar operaciones.",
-  "tool.map.cta": "Acceder al mapa",
+  "tool.map.cta": "Ver mapa",
 
   "tool.missing.title": "Reporte de personas desaparecidas",
   "tool.missing.desc":
     "Plataforma ciudadana para reportar y buscar personas desaparecidas. Los usuarios crean reportes con nombre, ubicación y foto. Cuando alguien es localizado, se actualiza el estado en tiempo real.",
-  "tool.missing.cta": "Buscar o reportar",
+  "tool.missing.cta": "Buscar persona",
 
   "tool.vision.title": "Identificación visual con IA",
   "tool.vision.desc":
-    "Herramienta de inteligencia artificial que facilita la identificación de personas a partir de imágenes compartidas en redes sociales y grupos de mensajería durante la emergencia.",
-  "tool.vision.cta": "Usar herramienta",
+    "Sube una foto de alguien que buscas o que encontraste. La IA compara con imágenes publicadas en redes y grupos de mensajería para facilitar la identificación.",
+  "tool.vision.cta": "Identificar persona",
 
   "tool.search.title": "Venezuela te busca",
   "tool.search.desc":
     "Registro público de personas desaparecidas tras el terremoto. Permite registrar y buscar personas con foto, nombre, edad y ubicación. Más de 22.000 personas registradas hasta ahora.",
-  "tool.search.cta": "Buscar o registrar",
+  "tool.search.cta": "Buscar persona",
 
   "tool.hospitals.title": "Hospitales en Venezuela",
   "tool.hospitals.desc":
-    "Digitaliza las listas de personas ingresadas en hospitales y centros de salud. Busca por nombre o cédula para saber si tu familiar está siendo atendido y en qué centro se encuentra.",
+    "Busca si tu familiar está ingresado en un hospital. Digitaliza listas de pacientes por nombre o cédula. Cubre centros de salud en las zonas afectadas.",
   "tool.hospitals.cta": "Buscar en hospitales",
 
   "tool.pets.title": "Mascotas perdidas y encontradas",
   "tool.pets.desc":
-    "Plataforma de emergencia para reportar y buscar mascotas extraviadas tras el terremoto. Publica sin registro. Más de 800 reportes activos entre perdidos y encontrados.",
+    "Reporta o busca mascotas extraviadas tras el terremoto. Sin registro. Fotos y ubicación. Más de 800 reportes activos.",
   "tool.pets.cta": "Buscar o reportar mascota",
 
   "tool.triage.title": "Pre-triage estructural",
   "tool.triage.desc":
-    "Evaluación rápida de daños estructurales basada en el Boletín 61 de la Academia Nacional de Ingeniería. Identifica riesgo de colapso. Útil para ingenieros, inspectores y ciudadanos.",
+    "Responde un formulario sobre el estado de tu edificio y recibe una evaluación preliminar de riesgo de colapso. Basado en protocolo de ingeniería venezolana (Boletín 61 ANIH).",
   "tool.triage.cta": "Evaluar estructura",
 
   "tool.shelters.title": "Centros de acopio y refugios",
   "tool.shelters.desc":
-    "Mapa colaborativo para registrar y localizar centros de acopio de ayuda y refugios disponibles en Venezuela. Reporta puntos verificados para que la ayuda llegue donde se necesita.",
+    "Mapa para encontrar o registrar puntos de acopio y refugios activos en Venezuela. Verificado por ciudadanos.",
   "tool.shelters.cta": "Ver mapa o reportar",
 
-  "tool.ayudave.title": "AyudaVE — Ayuda humanitaria",
-  "tool.ayudave.desc":
-    "Plataforma para donar, registrarte como voluntario o registrar tu centro de acopio en menos de un minuto. Conecta donantes, voluntarios y centros de ayuda en un solo lugar.",
-  "tool.ayudave.cta": "Donar o ser voluntario",
 
 
   "tool.redayuda.title": "Red Ayuda Venezuela",
@@ -267,7 +263,7 @@ const es: Dict = {
     "Este hub centraliza herramientas construidas por comunidades tech independientes en respuesta al terremoto del 24 de junio de 2026.",
 
   "cta.button": "Donar / Ayudar / Compartir",
-  "cta.rot1": "200+ personas siguen desaparecidas",
+  "cta.rot1": "50.000+ personas reportadas como desaparecidas",
   "cta.rot2": "Tu ayuda importa. Ahora mismo.",
   "cta.rot3": "34 vidas salvadas hasta ahora. Vamos por 50.",
 
@@ -304,7 +300,7 @@ const es: Dict = {
   "quick.damage.note": "Equipo verificado · Foto + GPS",
   "quick.damage.sub": "Dentro de Venezuela: usa VenApp (app oficial del gobierno)",
   "quick.donate.label": "Quiero donar",
-  "quick.donate.note": "Cruz Roja Colombiana · Donacion directa online · Pago seguro con tarjeta",
+  "quick.donate.note": "Cruz Roja Colombiana · Donacion directa online · Pago seguro",
   "quick.donate.sub": "También: GlobalGiving, Cáritas, World Central Kitchen",
   "quick.emergency": "¿Tienes una emergencia médica? Llama al 0800-0-000-911",
 
@@ -334,7 +330,7 @@ const es: Dict = {
 
   // Nuevo tool
   "tool.vresiste.title": "Venezuela Resiste",
-  "tool.vresiste.desc": "Iniciativa ciudadana que centraliza información sobre daños, refugios y necesidades en una sola vista navegable. Construida y mantenida por voluntarios.",
+  "tool.vresiste.desc": "Vista única con daños, refugios y necesidades reportadas por ciudadanos. Navegable por zona y tipo de emergencia.",
   "tool.vresiste.cta": "Abrir plataforma",
 
   "tool.sismoayuda.title": "SismoAyuda VE — Evaluación estructural",
@@ -349,13 +345,13 @@ const es: Dict = {
 
   "tool.filosos.title": "Red de ayuda comunitaria",
   "tool.filosos.desc":
-    "Solicita u ofrece ayuda en tiempo real. Reporta emergencias, comparte recursos y encuentra asistencia cerca de ti. Incluye reporte de niños y distribución de insumos.",
-  "tool.filosos.cta": "Acceder",
+    "Pide o ofrece ayuda cerca de ti. Reporta emergencias, niños solos y necesidades de insumos por zona. Red ciudadana en tiempo real.",
+  "tool.filosos.cta": "Pedir u ofrecer ayuda",
 
   "tool.ayudahumvzla.title": "Ayuda humanitaria Venezuela",
   "tool.ayudahumvzla.desc":
     "Plataforma centralizada para donar, registrarte como voluntario o registrar tu centro de acopio. Coordina la distribución de insumos y solicitudes de apoyo en un solo lugar.",
-  "tool.ayudahumvzla.cta": "Acceder",
+  "tool.ayudahumvzla.cta": "Donar o ser voluntario",
 
 
   // Capa 3
@@ -425,47 +421,43 @@ const en: Dict = {
   "tool.map.title": "Structural damage map",
   "tool.map.desc":
     "Real-time tracking of buildings affected by the earthquake. Citizens report damage classified by total collapse, severe damage, and partial damage. Rescue teams use it to prioritize operations.",
-  "tool.map.cta": "Open the map",
+  "tool.map.cta": "View map",
 
   "tool.missing.title": "Missing persons reports",
   "tool.missing.desc":
     "Citizen platform to report and search for missing people. Users create reports with name, location, and photo. When someone is found, the status updates in real time.",
-  "tool.missing.cta": "Search or report",
+  "tool.missing.cta": "Search for a person",
 
   "tool.vision.title": "AI-powered visual identification",
   "tool.vision.desc":
-    "AI tool that helps identify people from images shared on social media and messaging groups during the emergency.",
-  "tool.vision.cta": "Use the tool",
+    "Upload a photo of someone you're looking for or someone you found. AI compares it with images published on social media and messaging groups to help identify them.",
+  "tool.vision.cta": "Identify person",
 
   "tool.search.title": "Venezuela te busca",
   "tool.search.desc":
     "Public registry of people missing after the earthquake. Register or search for people with photo, name, age, and location. Over 22,000 people registered so far.",
-  "tool.search.cta": "Search or register",
+  "tool.search.cta": "Search for a person",
 
   "tool.hospitals.title": "Hospitals in Venezuela",
   "tool.hospitals.desc":
-    "Digitizes the lists of people admitted to hospitals and health centers. Search by name or ID to find out if your relative is being treated and at which center.",
+    "Find out if your relative is admitted to a hospital. Digitized patient lists by name or ID. Covers health centers in the affected areas.",
   "tool.hospitals.cta": "Search hospitals",
 
   "tool.pets.title": "Lost and found pets",
   "tool.pets.desc":
-    "Emergency platform to report and search for pets lost after the earthquake. Post without registering. Over 800 active reports between lost and found.",
+    "Report or search for pets lost after the earthquake. No registration required. Photos and location. Over 800 active reports.",
   "tool.pets.cta": "Search or report a pet",
 
   "tool.triage.title": "Structural pre-triage",
   "tool.triage.desc":
-    "Rapid structural damage assessment based on Bulletin 61 of the National Academy of Engineering. Identifies collapse risk. Useful for engineers, inspectors and citizens.",
+    "Answer a questionnaire about your building's condition and receive a preliminary collapse risk assessment. Based on Venezuelan engineering protocol (Bulletin 61 ANIH).",
   "tool.triage.cta": "Assess a structure",
 
   "tool.shelters.title": "Aid collection points and shelters",
   "tool.shelters.desc":
-    "Collaborative map to register and locate aid collection points and shelters available in Venezuela. Report verified locations so help reaches where it is needed.",
+    "Map to find or register active aid collection points and shelters in Venezuela. Verified by citizens.",
   "tool.shelters.cta": "View map or report",
 
-  "tool.ayudave.title": "AyudaVE — Humanitarian aid",
-  "tool.ayudave.desc":
-    "Platform to donate, sign up as a volunteer, or register your collection center in under a minute. Connects donors, volunteers and aid centers in one place.",
-  "tool.ayudave.cta": "Donate or volunteer",
 
 
   "tool.redayuda.title": "Red Ayuda Venezuela",
@@ -628,7 +620,7 @@ const en: Dict = {
     "This hub centralizes tools built by independent tech communities in response to the June 24, 2026 earthquake.",
 
   "cta.button": "Donate / Help / Share",
-  "cta.rot1": "200+ people are still missing",
+  "cta.rot1": "50,000+ people reported missing",
   "cta.rot2": "Your help matters. Right now.",
   "cta.rot3": "34 lives saved so far. Let's make it 50.",
 
@@ -665,7 +657,7 @@ const en: Dict = {
   "quick.damage.note": "Verified team · Photo + GPS",
   "quick.damage.sub": "Inside Venezuela: use VenApp (official government app)",
   "quick.donate.label": "I want to donate",
-  "quick.donate.note": "Colombian Red Cross · Direct online donation · Secure card payment",
+  "quick.donate.note": "Colombian Red Cross · Direct online donation · Secure payment",
   "quick.donate.sub": "Also: GlobalGiving, Caritas, World Central Kitchen",
   "quick.emergency": "Medical emergency? Call 0800-0-000-911",
 
@@ -695,7 +687,7 @@ const en: Dict = {
 
   // New tool
   "tool.vresiste.title": "Venezuela Resiste",
-  "tool.vresiste.desc": "Citizen initiative that centralizes information on damage, shelters and needs in one browsable view. Built and maintained by volunteers.",
+  "tool.vresiste.desc": "Single view with damage, shelters and needs reported by citizens. Browsable by zone and emergency type.",
   "tool.vresiste.cta": "Open platform",
 
   "tool.sismoayuda.title": "SismoAyuda VE — Structural assessment",
@@ -710,13 +702,13 @@ const en: Dict = {
 
   "tool.filosos.title": "Community aid network",
   "tool.filosos.desc":
-    "Request or offer help in real time. Report emergencies, share resources and find assistance nearby. Includes child reports and supply distribution.",
-  "tool.filosos.cta": "Open",
+    "Request or offer help nearby. Report emergencies, unaccompanied children and supply needs by zone. Real-time citizen network.",
+  "tool.filosos.cta": "Request or offer help",
 
   "tool.ayudahumvzla.title": "Ayuda humanitaria Venezuela",
   "tool.ayudahumvzla.desc":
     "Centralized platform to donate, register as a volunteer or register your collection center. Coordinates supply distribution and support requests in one place.",
-  "tool.ayudahumvzla.cta": "Open",
+  "tool.ayudahumvzla.cta": "Donate or volunteer",
 
   // Layer 3
   "build.layer.title": "Got technical skills?",
