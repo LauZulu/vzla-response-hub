@@ -942,6 +942,81 @@ function Push() {
               </AccordionContent>
             </AccordionItem>
           </Accordion>
+
+          <Accordion type="single" collapsible className="mt-3 border-t border-border pt-1">
+            <AccordionItem value="more-bogota" className="border-b-0">
+              <AccordionTrigger className="py-3 text-left text-[14px] font-medium">
+                {t("help.supplies.moreBogota.title")}
+              </AccordionTrigger>
+              <AccordionContent>
+                <ul className="text-[13px] leading-relaxed text-foreground/90 space-y-2">
+                  <li><span className="font-semibold">122 Plaza Apartahotel</span> — Cra 15A #122-27 (24 horas)</li>
+                  <li><span className="font-semibold">JUCA SUSHI</span> — Salitre, Chía, Chapinero, Morato, Cedritos (no perecederos)</li>
+                  <li><span className="font-semibold">CLINIHOGAR</span> — Calle 50 #14-34, Teusaquillo (medicamentos)</li>
+                  <li><span className="font-semibold">Cruz Roja Bogotá</span> — WhatsApp: 324 530 9495 · Línea: 132</li>
+                </ul>
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
+
+          <Accordion type="single" collapsible className="mt-3 border-t border-border pt-1">
+            <AccordionItem value="other-cities" className="border-b-0">
+              <AccordionTrigger className="py-3 text-left text-[14px] font-medium">
+                {t("help.supplies.otherCities.title")}
+              </AccordionTrigger>
+              <AccordionContent>
+                <ul className="text-[13px] leading-relaxed text-foreground/90 space-y-2">
+                  <li><span className="font-semibold">Cali</span> — Cra 28 B3 #72S-32 · 8AM-12PM / 5-7PM</li>
+                  <li><span className="font-semibold">Bucaramanga</span> — Calle 18 #21-52 · 7AM-7PM</li>
+                  <li><span className="font-semibold">Montería</span> — Calle 28A #4W-79 · 7AM-7PM</li>
+                  <li><span className="font-semibold">Santa Marta</span> — Parque La Tenería, Cra 2 con 1D36 · 7AM-6PM</li>
+                </ul>
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
+
+          <Accordion type="single" collapsible className="mt-3 border-t border-border pt-1">
+            <AccordionItem value="international" className="border-b-0">
+              <AccordionTrigger className="py-3 text-left text-[14px] font-medium">
+                {t("help.supplies.international.title")}
+              </AccordionTrigger>
+              <AccordionContent>
+                <ul className="text-[13px] leading-relaxed text-foreground/90 space-y-2">
+                  <li><span className="font-semibold">Panamá</span> — Casa Club Parque Omar · Jue-Vie 8AM-2PM</li>
+                  <li><span className="font-semibold">Uruguay</span> — Montevideo Bakery, G. Gallinal 1726 · 9AM-6PM</li>
+                  <li><span className="font-semibold">Ecuador</span> — Quito: Av. Napo S6-308 · 8AM-4PM / Guayaquil: Chamos Burger desde 10AM</li>
+                  <li><span className="font-semibold">México</span> — CDMX: Thelmas Cakes 9AM-8PM / Villahermosa: Parroquia San Miguel 10AM-6PM</li>
+                  <li><span className="font-semibold">Portugal</span> — Lisboa: Calçada da Tapada 15 · 11AM-2PM / Madeira: Praça do Colombo 4:30-7PM</li>
+                  <li><span className="font-semibold">España</span> — Madrid: Calle Oñate 10 · 9AM-6PM / Tenerife: Plaza de la Catedral 10AM-6PM</li>
+                  <li><span className="font-semibold">EE.UU.</span> — San Antonio TX: 16111 San Pedro Ave desde 11AM</li>
+                </ul>
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
+
+          <Accordion type="single" collapsible className="mt-3 border-t border-border pt-1">
+            <AccordionItem value="pets" className="border-b-0">
+              <AccordionTrigger className="py-3 text-left text-[14px] font-medium">
+                {t("help.supplies.pets.title")}
+              </AccordionTrigger>
+              <AccordionContent>
+                <ul className="text-[13px] leading-relaxed text-foreground/90 space-y-2">
+                  <li>Calle 140 #13-18</li>
+                  <li>Calle 116 #18B-43</li>
+                  <li>Chapinero: Cra 7 #59-34</li>
+                  <li>Modelia: Calle 24 #74A-67</li>
+                  <li>Chía: Km 2.5 vía Chía-Cajicá</li>
+                  <li>La Caro: Autopista Norte Km 21</li>
+                </ul>
+                <p className="mt-3 text-[13px] leading-relaxed text-foreground/90">
+                  {t("help.supplies.pets.needs")}
+                </p>
+                <p className="mt-2 text-[13px] leading-relaxed text-foreground/90">
+                  {t("help.supplies.pets.also")}
+                </p>
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
         </article>
 
         {/* CARD 3: People */}
