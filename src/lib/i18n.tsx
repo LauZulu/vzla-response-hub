@@ -621,6 +621,8 @@ const en: Dict = {
   "tools.trust.community": "Community",
   "tools.trust.unverified": "Unverified",
   "tools.recommended": "Recommended",
+  "tools.featured": "Featured",
+
   "a11y.newTab": "opens in a new tab",
 
   "tools.updated.active": "Active · updated today",
