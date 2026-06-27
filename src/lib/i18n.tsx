@@ -264,6 +264,7 @@ const es: Dict = {
   "tools.trust.community": "Comunidad",
   "tools.trust.unverified": "Sin verificar",
   "tools.recommended": "Recomendada",
+  "a11y.newTab": "se abre en una pestaña nueva",
 
   "tools.updated.active": "Activo · actualizado hoy",
   "tools.updated.recent": "Última revisión: {date}",
