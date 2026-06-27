@@ -232,6 +232,15 @@ function Story() {
 
 /* ───────────────────────── Tools ───────────────────────── */
 
+const COLOR_CLASSES: Record<string, { bar: string; icon: string; btn: string }> = {
+  coral: { bar: "bg-coral", icon: "text-coral", btn: "bg-coral text-coral-foreground" },
+  teal: { bar: "bg-teal", icon: "text-teal", btn: "bg-teal text-teal-foreground" },
+  trust: { bar: "bg-trust", icon: "text-trust", btn: "bg-trust text-trust-foreground" },
+  healing: { bar: "bg-healing", icon: "text-healing", btn: "bg-healing text-healing-foreground" },
+  violet: { bar: "bg-violet", icon: "text-violet", btn: "bg-violet text-violet-foreground" },
+  amber: { bar: "bg-amber", icon: "text-amber", btn: "bg-amber text-amber-foreground" },
+};
+
 type Badge = "verified" | "community" | "new";
 type Tool = {
   key: string;
