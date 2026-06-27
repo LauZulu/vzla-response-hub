@@ -742,7 +742,7 @@ function Push() {
     name: string;
     details: string;
     pill: string;
-    pillTone: "green" | "blue";
+    pillTone: "green" | "blue" | "teal";
     note?: string;
     cta?: { href: string; label: string };
   }> = [
