@@ -236,7 +236,52 @@ const es: Dict = {
   "prep.share": "Compartir esta guía por WhatsApp",
   "prep.shareMsg":
     "Información esencial sobre terremotos: qué hacer durante y después, y qué debe tener tu kit de emergencia.",
+
+  // Capa 1
+  "quick.title": "¿Qué necesitas ahora?",
+  "quick.sub": "Selecciona tu situación. Te llevamos a la mejor herramienta disponible.",
+  "quick.search.label": "Busco a alguien",
+  "quick.search.note": "22.000+ reportes activos",
+  "quick.shelter.label": "Necesito refugio",
+  "quick.shelter.note": "Mapa de refugios verificados",
+  "quick.damage.label": "Reportar daños",
+  "quick.damage.note": "Con foto y GPS",
+  "quick.donate.label": "Quiero donar",
+  "quick.donate.note": "Organizaciones verificadas",
+  "quick.emergency": "¿Tienes una emergencia médica? Llama al 0800-0-000-911",
+
+  // Capa 2 (reemplaza títulos previos)
+  "tools.title2": "Todas las herramientas disponibles",
+  "tools.sub2": "Organizadas por categoría. Algunas hacen cosas similares — te indicamos cuál recomendamos y por qué.",
+  "tools.cat.shelters": "Centros de acopio y refugios",
+
+  "tools.subgroup.people.title": "Buscar personas desaparecidas",
+  "tools.subgroup.people.note": "Estas herramientas tienen funciones similares. Recomendamos Venezuela te busca por volumen de reportes (22.000+). Las demás son alternativas válidas.",
+  "tools.subgroup.maps.title": "Reportar y ver daños estructurales",
+  "tools.subgroup.maps.note": "Yummy SOS permite reporte con foto+GPS y ofrece viajes gratuitos a hospitales. SOS Venezuela 2026 tiene datos sísmicos en vivo.",
+
+  "tools.trust.verified": "Equipo verificado",
+  "tools.trust.community": "Comunidad",
+  "tools.trust.unverified": "Sin verificar",
+  "tools.recommended": "Recomendada",
+
+  "tools.updated.active": "Activo · actualizado hoy",
+  "tools.updated.recent": "Última revisión: {date}",
+  "tools.updated.inactive": "Sin actividad reciente",
+
+  "tools.summary": "{n} herramientas activas · Última actualización: {datetime} · Estas herramientas son independientes, ciudadanas y no partidistas.",
+
+  // Nuevo tool
+  "tool.vresiste.title": "Venezuela Resiste",
+  "tool.vresiste.desc": "Iniciativa ciudadana que centraliza información sobre daños, refugios y necesidades en una sola vista navegable. Construida y mantenida por voluntarios.",
+  "tool.vresiste.cta": "Abrir plataforma",
+
+  // Capa 3
+  "build.layer.title": "¿Tienes habilidades técnicas?",
+  "build.layer.sub": "Puedes construir herramientas que salven vidas este fin de semana.",
+  "build.layer.cta": "¿Construiste algo que pueda ayudar? Escríbenos a l.zuluaga@youngaileadershub.org y lo agregamos al hub.",
 };
+
 
 const en: Dict = {
   "nav.convenedBy":
