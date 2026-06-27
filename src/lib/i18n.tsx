@@ -202,6 +202,24 @@ const es: Dict = {
   "help.money.d.details": "Dona directamente desde la página oficial de la Cruz Roja Colombiana. Pago seguro con tarjeta de crédito o débito.",
   "help.money.d.cta": "Donar ahora",
 
+  "help.money.e.name": "Cáritas Venezuela",
+  "help.money.e.pill": "Verificada",
+  "help.money.e.details": "Dona directamente en caritasvenezuela.org/donaciones/",
+  "help.money.e.cta": "Donar",
+
+  "help.money.f.name": "I Love Venezuela Foundation",
+  "help.money.f.pill": "GoFundMe",
+  "help.money.f.details": "Campaña verificada de ayuda por terremoto.",
+  "help.money.f.cta": "Donar",
+
+  "help.money.g.name": "Banco de Alimentos Bogotá",
+  "help.money.g.pill": "Colombia",
+  "help.money.g.details": "Bre-B llave: 0091677852\nbancodealimentos.org.co",
+
+  "help.money.h.name": "Dona desde Rappi",
+  "help.money.h.pill": "Sin salir de casa",
+  "help.money.h.details": "Abre Rappi con dirección en Bogotá.\nEntra a Rappi Turbo.\nBusca el botón de donación o la palabra 'Bono'.\nTu aporte llega al Banco de Alimentos para los afectados.",
+
   "help.money.verify": "Verifica siempre las cuentas antes de transferir.",
   "help.supplies.card.title": "Dona insumos",
   "help.supplies.card.sub": "Punto de acopio activo en Bogotá.",
