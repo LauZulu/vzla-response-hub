@@ -3,6 +3,7 @@ import { useEffect, useMemo, useState } from "react";
 import {
   Map as MapIcon,
   MapPin,
+  MapPinned,
   Users,
   Camera,
   Search,
@@ -17,10 +18,18 @@ import {
   ArrowRight,
   Mail,
   Phone,
+  PhoneCall,
   ExternalLink,
   AlertTriangle,
   Briefcase,
   HomeIcon,
+  Ambulance,
+  ListChecks,
+  Cross,
+  UtensilsCrossed,
+  Terminal,
+  Hammer,
+  type LucideIcon,
 } from "lucide-react";
 import {
   Accordion,
@@ -223,58 +232,6 @@ function Story() {
 
 /* ───────────────────────── Tools ───────────────────────── */
 
-const SOLUTIONS = [
-  {
-    key: "map",
-    icon: MapIcon,
-    color: "coral",
-    href: "https://terremotovenezuela.com",
-  },
-  {
-    key: "missing",
-    icon: Users,
-    color: "teal",
-    href: "https://desaparecidosterremotovenezuela.com",
-  },
-  {
-    key: "vision",
-    icon: Camera,
-    color: "trust",
-    href: "https://lo-la-has-visto-48680439362.us-west1.run.app",
-  },
-  {
-    key: "search",
-    icon: Search,
-    color: "healing",
-    href: "https://venezuela-te-busca-app.hellogafaro.workers.dev",
-  },
-  {
-    key: "hospitals",
-    icon: Building2,
-    color: "violet",
-    href: "https://hospitalesenvenezuela.com",
-  },
-  {
-    key: "pets",
-    icon: PawPrint,
-    color: "amber",
-    href: "https://www.huellascan.com/terremoto",
-  },
-  {
-    key: "triage",
-    icon: Castle,
-    color: "navy",
-    href: "https://pretriageestructuralvenezuela.netlify.app",
-  },
-  {
-    key: "shelters",
-    icon: MapPin,
-    color: "darkgreen",
-    href: "https://acopios-refugios.vercel.app",
-  },
-
-] as const;
-
 const COLOR_CLASSES: Record<string, { bar: string; icon: string; btn: string }> = {
   coral: { bar: "bg-coral", icon: "text-coral", btn: "bg-coral text-coral-foreground" },
   teal: { bar: "bg-teal", icon: "text-teal", btn: "bg-teal text-teal-foreground" },
@@ -282,32 +239,165 @@ const COLOR_CLASSES: Record<string, { bar: string; icon: string; btn: string }> 
   healing: { bar: "bg-healing", icon: "text-healing", btn: "bg-healing text-healing-foreground" },
   violet: { bar: "bg-violet", icon: "text-violet", btn: "bg-violet text-violet-foreground" },
   amber: { bar: "bg-amber", icon: "text-amber", btn: "bg-amber text-amber-foreground" },
-  navy: { bar: "bg-[#11243E]", icon: "text-[#11243E]", btn: "bg-[#11243E] text-white" },
-  darkgreen: { bar: "bg-[#2E7D32]", icon: "text-[#2E7D32]", btn: "bg-[#2E7D32] text-white" },
-
-
 };
 
-function Tools() {
+type Badge = "verified" | "community" | "new";
+type Tool = {
+  key: string;
+  icon: LucideIcon;
+  color: string; // hex
+  href: string;
+  badge: Badge;
+};
+type Section = {
+  id: string;
+  titleKey: string;
+  introKey?: string;
+  tools: Tool[];
+};
+
+const SECTIONS: Section[] = [
+  {
+    id: "people",
+    titleKey: "tools.cat.people",
+    tools: [
+      { key: "missing", icon: Users, color: "#1D9E75", href: "https://desaparecidosterremotovenezuela.com", badge: "verified" },
+      { key: "search", icon: Search, color: "#3B6D11", href: "https://venezuela-te-busca-app.hellogafaro.workers.dev", badge: "verified" },
+      { key: "vision", icon: Camera, color: "#185FA5", href: "https://lo-la-has-visto-48680439362.us-west1.run.app", badge: "community" },
+      { key: "hospitals", icon: Building2, color: "#534AB7", href: "https://hospitalesenvenezuela.com", badge: "community" },
+      { key: "pets", icon: PawPrint, color: "#BA7517", href: "https://www.huellascan.com/terremoto", badge: "community" },
+      { key: "redayuda", icon: ShieldCheck, color: "#DC2626", href: "https://redayudavenezuela.com", badge: "new" },
+    ],
+  },
+  {
+    id: "maps",
+    titleKey: "tools.cat.maps",
+    tools: [
+      { key: "map", icon: MapIcon, color: "#D85A30", href: "https://terremotovenezuela.com", badge: "verified" },
+      { key: "triage", icon: Castle, color: "#11243E", href: "https://pretriageestructuralvenezuela.netlify.app", badge: "verified" },
+      { key: "shelters", icon: MapPin, color: "#2E7D32", href: "https://acopios-refugios.vercel.app", badge: "community" },
+      { key: "sosvzla", icon: MapPinned, color: "#1E3A5F", href: "https://sosvenezuela2026.com", badge: "new" },
+      { key: "yummy", icon: Ambulance, color: "#CA8A04", href: "https://sos.yummyrides.com", badge: "new" },
+    ],
+  },
+  {
+    id: "comms",
+    titleKey: "tools.cat.comms",
+    tools: [
+      { key: "recursos", icon: ListChecks, color: "#4D7C0F", href: "https://recursos-venezuela.netlify.app", badge: "verified" },
+      { key: "talk360", icon: PhoneCall, color: "#7C3AED", href: "https://talk360.com", badge: "new" },
+    ],
+  },
+  {
+    id: "donations",
+    titleKey: "tools.cat.donations",
+    introKey: "tools.intro.donations",
+    tools: [
+      { key: "globalgiving", icon: Globe, color: "#059669", href: "https://www.globalgiving.org/projects/venezuela-earthquake-relief/", badge: "verified" },
+      { key: "caritas", icon: Cross, color: "#DC2626", href: "https://www.caritas.org/where-caritas-work/latin-america/venezuela/", badge: "verified" },
+      { key: "wck", icon: UtensilsCrossed, color: "#EA580C", href: "https://wck.org/", badge: "verified" },
+    ],
+  },
+  {
+    id: "build",
+    titleKey: "tools.cat.build",
+    introKey: "tools.intro.build",
+    tools: [
+      { key: "code4vzla", icon: Terminal, color: "#2563EB", href: "https://codeforvenezuela.org", badge: "verified" },
+      { key: "build4vzla", icon: Hammer, color: "#EA580C", href: "https://build4venezuela.com", badge: "new" },
+    ],
+  },
+];
+
+const BADGE_COLOR: Record<Badge, string> = {
+  verified: "#059669",
+  community: "#2563EB",
+  new: "#D97706",
+};
+
+const TOTAL_TOOLS = SECTIONS.reduce((n, s) => n + s.tools.length, 0);
+
+function ToolBadge({ kind }: { kind: Badge }) {
   const { t } = useI18n();
+  const label =
+    kind === "verified" ? t("tools.badge.verified")
+    : kind === "community" ? t("tools.badge.community")
+    : t("tools.badge.new");
+  return (
+    <span
+      className="absolute right-4 top-4 inline-flex items-center rounded-full text-white font-medium"
+      style={{ backgroundColor: BADGE_COLOR[kind], fontSize: "10px", padding: "2px 10px", borderRadius: "999px", fontWeight: 500 }}
+    >
+      {label}
+    </span>
+  );
+}
+
+function ToolCard({ tool }: { tool: Tool }) {
+  const { t } = useI18n();
+  const Icon = tool.icon;
+  return (
+    <article className="relative flex flex-col rounded-2xl border border-border bg-card p-6 sm:p-8 transition hover:-translate-y-0.5 hover:shadow-[0_10px_40px_-20px_rgb(0_0_0/0.25)]">
+      <span className="absolute left-0 top-8 h-12 w-1 rounded-r" style={{ backgroundColor: tool.color }} aria-hidden />
+      <ToolBadge kind={tool.badge} />
+      <div className="mb-5 inline-flex size-11 items-center justify-center rounded-xl bg-muted" style={{ color: tool.color }}>
+        <Icon className="size-5" strokeWidth={1.6} />
+      </div>
+      <h3 className="font-serif text-xl font-bold pr-20">{t(`tool.${tool.key}.title`)}</h3>
+      <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{t(`tool.${tool.key}.desc`)}</p>
+      <div className="mt-6">
+        <a
+          href={tool.href}
+          target="_blank"
+          rel="noreferrer"
+          className="inline-flex items-center gap-1.5 rounded-full px-4 py-2 text-sm font-medium text-white hover:opacity-90 transition"
+          style={{ backgroundColor: tool.color }}
+        >
+          {t(`tool.${tool.key}.cta`)}
+          <ArrowRight className="size-3.5" />
+        </a>
+      </div>
+    </article>
+  );
+}
+
+function Tools() {
+  const { t, lang } = useI18n();
   const [query, setQuery] = useState("");
 
-  const filtered = useMemo(() => {
+  const filteredSections = useMemo(() => {
     const q = query.trim().toLowerCase();
-    if (!q) return SOLUTIONS;
-    return SOLUTIONS.filter(({ key }) => {
-      const title = t(`tool.${key}.title`).toLowerCase();
-      const desc = t(`tool.${key}.desc`).toLowerCase();
-      return title.includes(q) || desc.includes(q);
-    });
+    if (!q) return SECTIONS;
+    return SECTIONS
+      .map((s) => ({
+        ...s,
+        tools: s.tools.filter(({ key }) => {
+          const title = t(`tool.${key}.title`).toLowerCase();
+          const desc = t(`tool.${key}.desc`).toLowerCase();
+          return title.includes(q) || desc.includes(q);
+        }),
+      }))
+      .filter((s) => s.tools.length > 0);
   }, [query, t]);
+
+  const totalFiltered = filteredSections.reduce((n, s) => n + s.tools.length, 0);
+
+  const today = new Date().toLocaleDateString(lang === "es" ? "es-VE" : "en-US", {
+    day: "numeric",
+    month: "long",
+    year: "numeric",
+  });
 
   return (
     <section id="tools" className="mx-auto max-w-6xl px-4 py-16 sm:py-24">
-      <div className="max-w-2xl mb-8">
+      <div className="max-w-2xl mb-6">
         <h2 className="font-serif text-2xl sm:text-3xl">{t("tools.title")}</h2>
         <p className="mt-2 text-[15px] text-muted-foreground leading-relaxed">{t("tools.sub")}</p>
       </div>
+
+      <p className="text-center text-[14px] text-muted-foreground mb-8">
+        {t("tools.counter", { n: TOTAL_TOOLS, date: today })}
+      </p>
 
       <div className="relative mb-8 max-w-xl">
         <Search className="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 size-4 text-muted-foreground" strokeWidth={1.6} />
@@ -321,79 +411,49 @@ function Tools() {
         />
       </div>
 
-      {filtered.length === 0 ? (
+      {totalFiltered === 0 ? (
         <p className="text-sm text-muted-foreground py-8">{t("tools.search.empty")}</p>
       ) : (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-
-          {filtered.map(({ key, icon: Icon, color, href }) => {
-            const c = COLOR_CLASSES[color];
-            return (
-              <article
-                key={key}
-                className="relative flex flex-col rounded-2xl border border-border bg-card p-6 sm:p-8 transition hover:-translate-y-0.5 hover:shadow-[0_10px_40px_-20px_rgb(0_0_0/0.25)]"
+        <div className="flex flex-col">
+          {filteredSections.map((section) => (
+            <div key={section.id} className="border-t pt-10 mt-0" style={{ borderColor: "#E5E7EB", paddingTop: "40px" }}>
+              <h3
+                className="mb-5"
+                style={{
+                  fontSize: "13px",
+                  color: "#6B7280",
+                  textTransform: "uppercase",
+                  letterSpacing: "0.1em",
+                  fontWeight: 600,
+                }}
               >
-                <span className={`absolute left-0 top-8 h-12 w-1 rounded-r ${c.bar}`} aria-hidden />
-                <div className={`mb-5 inline-flex size-11 items-center justify-center rounded-xl bg-muted ${c.icon}`}>
-                  <Icon className="size-5" strokeWidth={1.6} />
-                </div>
-                <h3 className="font-serif text-xl font-bold">{t(`tool.${key}.title`)}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                  {t(`tool.${key}.desc`)}
+                {t(section.titleKey)}
+              </h3>
+              {section.introKey && (
+                <p
+                  className="mb-6"
+                  style={{ fontSize: "14px", color: "#6B7280", maxWidth: "700px" }}
+                >
+                  {t(section.introKey)}
                 </p>
-                <div className="mt-6">
-                  <a
-                    href={href}
-                    target="_blank"
-                    rel="noreferrer"
-                    className={`inline-flex items-center gap-1.5 rounded-full px-4 py-2 text-sm font-medium ${c.btn} hover:opacity-90 transition`}
-                  >
-                    {t(`tool.${key}.cta`)}
-                    <ArrowRight className="size-3.5" />
-                  </a>
-                </div>
-              </article>
-            );
-          })}
+              )}
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                {section.tools.map((tool) => (
+                  <ToolCard key={tool.key} tool={tool} />
+                ))}
+              </div>
+            </div>
+          ))}
         </div>
       )}
 
-
-      <p className="mt-6 text-[13px] text-muted-foreground">{t("tools.disclaimer")}</p>
-
-      <div className="mt-8 rounded-2xl border border-border bg-transparent p-6 sm:p-8 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-5">
-        <div>
-          <h3 className="font-serif text-base sm:text-[17px] leading-snug">
-            {t("tools.contribute.title")}
-          </h3>
-          <p className="mt-1.5 text-sm text-muted-foreground">{t("tools.contribute.sub")}</p>
-        </div>
-        <div className="flex flex-col sm:flex-row shrink-0 gap-2">
-          <a
-            href="mailto:l.zuluaga@youngaileadershub.org"
-            className="inline-flex items-center justify-center gap-1.5 rounded-full border border-foreground/80 px-4 py-2 text-sm font-medium text-foreground hover:bg-foreground hover:text-background transition"
-          >
-            <Mail className="size-3.5" />
-            {t("tools.contribute.cta")}
-          </a>
-          <a
-            href="https://www.youngaileadershub.org"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center justify-center gap-1.5 rounded-full border border-foreground/80 px-4 py-2 text-sm font-medium text-foreground hover:bg-foreground hover:text-background transition"
-          >
-            {t("tools.contribute.whatsapp")}
-          </a>
-          <a
-            href="https://chat.whatsapp.com/FTBI2oLHtuaEVnbEbjUHbl"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center justify-center gap-1.5 rounded-full border border-foreground/80 px-4 py-2 text-sm font-medium text-foreground hover:bg-foreground hover:text-background transition"
-          >
-            <MessageCircle className="size-3.5" />
-            {t("tools.contribute.coord")}
-          </a>
-        </div>
+      <div
+        className="mt-10 text-center"
+        style={{ borderTop: "1px solid #E5E7EB", paddingTop: "32px" }}
+      >
+        <p style={{ fontSize: "13px", color: "#6B7280" }}>
+          {t("tools.footer.note")}
+        </p>
       </div>
     </section>
   );

@@ -41,8 +41,25 @@ const es: Dict = {
     "Herramientas construidas por comunidades tech. Funcionando ahora. Usa una. Si construiste otra, contáctanos.",
   "tools.search.placeholder": "Buscar por palabra clave (ej: desaparecidos, hospitales, mapa...)",
   "tools.search.empty": "No se encontraron soluciones con ese término.",
+  "tools.counter": "{n} herramientas activas · Actualizado {date}",
 
+  "tools.cat.people": "Búsqueda de personas",
+  "tools.cat.maps": "Mapas y daños estructurales",
+  "tools.cat.comms": "Recursos y comunicación",
+  "tools.cat.donations": "Donaciones verificadas",
+  "tools.cat.build": "Construye con nosotros",
 
+  "tools.intro.donations":
+    "Verifica siempre que la campaña sea legítima. La donación económica suele ser la forma más eficaz de ayudar — permite comprar exactamente lo que cada zona necesita en cada momento.",
+  "tools.intro.build":
+    "Si tienes habilidades técnicas, puedes construir herramientas que salven vidas este fin de semana.",
+
+  "tools.badge.verified": "Verificado",
+  "tools.badge.community": "Comunidad",
+  "tools.badge.new": "Nuevo",
+
+  "tools.footer.note":
+    "Estas herramientas son independientes, ciudadanas y no partidistas. ¿Construiste algo que pueda ayudar? Escríbenos a l.zuluaga@youngaileadershub.org",
 
   "tool.map.title": "Mapa de daños estructurales",
   "tool.map.desc":
@@ -84,9 +101,55 @@ const es: Dict = {
     "Mapa colaborativo para registrar y localizar centros de acopio de ayuda y refugios disponibles en Venezuela. Reporta puntos verificados para que la ayuda llegue donde se necesita.",
   "tool.shelters.cta": "Ver mapa o reportar",
 
+  "tool.redayuda.title": "Red Ayuda Venezuela",
+  "tool.redayuda.desc":
+    "Avisa que estás a salvo, busca personas y coordina ayuda entre comunidades. Funciona como red ciudadana descentralizada.",
+  "tool.redayuda.cta": "Entrar a la red",
 
+  "tool.sosvzla.title": "SOS Venezuela 2026",
+  "tool.sosvzla.desc":
+    "Mapa colaborativo en tiempo real con reportes de daños, colapsos, refugios y primeros auxilios. Datos sísmicos en vivo desde USGS. Tu ubicación nunca se comparte públicamente.",
+  "tool.sosvzla.cta": "Ver mapa en vivo",
 
+  "tool.yummy.title": "Yummy SOS",
+  "tool.yummy.desc":
+    "Reporta daños estructurales con fotos y GPS. Viajes gratuitos a hospitales y clínicas en Caracas. Red de conductores activada sin comisión como corredor humanitario durante la emergencia.",
+  "tool.yummy.cta": "Reportar o pedir viaje",
 
+  "tool.recursos.title": "Recursos Verificados",
+  "tool.recursos.desc":
+    "Hub con líneas de emergencia, guías de supervivencia, plataformas de búsqueda y canales de donación — todo verificado y actualizado desde el 25 de junio.",
+  "tool.recursos.cta": "Ver recursos",
+
+  "tool.talk360.title": "Talk360 — Llamar a Venezuela",
+  "tool.talk360.desc":
+    "App para llamar a Venezuela desde el exterior sin roaming ni costos internacionales. Recomendada por la diáspora venezolana como una de las pocas vías de comunicación directa funcionales.",
+  "tool.talk360.cta": "Descargar app",
+
+  "tool.globalgiving.title": "GlobalGiving",
+  "tool.globalgiving.desc":
+    "Fondo verificado que canaliza donaciones directamente a organizaciones locales en Venezuela para atención médica, refugio, agua y alimentos.",
+  "tool.globalgiving.cta": "Donar",
+
+  "tool.caritas.title": "Cáritas Venezuela",
+  "tool.caritas.desc":
+    "Red humanitaria presente en todo el territorio venezolano. Recibe donaciones para atención directa a familias damnificadas en las zonas más afectadas.",
+  "tool.caritas.cta": "Donar",
+
+  "tool.wck.title": "World Central Kitchen",
+  "tool.wck.desc":
+    "Equipo desplegado en Venezuela proporcionando comidas calientes a comunidades afectadas y equipos de rescate. Fundada por el chef José Andrés.",
+  "tool.wck.cta": "Donar",
+
+  "tool.code4vzla.title": "Code for Venezuela",
+  "tool.code4vzla.desc":
+    "ONG que conecta tecnólogos con las necesidades más urgentes de Venezuela. Años de experiencia construyendo plataformas de datos para respuesta humanitaria.",
+  "tool.code4vzla.cta": "Ver proyectos",
+
+  "tool.build4vzla.title": "Build for Venezuela — Hackathon",
+  "tool.build4vzla.desc":
+    "Hackathon humanitaria online, 26 al 28 de junio. Cualquier persona que pueda construir puede contribuir. Sin importar stack ni nivel.",
+  "tool.build4vzla.cta": "Unirme a la hackathon",
 
   "tools.disclaimer": "Estas herramientas son independientes, ciudadanas y no partidistas.",
   "tools.contribute.title": "¿Tu comunidad construyó una herramienta para esta emergencia?",
@@ -212,8 +275,25 @@ const en: Dict = {
     "Tools built by tech communities. Live now. Use one. If you built another, contact us.",
   "tools.search.placeholder": "Search by keyword (e.g. missing, hospitals, map...)",
   "tools.search.empty": "No solutions found for that term.",
+  "tools.counter": "{n} active tools · Updated {date}",
 
+  "tools.cat.people": "Find people",
+  "tools.cat.maps": "Maps & structural damage",
+  "tools.cat.comms": "Resources & communication",
+  "tools.cat.donations": "Verified donations",
+  "tools.cat.build": "Build with us",
 
+  "tools.intro.donations":
+    "Always verify the campaign is legitimate. Cash donations are usually the most effective form of help — they let teams buy exactly what each area needs in the moment.",
+  "tools.intro.build":
+    "If you have technical skills, you can build tools that save lives this weekend.",
+
+  "tools.badge.verified": "Verified",
+  "tools.badge.community": "Community",
+  "tools.badge.new": "New",
+
+  "tools.footer.note":
+    "These tools are independent, citizen-led and nonpartisan. Built something that can help? Write to us at l.zuluaga@youngaileadershub.org",
 
   "tool.map.title": "Structural damage map",
   "tool.map.desc":
@@ -255,9 +335,55 @@ const en: Dict = {
     "Collaborative map to register and locate aid collection points and shelters available in Venezuela. Report verified locations so help reaches where it is needed.",
   "tool.shelters.cta": "View map or report",
 
+  "tool.redayuda.title": "Red Ayuda Venezuela",
+  "tool.redayuda.desc":
+    "Mark yourself safe, search for people, and coordinate help between communities. Works as a decentralized citizen network.",
+  "tool.redayuda.cta": "Enter the network",
 
+  "tool.sosvzla.title": "SOS Venezuela 2026",
+  "tool.sosvzla.desc":
+    "Real-time collaborative map with damage, collapse, shelter and first-aid reports. Live seismic data from USGS. Your location is never shared publicly.",
+  "tool.sosvzla.cta": "See live map",
 
+  "tool.yummy.title": "Yummy SOS",
+  "tool.yummy.desc":
+    "Report structural damage with photos and GPS. Free rides to hospitals and clinics in Caracas. Driver network activated with no commission as a humanitarian corridor during the emergency.",
+  "tool.yummy.cta": "Report or request a ride",
 
+  "tool.recursos.title": "Verified Resources",
+  "tool.recursos.desc":
+    "Hub with emergency lines, survival guides, search platforms and donation channels — all verified and updated since June 25.",
+  "tool.recursos.cta": "See resources",
+
+  "tool.talk360.title": "Talk360 — Call Venezuela",
+  "tool.talk360.desc":
+    "App to call Venezuela from abroad without roaming or international fees. Recommended by the Venezuelan diaspora as one of the few working direct communication channels.",
+  "tool.talk360.cta": "Download app",
+
+  "tool.globalgiving.title": "GlobalGiving",
+  "tool.globalgiving.desc":
+    "Verified fund that channels donations directly to local organizations in Venezuela for medical care, shelter, water and food.",
+  "tool.globalgiving.cta": "Donate",
+
+  "tool.caritas.title": "Cáritas Venezuela",
+  "tool.caritas.desc":
+    "Humanitarian network present across Venezuela. Receives donations for direct care of families affected in the most impacted areas.",
+  "tool.caritas.cta": "Donate",
+
+  "tool.wck.title": "World Central Kitchen",
+  "tool.wck.desc":
+    "Team deployed in Venezuela providing hot meals to affected communities and rescue crews. Founded by chef José Andrés.",
+  "tool.wck.cta": "Donate",
+
+  "tool.code4vzla.title": "Code for Venezuela",
+  "tool.code4vzla.desc":
+    "NGO connecting technologists with Venezuela's most urgent needs. Years of experience building data platforms for humanitarian response.",
+  "tool.code4vzla.cta": "See projects",
+
+  "tool.build4vzla.title": "Build for Venezuela — Hackathon",
+  "tool.build4vzla.desc":
+    "Online humanitarian hackathon, June 26–28. Anyone who can build can contribute. Any stack, any level.",
+  "tool.build4vzla.cta": "Join the hackathon",
 
   "tools.disclaimer": "These tools are independent, citizen-led, and nonpartisan.",
   "tools.contribute.title": "Did your community build a tool for this emergency?",
