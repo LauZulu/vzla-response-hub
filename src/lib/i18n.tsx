@@ -592,6 +592,11 @@ const en: Dict = {
   "tool.vresiste.desc": "Citizen initiative that centralizes information on damage, shelters and needs in one browsable view. Built and maintained by volunteers.",
   "tool.vresiste.cta": "Open platform",
 
+  "tool.sismoayuda.title": "SismoAyuda VE — Structural assessment",
+  "tool.sismoayuda.desc":
+    "Upload photos of damage to your building and a volunteer civil engineer reviews them remotely. You get a habitability report by email with classification and recommendations. Free, no signup, using ATC-20 and EMS-98 technical standards.",
+  "tool.sismoayuda.cta": "Report my building",
+
   // Layer 3
   "build.layer.title": "Got technical skills?",
   "build.layer.sub": "You can build tools that save lives this weekend.",
