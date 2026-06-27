@@ -821,7 +821,19 @@ function Push() {
                   {it.note && (
                     <p className="mt-2 text-[12px] text-muted-foreground leading-relaxed">{it.note}</p>
                   )}
+                  {it.cta && (
+                    <a
+                      href={it.cta.href}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="mt-3 inline-flex items-center gap-1.5 rounded-full bg-teal px-4 py-2 text-[13px] font-medium text-teal-foreground hover:opacity-90 transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+                    >
+                      {it.cta.label}
+                      <ArrowRight className="size-3.5" aria-hidden />
+                    </a>
+                  )}
                 </AccordionContent>
+
               </AccordionItem>
             ))}
           </Accordion>
