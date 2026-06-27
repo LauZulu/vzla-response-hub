@@ -267,10 +267,11 @@ function QuickAccess() {
               href={href}
               target="_blank"
               rel="noopener noreferrer"
-              className="group rounded-2xl border p-5 sm:p-6 flex flex-col items-start gap-3 transition hover:-translate-y-0.5 hover:shadow-[0_10px_30px_-15px_rgb(0_0_0/0.25)]"
+              aria-label={`${t(`quick.${key}.label`)} (${t("a11y.newTab")})`}
+              className="group rounded-2xl border p-5 sm:p-6 flex flex-col items-start gap-3 transition hover:-translate-y-0.5 hover:shadow-[0_10px_30px_-15px_rgb(0_0_0/0.25)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
               style={{ backgroundColor: bg, borderColor: border, color: fg }}
             >
-              <Icon size={40} strokeWidth={1.6} />
+              <Icon size={40} strokeWidth={1.6} aria-hidden />
               <span className="font-serif text-[18px] sm:text-[20px] font-bold leading-tight">
                 {t(`quick.${key}.label`)}
               </span>
