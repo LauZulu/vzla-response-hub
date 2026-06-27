@@ -202,6 +202,24 @@ const es: Dict = {
   "help.money.d.details": "Dona directamente desde la página oficial de la Cruz Roja Colombiana. Pago seguro con tarjeta de crédito o débito.",
   "help.money.d.cta": "Donar ahora",
 
+  "help.money.e.name": "Cáritas Venezuela",
+  "help.money.e.pill": "Verificada",
+  "help.money.e.details": "Dona directamente en caritasvenezuela.org/donaciones/",
+  "help.money.e.cta": "Donar",
+
+  "help.money.f.name": "I Love Venezuela Foundation",
+  "help.money.f.pill": "GoFundMe",
+  "help.money.f.details": "Campaña verificada de ayuda por terremoto.",
+  "help.money.f.cta": "Donar",
+
+  "help.money.g.name": "Banco de Alimentos Bogotá",
+  "help.money.g.pill": "Colombia",
+  "help.money.g.details": "Bre-B llave: 0091677852\nbancodealimentos.org.co",
+
+  "help.money.h.name": "Dona desde Rappi",
+  "help.money.h.pill": "Sin salir de casa",
+  "help.money.h.details": "Abre Rappi con dirección en Bogotá.\nEntra a Rappi Turbo.\nBusca el botón de donación o la palabra 'Bono'.\nTu aporte llega al Banco de Alimentos para los afectados.",
+
   "help.money.verify": "Verifica siempre las cuentas antes de transferir.",
   "help.supplies.card.title": "Dona insumos",
   "help.supplies.card.sub": "Punto de acopio activo en Bogotá.",
@@ -221,6 +239,14 @@ const es: Dict = {
   "help.supplies.cat.shelter.items": "Cobijas, carpas, colchonetas, lonas plásticas, sacos de dormir, cuerdas, frazadas.",
   "help.supplies.cat.clothing.title": "Ropa",
   "help.supplies.cat.clothing.items": "Ropa en buen estado y limpia, para todas las edades. Abrigos, cobijas, calzado.",
+
+  "help.supplies.moreBogota.title": "Más puntos en Bogotá",
+  "help.supplies.otherCities.title": "Otras ciudades de Colombia",
+  "help.supplies.international.title": "Centros de acopio internacionales",
+  "help.supplies.pets.title": "Donación para mascotas (Puntos Laika Bogotá)",
+  "help.supplies.pets.needs": "Qué reciben: alimento húmedo y seco (perros y gatos), arena sanitaria, medicamentos básicos, mantas, guacales, collares, platitos.",
+  "help.supplies.pets.also": "También reciben en: CLINIHOGAR (Calle 50 #14-34 Teusaquillo) y La Panadería Rusa (Chapinero, Zona Rosa).",
+
   "help.people.card.title": "Busca o reporta personas",
   "help.people.card.sub": "Si perdiste contacto con alguien, búscalo aquí. Si encontraste a alguien, repórtalo.",
   "help.people.btn": "Buscar persona",
@@ -537,6 +563,24 @@ const en: Dict = {
   "help.money.d.details": "Donate directly from the official Colombian Red Cross site. Secure payment with credit or debit card.",
   "help.money.d.cta": "Donate now",
 
+  "help.money.e.name": "Caritas Venezuela",
+  "help.money.e.pill": "Verified",
+  "help.money.e.details": "Donate directly at caritasvenezuela.org/donaciones/",
+  "help.money.e.cta": "Donate",
+
+  "help.money.f.name": "I Love Venezuela Foundation",
+  "help.money.f.pill": "GoFundMe",
+  "help.money.f.details": "Verified earthquake relief campaign.",
+  "help.money.f.cta": "Donate",
+
+  "help.money.g.name": "Banco de Alimentos Bogotá",
+  "help.money.g.pill": "Colombia",
+  "help.money.g.details": "Bre-B llave: 0091677852\nbancodealimentos.org.co",
+
+  "help.money.h.name": "Donate via Rappi",
+  "help.money.h.pill": "From home",
+  "help.money.h.details": "Open Rappi with a Bogotá address.\nGo to Rappi Turbo.\nLook for the donation button or the word 'Bono'.\nYour contribution reaches the Food Bank for those affected.",
+
   "help.money.verify": "Always verify accounts before transferring.",
   "help.supplies.card.title": "Donate supplies",
   "help.supplies.card.sub": "Active drop-off point in Bogotá.",
@@ -556,6 +600,14 @@ const en: Dict = {
   "help.supplies.cat.shelter.items": "Blankets, tents, sleeping mats, plastic tarps, sleeping bags, ropes, throws.",
   "help.supplies.cat.clothing.title": "Clothing",
   "help.supplies.cat.clothing.items": "Clean clothing in good condition, for all ages. Coats, blankets, footwear.",
+
+  "help.supplies.moreBogota.title": "More points in Bogotá",
+  "help.supplies.otherCities.title": "Other cities in Colombia",
+  "help.supplies.international.title": "International collection centers",
+  "help.supplies.pets.title": "Donation for pets (Laika points Bogotá)",
+  "help.supplies.pets.needs": "What they receive: wet and dry food (dogs and cats), cat litter, basic medicines, blankets, crates, collars, bowls.",
+  "help.supplies.pets.also": "Also receiving at: CLINIHOGAR (Calle 50 #14-34 Teusaquillo) and La Panadería Rusa (Chapinero, Zona Rosa).",
+
   "help.people.card.title": "Search or report people",
   "help.people.card.sub": "If you've lost contact with someone, search here. If you found someone, report it.",
   "help.people.btn": "Search for a person",
