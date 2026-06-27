@@ -498,8 +498,10 @@ function ToolCard({ tool }: { tool: Tool }) {
     <article className="relative flex flex-col rounded-2xl border border-border bg-card p-6 sm:p-7 transition hover:-translate-y-0.5 hover:shadow-[0_10px_40px_-20px_rgb(0_0_0/0.25)]">
       <span className="absolute left-0 top-8 h-12 w-1 rounded-r" style={{ backgroundColor: tool.color }} aria-hidden />
       <div className="absolute right-3 top-3 flex flex-wrap justify-end gap-1.5 max-w-[60%]">
+        {tool.featured && <FeaturedBadge />}
         {tool.recommended && <RecommendedBadge />}
         <TrustBadge kind={tool.trust} />
+
       </div>
       <div className="mb-4 inline-flex size-11 items-center justify-center rounded-xl bg-muted" style={{ color: tool.color }} aria-hidden>
         <Icon className="size-5" strokeWidth={1.6} />
