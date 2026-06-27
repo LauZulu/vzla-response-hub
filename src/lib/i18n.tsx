@@ -101,10 +101,6 @@ const es: Dict = {
     "Mapa para encontrar o registrar puntos de acopio y refugios activos en Venezuela. Verificado por ciudadanos.",
   "tool.shelters.cta": "Ver mapa o reportar",
 
-  "tool.ayudave.title": "AyudaVE — Ayuda humanitaria",
-  "tool.ayudave.desc":
-    "Plataforma para donar, registrarte como voluntario o registrar tu centro de acopio en menos de un minuto. Conecta donantes, voluntarios y centros de ayuda en un solo lugar.",
-  "tool.ayudave.cta": "Donar o ser voluntario",
 
 
   "tool.redayuda.title": "Red Ayuda Venezuela",
@@ -267,7 +263,7 @@ const es: Dict = {
     "Este hub centraliza herramientas construidas por comunidades tech independientes en respuesta al terremoto del 24 de junio de 2026.",
 
   "cta.button": "Donar / Ayudar / Compartir",
-  "cta.rot1": "200+ personas siguen desaparecidas",
+  "cta.rot1": "50.000+ personas reportadas como desaparecidas",
   "cta.rot2": "Tu ayuda importa. Ahora mismo.",
   "cta.rot3": "34 vidas salvadas hasta ahora. Vamos por 50.",
 
@@ -304,7 +300,7 @@ const es: Dict = {
   "quick.damage.note": "Equipo verificado · Foto + GPS",
   "quick.damage.sub": "Dentro de Venezuela: usa VenApp (app oficial del gobierno)",
   "quick.donate.label": "Quiero donar",
-  "quick.donate.note": "Cruz Roja Colombiana · Donacion directa online · Pago seguro con tarjeta",
+  "quick.donate.note": "Cruz Roja Colombiana · Donacion directa online · Pago seguro",
   "quick.donate.sub": "También: GlobalGiving, Cáritas, World Central Kitchen",
   "quick.emergency": "¿Tienes una emergencia médica? Llama al 0800-0-000-911",
 
@@ -334,7 +330,7 @@ const es: Dict = {
 
   // Nuevo tool
   "tool.vresiste.title": "Venezuela Resiste",
-  "tool.vresiste.desc": "Iniciativa ciudadana que centraliza información sobre daños, refugios y necesidades en una sola vista navegable. Construida y mantenida por voluntarios.",
+  "tool.vresiste.desc": "Vista única con daños, refugios y necesidades reportadas por ciudadanos. Navegable por zona y tipo de emergencia.",
   "tool.vresiste.cta": "Abrir plataforma",
 
   "tool.sismoayuda.title": "SismoAyuda VE — Evaluación estructural",
@@ -349,13 +345,13 @@ const es: Dict = {
 
   "tool.filosos.title": "Red de ayuda comunitaria",
   "tool.filosos.desc":
-    "Solicita u ofrece ayuda en tiempo real. Reporta emergencias, comparte recursos y encuentra asistencia cerca de ti. Incluye reporte de niños y distribución de insumos.",
-  "tool.filosos.cta": "Acceder",
+    "Pide o ofrece ayuda cerca de ti. Reporta emergencias, niños solos y necesidades de insumos por zona. Red ciudadana en tiempo real.",
+  "tool.filosos.cta": "Pedir u ofrecer ayuda",
 
   "tool.ayudahumvzla.title": "Ayuda humanitaria Venezuela",
   "tool.ayudahumvzla.desc":
     "Plataforma centralizada para donar, registrarte como voluntario o registrar tu centro de acopio. Coordina la distribución de insumos y solicitudes de apoyo en un solo lugar.",
-  "tool.ayudahumvzla.cta": "Acceder",
+  "tool.ayudahumvzla.cta": "Donar o ser voluntario",
 
 
   // Capa 3
