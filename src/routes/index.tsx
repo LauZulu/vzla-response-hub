@@ -280,6 +280,9 @@ function QuickAccess() {
               </span>
             </a>
             <p className="mt-2 text-[11px] text-muted-foreground px-1">{t(`quick.${key}.note`)}</p>
+            {QUICK_SUBS[key] && (
+              <p className="mt-1 text-[10px] text-muted-foreground/80 px-1 leading-snug">{t(`quick.${key}.sub`)}</p>
+            )}
           </div>
         ))}
       </div>
