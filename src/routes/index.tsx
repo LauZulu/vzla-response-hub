@@ -252,7 +252,7 @@ const QUICK_BUTTONS: QuickBtn[] = [
   { key: "search", icon: Search, href: "https://familylinks.icrc.org/organization/venezuelan-red-cross", bg: "#FEE2E2", border: "#FCA5A5", fg: "#7F1D1D" },
   { key: "shelter", icon: MapPin, href: "https://acopios-refugios.vercel.app", bg: "#D1FAE5", border: "#86EFAC", fg: "#064E3B" },
   { key: "damage", icon: Camera, href: "https://sos.yummyrides.com", bg: "#FFEDD5", border: "#FDBA74", fg: "#7C2D12" },
-  { key: "donate", icon: HeartHandshake, href: "https://www.ifrc.org/emergency/venezuela-earthquakes", bg: "#FEE2E2", border: "#FCA5A5", fg: "#7F1D1D" },
+  { key: "donate", icon: HeartHandshake, href: "https://ayuda.cruzrojacolombiana.org/#afrus-container", bg: "#FEE2E2", border: "#FCA5A5", fg: "#7F1D1D" },
 ];
 
 const QUICK_SUBS: Partial<Record<QuickBtn["key"], true>> = { search: true, damage: true, donate: true };
