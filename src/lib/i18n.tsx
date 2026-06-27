@@ -16,6 +16,11 @@ const es: Dict = {
 
   "hero.kicker": "Terremoto Venezuela · 24 jun 2026 · 6:04 PM",
   "hero.headline": "920+ personas fallecidas. 4.500+ heridas. 50.000+ reportadas como desaparecidas. 172 personas atrapadas bajo escombros. 383 edificios afectados. AHORA",
+  "hero.stat.dead.label": "fallecidos",
+  "hero.stat.injured.label": "heridos",
+  "hero.stat.missing.label": "desaparecidos",
+  "hero.stat.trapped.label": "atrapados bajo escombros",
+  "hero.now": "AHORA",
   "hero.live": "En este segundo, hay personas siendo localizadas",
   "hero.sub1": "Comunidades tech construyeron herramientas reales.",
   "hero.sub2": "Tú puedes ayudar.",
@@ -24,6 +29,7 @@ const es: Dict = {
   "hero.cta.tools": "Ver soluciones activas",
   "hero.cta.donate": "Donar ahora",
   "hero.cta.prepare": "Qué hacer ante un sismo",
+  "nav.lastUpdate": "Última actualización",
 
   "impact.title": "Cifras de la emergencia",
   "impact.sub": "Fuentes oficiales. Datos pueden cambiar conforme avanza la respuesta.",
