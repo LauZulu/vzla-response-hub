@@ -178,6 +178,12 @@ function LangToggle({ lang, setLang }: { lang: Lang; setLang: (l: Lang) => void 
 
 function Hero() {
   const { t } = useI18n();
+  const stats = [
+    { n: "920+", label: t("hero.stat.dead.label") },
+    { n: "4.500+", label: t("hero.stat.injured.label") },
+    { n: "50.000+", label: t("hero.stat.missing.label") },
+    { n: "172", label: t("hero.stat.trapped.label") },
+  ];
   return (
     <section className="relative overflow-hidden border-b border-border">
       <Ripples />
@@ -185,9 +191,28 @@ function Hero() {
         <p className="text-xs uppercase tracking-[0.18em] text-coral font-medium">
           {t("hero.kicker")}
         </p>
-        <h1 className="mt-4 font-serif text-3xl sm:text-5xl md:text-6xl leading-[1.05] text-balance">
-          {t("hero.headline")}
-        </h1>
+
+        <h1 className="sr-only">{t("hero.headline")}</h1>
+
+        <ul className="mt-6 grid grid-cols-2 gap-x-6 gap-y-5 sm:gap-x-10 sm:gap-y-6 sm:max-w-2xl">
+          {stats.map((s) => (
+            <li key={s.label} className="flex flex-col">
+              <span className="font-serif font-bold text-3xl sm:text-5xl md:text-6xl leading-none tnum">
+                {s.n}
+              </span>
+              <span className="mt-2 text-xs sm:text-sm uppercase tracking-wider text-muted-foreground">
+                {s.label}
+              </span>
+            </li>
+          ))}
+        </ul>
+
+        <p
+          className="mt-6 font-serif font-bold text-3xl sm:text-5xl leading-none"
+          style={{ color: "#D85A30" }}
+        >
+          {t("hero.now")}
+        </p>
 
         <div className="mt-6 inline-flex items-center gap-2 rounded-full border border-border bg-card px-3 py-1.5 text-sm">
           <span className="relative inline-flex size-2">
@@ -205,19 +230,19 @@ function Hero() {
         <div className="mt-8 flex flex-col sm:flex-row gap-2 sm:gap-3">
           <a
             href="#tools"
-            className="inline-flex items-center justify-center rounded-full bg-teal text-white px-5 py-3 text-sm font-medium hover:opacity-90 transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+            className="inline-flex w-full sm:w-auto items-center justify-center rounded-full bg-teal text-white px-5 py-3 text-sm font-medium hover:opacity-90 transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
           >
             {t("hero.cta.tools")}
           </a>
           <a
             href="#donar"
-            className="inline-flex items-center justify-center rounded-full border border-teal text-teal px-5 py-3 text-sm font-medium hover:bg-teal/10 transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+            className="inline-flex w-full sm:w-auto items-center justify-center rounded-full border border-teal text-teal px-5 py-3 text-sm font-medium hover:bg-teal/10 transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
           >
             {t("hero.cta.donate")}
           </a>
           <a
             href="#preparacion"
-            className="inline-flex items-center justify-center rounded-full border border-teal text-teal px-5 py-3 text-sm font-medium hover:bg-teal/10 transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+            className="inline-flex w-full sm:w-auto items-center justify-center rounded-full border border-teal text-teal px-5 py-3 text-sm font-medium hover:bg-teal/10 transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
           >
             {t("hero.cta.prepare")}
           </a>
