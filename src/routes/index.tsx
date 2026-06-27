@@ -32,6 +32,7 @@ import {
   Link2,
   Building,
   Stethoscope,
+  Heart,
   type LucideIcon,
 } from "lucide-react";
 import {
@@ -345,6 +346,7 @@ const SECTIONS: Section[] = [
           { key: "search", icon: Search, color: "#3B6D11", href: "https://venezuelatebusca.com", trust: "verified", recommended: true, updated: { kind: "active" } },
           { key: "missing", icon: Users, color: "#1D9E75", href: "https://desaparecidosterremotovenezuela.com", trust: "community", updated: { kind: "active" } },
           { key: "redayuda", icon: ShieldCheck, color: "#DC2626", href: "https://redayudavenezuela.com", trust: "community", updated: { kind: "active" } },
+          { key: "filosos", icon: Heart, color: "#D32F2F", href: "https://filosos.site", trust: "community", updated: { kind: "active" } },
           { key: "vision", icon: Camera, color: "#185FA5", href: "https://lo-la-has-visto-48680439362.us-west1.run.app", trust: "unverified", updated: { kind: "recent", date: "25 jun 2026" } },
         ],
       },
@@ -393,6 +395,7 @@ const SECTIONS: Section[] = [
         tools: [
           { key: "shelters", icon: MapPin, color: "#2E7D32", href: "https://acopios-refugios.vercel.app", trust: "community", updated: { kind: "active" } },
           { key: "ayudave", icon: HeartHandshake, color: "#003893", href: "https://ayudahumanitariavenezuela.com", trust: "community", updated: { kind: "active" } },
+          { key: "ayudahumvzla", icon: Package, color: "#003893", href: "https://www.ayudahumanitariavenezuela.com", trust: "community", updated: { kind: "active" } },
           { key: "pets", icon: PawPrint, color: "#BA7517", href: "https://www.huellascan.com/terremoto", trust: "community", updated: { kind: "active" } },
         ],
       },
