@@ -246,11 +246,13 @@ type QuickBtn = {
 };
 
 const QUICK_BUTTONS: QuickBtn[] = [
-  { key: "search", icon: Search, href: "https://venezuelatebusca.com", bg: "#DBEAFE", border: "#93C5FD", fg: "#1E3A8A" },
+  { key: "search", icon: Search, href: "https://familylinks.icrc.org/organization/venezuelan-red-cross", bg: "#FEE2E2", border: "#FCA5A5", fg: "#7F1D1D" },
   { key: "shelter", icon: MapPin, href: "https://acopios-refugios.vercel.app", bg: "#D1FAE5", border: "#86EFAC", fg: "#064E3B" },
   { key: "damage", icon: Camera, href: "https://sos.yummyrides.com", bg: "#FFEDD5", border: "#FDBA74", fg: "#7C2D12" },
-  { key: "donate", icon: HeartHandshake, href: "https://www.globalgiving.org/projects/venezuela-earthquake-relief/", bg: "#FEE2E2", border: "#FCA5A5", fg: "#7F1D1D" },
+  { key: "donate", icon: HeartHandshake, href: "https://www.ifrc.org/emergency/venezuela-earthquakes", bg: "#FEE2E2", border: "#FCA5A5", fg: "#7F1D1D" },
 ];
+
+const QUICK_SUBS: Partial<Record<QuickBtn["key"], true>> = { search: true, damage: true, donate: true };
 
 function QuickAccess() {
   const { t } = useI18n();
@@ -278,6 +280,9 @@ function QuickAccess() {
               </span>
             </a>
             <p className="mt-2 text-[11px] text-muted-foreground px-1">{t(`quick.${key}.note`)}</p>
+            {QUICK_SUBS[key] && (
+              <p className="mt-1 text-[10px] text-muted-foreground/80 px-1 leading-snug">{t(`quick.${key}.sub`)}</p>
+            )}
           </div>
         ))}
       </div>
