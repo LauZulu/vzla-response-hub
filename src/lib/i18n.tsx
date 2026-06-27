@@ -532,6 +532,11 @@ const en: Dict = {
   "help.money.c.pill": "National & international",
   "help.money.c.details": "Mobile payment (Venezuela):\nBanco Mercantil / J-000579105 / (0412) 332-1367\n\nDomestic transfer:\nBanco Mercantil\nAccount holder: Dividendo Voluntario para la Comunidad, A.C.\nChecking account: 0105-0026-5410-2642-4518\nRIF: J-000579105\n\nForeign currency account (international):\nBank: Mercantil Banco, S.A.\nSWIFT: MPANPAPA\nAccount number: 300016658\nTorre de las Américas, Punta Pacífica, Panama",
   "help.money.c.note": "Mercantil contributes an additional amount to every donation.",
+  "help.money.d.name": "Colombian Red Cross",
+  "help.money.d.pill": "Online donation",
+  "help.money.d.details": "Donate directly from the official Colombian Red Cross site. Secure payment with credit or debit card.",
+  "help.money.d.cta": "Donate now",
+
   "help.money.verify": "Always verify accounts before transferring.",
   "help.supplies.card.title": "Donate supplies",
   "help.supplies.card.sub": "Active drop-off point in Bogotá.",
