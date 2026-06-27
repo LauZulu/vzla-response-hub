@@ -780,10 +780,11 @@ function Push() {
   ];
 
 
-  const pillClass = (tone: "green" | "blue") =>
-    tone === "green"
-      ? "bg-healing/15 text-healing"
-      : "bg-trust/15 text-trust";
+  const pillClass = (tone: "green" | "blue" | "teal") => {
+    if (tone === "green") return "bg-healing/15 text-healing";
+    if (tone === "teal") return "bg-teal/15 text-teal";
+    return "bg-trust/15 text-trust";
+  };
 
   return (
     <section id="donar" className="mx-auto max-w-6xl px-4 py-16 sm:py-24">
