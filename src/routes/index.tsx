@@ -174,19 +174,19 @@ function Hero() {
         <div className="mt-8 flex flex-col sm:flex-row gap-2 sm:gap-3">
           <a
             href="#tools"
-            className="inline-flex items-center justify-center rounded-full bg-teal text-white px-5 py-3 text-sm font-medium hover:opacity-90 transition"
+            className="inline-flex items-center justify-center rounded-full bg-teal text-white px-5 py-3 text-sm font-medium hover:opacity-90 transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
           >
             {t("hero.cta.tools")}
           </a>
           <a
             href="#donar"
-            className="inline-flex items-center justify-center rounded-full border border-teal text-teal px-5 py-3 text-sm font-medium hover:bg-teal/10 transition"
+            className="inline-flex items-center justify-center rounded-full border border-teal text-teal px-5 py-3 text-sm font-medium hover:bg-teal/10 transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
           >
             {t("hero.cta.donate")}
           </a>
           <a
             href="#preparacion"
-            className="inline-flex items-center justify-center rounded-full border border-teal text-teal px-5 py-3 text-sm font-medium hover:bg-teal/10 transition"
+            className="inline-flex items-center justify-center rounded-full border border-teal text-teal px-5 py-3 text-sm font-medium hover:bg-teal/10 transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
           >
             {t("hero.cta.prepare")}
           </a>
@@ -267,10 +267,11 @@ function QuickAccess() {
               href={href}
               target="_blank"
               rel="noopener noreferrer"
-              className="group rounded-2xl border p-5 sm:p-6 flex flex-col items-start gap-3 transition hover:-translate-y-0.5 hover:shadow-[0_10px_30px_-15px_rgb(0_0_0/0.25)]"
+              aria-label={`${t(`quick.${key}.label`)} (${t("a11y.newTab")})`}
+              className="group rounded-2xl border p-5 sm:p-6 flex flex-col items-start gap-3 transition hover:-translate-y-0.5 hover:shadow-[0_10px_30px_-15px_rgb(0_0_0/0.25)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
               style={{ backgroundColor: bg, borderColor: border, color: fg }}
             >
-              <Icon size={40} strokeWidth={1.6} />
+              <Icon size={40} strokeWidth={1.6} aria-hidden />
               <span className="font-serif text-[18px] sm:text-[20px] font-bold leading-tight">
                 {t(`quick.${key}.label`)}
               </span>
@@ -457,7 +458,7 @@ function UpdatedIndicator({ updated }: { updated: Updated }) {
     : updated.kind === "inactive" ? t("tools.updated.inactive")
     : t("tools.updated.recent", { date: updated.date });
   return (
-    <p className="mt-2 inline-flex items-center gap-1.5" style={{ fontSize: "11px", color: "#9CA3AF" }}>
+    <p className="mt-2 inline-flex items-center gap-1.5" style={{ fontSize: "11px", color: "#6B7280" }}>
       <span className="inline-block size-1.5 rounded-full" style={{ backgroundColor: dotColor }} aria-hidden />
       {label}
     </p>
@@ -474,7 +475,7 @@ function ToolCard({ tool }: { tool: Tool }) {
         {tool.recommended && <RecommendedBadge />}
         <TrustBadge kind={tool.trust} />
       </div>
-      <div className="mb-4 inline-flex size-11 items-center justify-center rounded-xl bg-muted" style={{ color: tool.color }}>
+      <div className="mb-4 inline-flex size-11 items-center justify-center rounded-xl bg-muted" style={{ color: tool.color }} aria-hidden>
         <Icon className="size-5" strokeWidth={1.6} />
       </div>
       <h3 className="font-serif text-[18px] font-bold pr-2 mt-8">{t(`tool.${tool.key}.title`)}</h3>
@@ -485,11 +486,12 @@ function ToolCard({ tool }: { tool: Tool }) {
           href={tool.href}
           target="_blank"
           rel="noreferrer"
-          className="inline-flex items-center gap-1.5 rounded-full px-4 py-2 text-sm font-medium text-white hover:opacity-90 transition"
+          aria-label={`${t(`tool.${tool.key}.cta`)} — ${t(`tool.${tool.key}.title`)} (${t("a11y.newTab")})`}
+          className="inline-flex items-center gap-1.5 rounded-full px-4 py-2 text-sm font-medium text-white hover:opacity-90 transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
           style={{ backgroundColor: tool.color }}
         >
           {t(`tool.${tool.key}.cta`)}
-          <ArrowRight className="size-3.5" />
+          <ArrowRight className="size-3.5" aria-hidden />
         </a>
       </div>
     </article>
