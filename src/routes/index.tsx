@@ -345,12 +345,13 @@ const SECTIONS: Section[] = [
         titleKey: "tools.subgroup.people.title",
         noteKey: "tools.subgroup.people.note",
         tools: [
+          { key: "missing", icon: Users, color: "#1D9E75", href: "https://desaparecidosterremotovenezuela.com", trust: "community", featured: true, updated: { kind: "active" } },
           { key: "search", icon: Search, color: "#3B6D11", href: "https://venezuelatebusca.com", trust: "verified", recommended: true, updated: { kind: "active" } },
-          { key: "missing", icon: Users, color: "#1D9E75", href: "https://desaparecidosterremotovenezuela.com", trust: "community", updated: { kind: "active" } },
           { key: "redayuda", icon: ShieldCheck, color: "#DC2626", href: "https://redayudavenezuela.com", trust: "community", updated: { kind: "active" } },
           { key: "filosos", icon: Heart, color: "#D32F2F", href: "https://filosos.site", trust: "community", updated: { kind: "active" } },
           { key: "vision", icon: Camera, color: "#185FA5", href: "https://lo-la-has-visto-48680439362.us-west1.run.app", trust: "unverified", updated: { kind: "recent", date: "25 jun 2026" } },
         ],
+
       },
     ],
   },
