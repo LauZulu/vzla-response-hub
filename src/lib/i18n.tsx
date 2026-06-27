@@ -600,6 +600,14 @@ const en: Dict = {
   "help.supplies.cat.shelter.items": "Blankets, tents, sleeping mats, plastic tarps, sleeping bags, ropes, throws.",
   "help.supplies.cat.clothing.title": "Clothing",
   "help.supplies.cat.clothing.items": "Clean clothing in good condition, for all ages. Coats, blankets, footwear.",
+
+  "help.supplies.moreBogota.title": "More points in Bogotá",
+  "help.supplies.otherCities.title": "Other cities in Colombia",
+  "help.supplies.international.title": "International collection centers",
+  "help.supplies.pets.title": "Donation for pets (Laika points Bogotá)",
+  "help.supplies.pets.needs": "What they receive: wet and dry food (dogs and cats), cat litter, basic medicines, blankets, crates, collars, bowls.",
+  "help.supplies.pets.also": "Also receiving at: CLINIHOGAR (Calle 50 #14-34 Teusaquillo) and La Panadería Rusa (Chapinero, Zona Rosa).",
+
   "help.people.card.title": "Search or report people",
   "help.people.card.sub": "If you've lost contact with someone, search here. If you found someone, report it.",
   "help.people.btn": "Search for a person",
