@@ -50,12 +50,12 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "920+ fallecidos. 50.000+ desaparecidos. Herramientas tech construidas por comunidades para ayudar a Venezuela. Busca personas, dona, reporta daños.",
+          "1.430+ fallecidos. 68.900+ desaparecidos. Herramientas tech construidas por comunidades para ayudar a Venezuela. Busca personas, dona, reporta daños.",
       },
       { property: "og:title", content: "Venezuela Earthquake Response Hub" },
       {
         property: "og:description",
-        content: "920+ fallecidos. 50.000+ desaparecidos. Herramientas tech construidas por comunidades para ayudar a Venezuela. Busca personas, dona, reporta daños.",
+        content: "1.430+ fallecidos. 68.900+ desaparecidos. Herramientas tech construidas por comunidades para ayudar a Venezuela. Busca personas, dona, reporta daños.",
       },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "https://vzlaresponsehub.org/" },
@@ -179,10 +179,10 @@ function LangToggle({ lang, setLang }: { lang: Lang; setLang: (l: Lang) => void 
 function Hero() {
   const { t } = useI18n();
   const stats = [
-    { n: "920+", label: t("hero.stat.dead.label") },
-    { n: "4.500+", label: t("hero.stat.injured.label") },
-    { n: "50.000+", label: t("hero.stat.missing.label") },
-    { n: "172", label: t("hero.stat.trapped.label") },
+    { n: "1.430+", label: t("hero.stat.dead.label") },
+    { n: "3.300+", label: t("hero.stat.injured.label") },
+    { n: "68.900+", label: t("hero.stat.missing.label") },
+    { n: "243", label: t("hero.stat.rescued.label") },
   ];
   return (
     <section className="relative overflow-hidden border-b border-border">

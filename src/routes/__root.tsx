@@ -82,7 +82,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       {
         name: "description",
         content:
-          "920+ fallecidos. 50.000+ desaparecidos. Herramientas tech construidas por comunidades para ayudar a Venezuela. Busca personas, dona, reporta daños.",
+          "1.430+ fallecidos. 68.900+ desaparecidos. Herramientas tech construidas por comunidades para ayudar a Venezuela. Busca personas, dona, reporta daños.",
       },
       { property: "og:site_name", content: "VZLA Response Hub" },
       { property: "og:title", content: "VZLA Response Hub" },
