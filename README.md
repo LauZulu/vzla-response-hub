@@ -1,27 +1,27 @@
 # 🇻🇪 Venezuela Response Hub
 
-> Plataforma de coordinación humanitaria en respuesta al terremoto de Venezuela (junio 2026)
+> Humanitarian coordination platform built in response to the Venezuela earthquake (June 2026)
 
-[![Deploy](https://img.shields.io/badge/Live-vzlaresponsehub.org-red?style=flat-square)](https://vzlaresponsehub.org)
+[![Live](https://img.shields.io/badge/Live-vzlaresponsehub.org-red?style=flat-square)](https://vzlaresponsehub.org)
 [![Status](https://img.shields.io/badge/Status-Active-brightgreen?style=flat-square)]()
 [![Built with](https://img.shields.io/badge/Built_with-TanStack_Start-orange?style=flat-square)](https://tanstack.com/start)
 
 ---
 
-## ¿Qué es?
+## What is it?
 
-Venezuela Response Hub centraliza información verificada de refugios, rutas de evacuación, puntos de ayuda y recursos críticos para la respuesta al sismo del 24 de junio de 2026.
+Venezuela Response Hub centralizes verified information about shelters, evacuation routes, aid points, and critical resources for the response to the June 24, 2026 earthquake.
 
-Construido en el marco del ecosistema **Build4Venezuela** por el equipo de Young AI Leaders Bogotá Hub (UN AI for Good / ITU Network).
+Built during the **Build4Venezuela** hackathon ecosystem by the Young AI Leaders Bogotá Hub team (UN AI for Good / ITU Network).
 
 ---
 
-## Plataformas integradas
+## Integrated platforms
 
-| Plataforma | Descripción |
-|-----------|-------------|
-| 🗺️ **Response Hub** | Coordinación de recursos y voluntarios |
-| 📡 **SismoLab** | Monitoreo científico sísmico en tiempo real |
+| Platform | Description |
+|----------|-------------|
+| 🗺️ **Response Hub** | Resource and volunteer coordination |
+| 📡 **SismoLab** | Real-time scientific seismic monitoring |
 
 ---
 
@@ -34,7 +34,7 @@ Construido en el marco del ecosistema **Build4Venezuela** por el equipo de Young
 
 ---
 
-## Correr localmente
+## Run locally
 
 ```bash
 bun install
@@ -43,16 +43,16 @@ bun run dev
 
 ---
 
-## Contribuir
+## Contributing
 
-Este proyecto es de respuesta humanitaria activa. Pull requests bienvenidos.
-
----
-
-## Equipo
-
-Construido por **Laura Zuluaga Pineda** · [Young AI Leaders Bogotá Hub](https://youngaileaders.org) · UN AI for Good / ITU
+This is an active humanitarian response project. Pull requests are welcome.
 
 ---
 
-*Operativo desde 48h después del sismo. Construido con urgencia, con propósito.*
+## Team
+
+Built by **Laura Zuluaga Pineda** · [Young AI Leaders Bogotá Hub](https://youngaileaders.org) · UN AI for Good / ITU
+
+---
+
+*Live within 48h of the earthquake. Built with urgency, built with purpose.*
