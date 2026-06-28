@@ -51,7 +51,7 @@ Este proyecto es de respuesta humanitaria activa. Pull requests bienvenidos.
 
 ## Equipo
 
-Construido por **Laura Rueda** · [Young AI Leaders Bogotá Hub](https://youngaileaders.org) · UN AI for Good / ITU
+Construido por **Laura Zuluaga Pineda** · [Young AI Leaders Bogotá Hub](https://youngaileaders.org) · UN AI for Good / ITU
 
 ---
 
