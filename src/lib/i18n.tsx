@@ -366,6 +366,39 @@ const es: Dict = {
   "build.layer.title": "¿Tienes habilidades técnicas?",
   "build.layer.sub": "Puedes construir herramientas que salven vidas este fin de semana.",
   "build.layer.cta": "¿Construiste algo que pueda ayudar? Escríbenos a l.zuluaga@youngaileadershub.org y lo agregamos al hub.",
+
+  // Impacto Build4Venezuela (números permanentes)
+  "impact.b4v.title": "Lo que se construyó",
+  "impact.b4v.sub": "Números permanentes de la respuesta ciudadana en las primeras 72 horas.",
+  "impact.b4v.builders": "constructores movilizados",
+  "impact.b4v.projects": "proyectos entregados",
+  "impact.b4v.countries": "países",
+  "impact.b4v.hours": "horas",
+
+  // Balance oficial (colapsable)
+  "balance.title": "Balance oficial",
+  "balance.toggle": "Ver cifras de víctimas",
+  "balance.dead": "fallecidos",
+  "balance.injured": "heridos",
+  "balance.missing": "reportados como desaparecidos",
+  "balance.disclaimer": "Cifras al 27 de junio de 2026. Fuente: reportes de Protección Civil de Venezuela y prensa nacional. Los conteos de personas desaparecidas son preliminares y pueden incluir duplicados o personas ya localizadas. Esta página no se actualiza automáticamente.",
+
+  // Actividad sísmica (USGS)
+  "seismic.title": "Actividad sísmica",
+  "seismic.sub": "Consulta automática al USGS. Región norcentral de Venezuela, magnitud ≥ 4.0, desde el 24 de junio de 2026.",
+  "seismic.count": "{n} réplicas registradas desde el 24 de junio",
+  "seismic.latest": "Más reciente: M {mag} · {when}",
+  "seismic.link": "Ver más en USGS",
+  "seismic.loading": "Cargando datos sísmicos…",
+
+  // Reportes oficiales (ReliefWeb)
+  "reports.title": "Reportes oficiales",
+  "reports.sub": "Últimos informes humanitarios sobre Venezuela vía ReliefWeb.",
+
+  // Cierre
+  "closing.title": "Build4Venezuela terminó. Las herramientas no.",
+  "closing.body": "El código es abierto. Si quieres seguir construyendo, está acá.",
+  "closing.github": "Ver el código en GitHub",
 };
 
 
