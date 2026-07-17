@@ -178,55 +178,18 @@ function LangToggle({ lang, setLang }: { lang: Lang; setLang: (l: Lang) => void 
 
 function Hero() {
   const { t } = useI18n();
-  const stats = [
-    { n: "1.430+", label: t("hero.stat.dead.label") },
-    { n: "3.300+", label: t("hero.stat.injured.label") },
-    { n: "68.900+", label: t("hero.stat.missing.label") },
-    { n: "243", label: t("hero.stat.rescued.label") },
-  ];
   return (
-    <section className="relative overflow-hidden border-b border-border">
-      <Ripples />
-      <div className="relative mx-auto max-w-6xl px-4 pt-14 pb-20 sm:pt-20 sm:pb-28">
-        <p className="text-xs uppercase tracking-[0.18em] text-coral font-medium">
+    <section className="relative border-b border-border">
+      <div className="mx-auto max-w-6xl px-4 pt-14 pb-16 sm:pt-20 sm:pb-20">
+        <p className="text-xs uppercase tracking-[0.18em] text-muted-foreground font-medium">
           {t("hero.kicker")}
         </p>
-
-        <h1 className="sr-only">{t("hero.headline")}</h1>
-
-        <ul className="mt-6 grid grid-cols-2 gap-x-6 gap-y-5 sm:gap-x-10 sm:gap-y-6 sm:max-w-2xl">
-          {stats.map((s) => (
-            <li key={s.label} className="flex flex-col">
-              <span className="font-serif font-bold text-3xl sm:text-5xl md:text-6xl leading-none tnum">
-                {s.n}
-              </span>
-              <span className="mt-2 text-xs sm:text-sm uppercase tracking-wider text-muted-foreground">
-                {s.label}
-              </span>
-            </li>
-          ))}
-        </ul>
-
-        <p
-          className="mt-6 font-serif font-bold text-3xl sm:text-5xl leading-none"
-          style={{ color: "#D85A30" }}
-        >
-          {t("hero.now")}
+        <h1 className="mt-4 font-serif text-3xl sm:text-5xl md:text-6xl leading-tight max-w-3xl">
+          {t("hero.title")}
+        </h1>
+        <p className="mt-6 max-w-2xl text-lg sm:text-xl leading-relaxed text-foreground/85">
+          {t("hero.subtitle")}
         </p>
-
-        <div className="mt-6 inline-flex items-center gap-2 rounded-full border border-border bg-card px-3 py-1.5 text-sm">
-          <span className="relative inline-flex size-2">
-            <span className="absolute inset-0 rounded-full bg-teal animate-ping opacity-70" />
-            <span className="relative inline-flex size-2 rounded-full bg-teal" />
-          </span>
-          <span className="text-muted-foreground">{t("hero.live")}</span>
-        </div>
-
-        <p className="mt-8 max-w-2xl text-lg sm:text-xl leading-relaxed">
-          <span className="block">{t("hero.sub1")}</span>
-          <span className="block">{t("hero.sub2")}</span>
-        </p>
-
         <div className="mt-8 flex flex-col sm:flex-row gap-2 sm:gap-3">
           <a
             href="#tools"
@@ -238,13 +201,7 @@ function Hero() {
             href="#donar"
             className="inline-flex w-full sm:w-auto items-center justify-center rounded-full border border-teal text-teal px-5 py-3 text-sm font-medium hover:bg-teal/10 transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
           >
-            {t("hero.cta.donate")}
-          </a>
-          <a
-            href="#preparacion"
-            className="inline-flex w-full sm:w-auto items-center justify-center rounded-full border border-teal text-teal px-5 py-3 text-sm font-medium hover:bg-teal/10 transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
-          >
-            {t("hero.cta.prepare")}
+            {t("hero.cta.contribute")}
           </a>
         </div>
       </div>
@@ -252,22 +209,261 @@ function Hero() {
   );
 }
 
-function Ripples() {
+/* ───────────────────── Impact (permanent numbers) ───────────────────── */
+
+function BuildImpact() {
+  const { t } = useI18n();
+  const items = [
+    { n: "1.000+", label: t("impact.b4v.builders") },
+    { n: "80+", label: t("impact.b4v.projects") },
+    { n: "10+", label: t("impact.b4v.countries") },
+    { n: "72", label: t("impact.b4v.hours") },
+  ];
   return (
-    <div aria-hidden className="pointer-events-none absolute inset-0 overflow-hidden">
-      <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
-        {[0, 2, 4].map((delay) => (
-          <span
-            key={delay}
-            className="absolute left-0 top-0 size-[420px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-coral/20"
-            style={{ animation: `ripple 6s ease-out ${delay}s infinite` }}
-          />
-        ))}
+    <section className="mx-auto max-w-6xl px-4 py-14 sm:py-20">
+      <div className="max-w-2xl mb-8">
+        <h2 className="font-serif text-2xl sm:text-3xl">{t("impact.b4v.title")}</h2>
+        <p className="mt-2 text-[15px] text-muted-foreground leading-relaxed">{t("impact.b4v.sub")}</p>
       </div>
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-background" />
-    </div>
+      <ul className="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-10">
+        {items.map((it) => (
+          <li key={it.label} className="flex flex-col">
+            <span className="font-serif font-bold text-4xl sm:text-5xl md:text-6xl leading-none tnum">
+              {it.n}
+            </span>
+            <span className="mt-2 text-xs sm:text-sm uppercase tracking-wider text-muted-foreground">
+              {it.label}
+            </span>
+          </li>
+        ))}
+      </ul>
+    </section>
   );
 }
+
+/* ───────────────────── Official Balance (collapsible) ───────────────────── */
+
+function OfficialBalance() {
+  const { t } = useI18n();
+  const rows = [
+    { n: "1.430+", label: t("balance.dead") },
+    { n: "3.300+", label: t("balance.injured") },
+    { n: "68.900+", label: t("balance.missing") },
+  ];
+  return (
+    <section className="mx-auto max-w-6xl px-4 py-10">
+      <Accordion type="single" collapsible className="max-w-3xl">
+        <AccordionItem value="balance" className="border-b border-border">
+          <AccordionTrigger className="py-4 hover:no-underline">
+            <span className="font-serif text-lg font-bold text-left">{t("balance.title")}</span>
+          </AccordionTrigger>
+          <AccordionContent>
+            <ul className="grid grid-cols-1 sm:grid-cols-3 gap-6 py-4">
+              {rows.map((r) => (
+                <li key={r.label} className="flex flex-col">
+                  <span className="font-serif text-3xl sm:text-4xl leading-none tnum text-foreground">
+                    {r.n}
+                  </span>
+                  <span className="mt-2 text-xs uppercase tracking-wider text-muted-foreground">
+                    {r.label}
+                  </span>
+                </li>
+              ))}
+            </ul>
+            <p className="mt-4 text-[12px] leading-relaxed text-muted-foreground max-w-2xl">
+              {t("balance.disclaimer")}
+            </p>
+          </AccordionContent>
+        </AccordionItem>
+      </Accordion>
+    </section>
+  );
+}
+
+/* ───────────────────── Seismic Activity (USGS) ───────────────────── */
+
+type UsgsFeature = { properties: { mag: number | null; time: number; place: string; url: string } };
+
+function SeismicActivity() {
+  const { t, lang } = useI18n();
+  const [data, setData] = useState<{ count: number; latest: UsgsFeature | null } | null>(null);
+  const [error, setError] = useState(false);
+
+  useEffect(() => {
+    let cancelled = false;
+    async function load() {
+      try {
+        const url =
+          "https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson" +
+          "&starttime=2026-06-24&minmagnitude=4.0" +
+          "&minlatitude=8&maxlatitude=12&minlongitude=-70&maxlongitude=-67";
+        const res = await fetch(url);
+        if (!res.ok) throw new Error("USGS " + res.status);
+        const json = await res.json();
+        const features = (json.features ?? []) as UsgsFeature[];
+        features.sort((a, b) => (b.properties?.time ?? 0) - (a.properties?.time ?? 0));
+        if (!cancelled) setData({ count: features.length, latest: features[0] ?? null });
+      } catch {
+        if (!cancelled) setError(true);
+      }
+    }
+    load();
+    const id = setInterval(load, 60 * 60 * 1000);
+    return () => {
+      cancelled = true;
+      clearInterval(id);
+    };
+  }, []);
+
+  if (error) return null;
+
+  const locale = lang === "es" ? "es-VE" : "en-US";
+  const fmtWhen = (ms: number) =>
+    new Date(ms).toLocaleString(locale, { day: "numeric", month: "short", year: "numeric", hour: "2-digit", minute: "2-digit" });
+
+  return (
+    <section className="mx-auto max-w-6xl px-4 py-14 sm:py-16">
+      <div className="max-w-2xl mb-6">
+        <h2 className="font-serif text-2xl sm:text-3xl">{t("seismic.title")}</h2>
+        <p className="mt-2 text-[14px] text-muted-foreground leading-relaxed">{t("seismic.sub")}</p>
+      </div>
+      <div className="rounded-2xl border border-border bg-card p-6 sm:p-8 max-w-2xl">
+        {!data ? (
+          <p className="text-[14px] text-muted-foreground">{t("seismic.loading")}</p>
+        ) : (
+          <>
+            <p className="font-serif text-2xl sm:text-3xl leading-tight">
+              {t("seismic.count", { n: data.count })}
+            </p>
+            {data.latest && data.latest.properties.mag != null && (
+              <p className="mt-3 text-[14px] text-foreground/85">
+                {t("seismic.latest", {
+                  mag: data.latest.properties.mag.toFixed(1),
+                  when: fmtWhen(data.latest.properties.time),
+                })}
+                {" · "}
+                <span className="text-muted-foreground">{data.latest.properties.place}</span>
+              </p>
+            )}
+            <a
+              href={data.latest?.properties.url ?? "https://earthquake.usgs.gov/earthquakes/map/"}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-4 inline-flex items-center gap-1.5 text-[13px] text-teal hover:underline"
+            >
+              {t("seismic.link")} <ExternalLink className="size-3.5" />
+            </a>
+          </>
+        )}
+      </div>
+    </section>
+  );
+}
+
+/* ───────────────────── Relief Reports (ReliefWeb) ───────────────────── */
+
+type ReliefItem = { id: string; title: string; url: string; date: string };
+
+function ReliefReports() {
+  const { t, lang } = useI18n();
+  const [items, setItems] = useState<ReliefItem[] | null>(null);
+  const [error, setError] = useState(false);
+
+  useEffect(() => {
+    let cancelled = false;
+    async function load() {
+      try {
+        const url =
+          "https://api.reliefweb.int/v1/reports?appname=vzlaresponsehub" +
+          "&filter[field]=country&filter[value]=Venezuela" +
+          "&sort[]=date:desc&limit=5" +
+          "&fields[include][]=title&fields[include][]=date.created&fields[include][]=url_alias";
+        const res = await fetch(url);
+        if (!res.ok) throw new Error("ReliefWeb " + res.status);
+        const json = await res.json();
+        const rows: ReliefItem[] = (json.data ?? []).map((d: { id: string; fields: { title: string; url_alias?: string; date?: { created?: string } } }) => ({
+          id: d.id,
+          title: d.fields?.title ?? "",
+          url: d.fields?.url_alias ?? `https://reliefweb.int/node/${d.id}`,
+          date: d.fields?.date?.created ?? "",
+        }));
+        if (!cancelled) setItems(rows);
+      } catch {
+        if (!cancelled) setError(true);
+      }
+    }
+    load();
+    const id = setInterval(load, 6 * 60 * 60 * 1000);
+    return () => {
+      cancelled = true;
+      clearInterval(id);
+    };
+  }, []);
+
+  if (error || (items && items.length === 0)) return null;
+
+  const locale = lang === "es" ? "es-VE" : "en-US";
+  const fmtDate = (iso: string) =>
+    iso ? new Date(iso).toLocaleDateString(locale, { day: "numeric", month: "short", year: "numeric" }) : "";
+
+  return (
+    <section className="mx-auto max-w-6xl px-4 py-14 sm:py-16">
+      <div className="max-w-2xl mb-6">
+        <h2 className="font-serif text-2xl sm:text-3xl">{t("reports.title")}</h2>
+        <p className="mt-2 text-[14px] text-muted-foreground leading-relaxed">{t("reports.sub")}</p>
+      </div>
+      <ul className="max-w-3xl divide-y divide-border border-y border-border">
+        {(items ?? Array.from({ length: 3 })).map((it, i) => (
+          <li key={it ? (it as ReliefItem).id : i} className="py-4">
+            {it ? (
+              <a
+                href={(it as ReliefItem).url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1 group"
+              >
+                <span className="text-[15px] leading-snug group-hover:text-teal transition">
+                  {(it as ReliefItem).title}
+                </span>
+                <span className="text-[12px] text-muted-foreground tnum shrink-0">
+                  {fmtDate((it as ReliefItem).date)}
+                </span>
+              </a>
+            ) : (
+              <span className="block h-4 w-full bg-muted/60 rounded" aria-hidden />
+            )}
+          </li>
+        ))}
+      </ul>
+    </section>
+  );
+}
+
+/* ───────────────────── Closing ───────────────────── */
+
+function Closing() {
+  const { t } = useI18n();
+  return (
+    <section className="border-t border-border bg-muted/40">
+      <div className="mx-auto max-w-6xl px-4 py-16 sm:py-20">
+        <h2 className="font-serif text-2xl sm:text-3xl max-w-2xl">{t("closing.title")}</h2>
+        <p className="mt-3 max-w-2xl text-[15px] leading-relaxed text-foreground/85">
+          {t("closing.body")}
+        </p>
+        <a
+          href="https://github.com/build4venezuela"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-6 inline-flex items-center gap-1.5 rounded-full border border-foreground/80 px-5 py-2.5 text-sm font-medium text-foreground hover:bg-foreground hover:text-background transition"
+        >
+          {t("closing.github")}
+          <ExternalLink className="size-3.5" />
+        </a>
+      </div>
+    </section>
+  );
+}
+
 
 
 
