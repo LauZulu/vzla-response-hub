@@ -1392,10 +1392,7 @@ function Footer() {
       <div className="mx-auto max-w-6xl px-4 py-10 flex flex-col gap-6 text-sm">
         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
           <div className="flex items-center gap-2">
-            <span className="relative inline-flex size-2.5">
-              <span className="absolute inset-0 rounded-full bg-coral animate-ping opacity-60" />
-              <span className="relative inline-flex size-2.5 rounded-full bg-coral" />
-            </span>
+            <span className="inline-flex size-2 rounded-full bg-teal" aria-hidden />
             <span className="font-serif">{t("nav.logo")}</span>
           </div>
           <div className="text-muted-foreground text-xs">{t("footer.rights")}</div>
