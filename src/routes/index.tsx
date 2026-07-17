@@ -143,10 +143,8 @@ function TopBar() {
       </div>
       <div className="mx-auto max-w-6xl px-4 h-12 flex items-center justify-between gap-3">
         <a href="#" className="flex items-center gap-2 group min-w-0" aria-label={t("nav.logo")}>
-          <span className="relative inline-flex size-2.5 shrink-0">
-            <span className="absolute inset-0 rounded-full bg-coral animate-ping opacity-60" />
-            <span className="relative inline-flex size-2.5 rounded-full bg-coral" />
-          </span>
+          <span className="inline-flex size-2 shrink-0 rounded-full bg-teal" aria-hidden />
+
           <span className="font-serif text-sm tracking-tight truncate">{t("nav.logo")}</span>
         </a>
         <div className="flex items-center gap-3 shrink-0">
