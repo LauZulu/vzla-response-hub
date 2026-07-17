@@ -14,23 +14,12 @@ const es: Dict = {
   "nav.logo": "VZLA Response Hub",
   "lang.toggle": "ES | EN",
 
-  "hero.kicker": "Terremoto Venezuela · 24 jun 2026 · 6:04 PM",
-  "hero.headline": "1.430+ personas fallecidas. 3.300+ heridas. 68.900+ reportadas como desaparecidas. La ventana de 72 horas para rescatar sobrevivientes se cierra esta noche. AHORA",
-  "hero.stat.dead.label": "fallecidos",
-  "hero.stat.injured.label": "heridos",
-  "hero.stat.missing.label": "desaparecidos",
-  "hero.stat.trapped.label": "atrapados bajo escombros",
-  "hero.stat.rescued.label": "rescatados con vida",
-  "hero.now": "AHORA",
-  "hero.live": "En este segundo, hay personas siendo localizadas",
-  "hero.sub1": "Comunidades tech construyeron herramientas reales.",
-  "hero.sub2": "Tú puedes ayudar.",
-  "hero.sub3": "",
-  "hero.cta": "Ver cómo ayudar",
-  "hero.cta.tools": "Ver soluciones activas",
-  "hero.cta.donate": "Donar ahora",
-  "hero.cta.prepare": "Qué hacer ante un sismo",
-  "nav.lastUpdate": "Última actualización",
+  "hero.kicker": "Archivo vivo",
+  "hero.title": "Terremoto de Venezuela · 24 de junio de 2026",
+  "hero.subtitle": "En 72 horas, más de 1.000 personas de 10 países construyeron 80+ herramientas. Siguen funcionando.",
+  "hero.cta.tools": "Ver las herramientas",
+  "hero.cta.contribute": "Cómo contribuir",
+  "nav.lastUpdate": "Última revisión",
 
   "impact.title": "Cifras de la emergencia",
   "impact.sub": "Fuentes oficiales. Datos pueden cambiar conforme avanza la respuesta.",
@@ -377,6 +366,39 @@ const es: Dict = {
   "build.layer.title": "¿Tienes habilidades técnicas?",
   "build.layer.sub": "Puedes construir herramientas que salven vidas este fin de semana.",
   "build.layer.cta": "¿Construiste algo que pueda ayudar? Escríbenos a l.zuluaga@youngaileadershub.org y lo agregamos al hub.",
+
+  // Impacto Build4Venezuela (números permanentes)
+  "impact.b4v.title": "Lo que se construyó",
+  "impact.b4v.sub": "Números permanentes de la respuesta ciudadana en las primeras 72 horas.",
+  "impact.b4v.builders": "constructores movilizados",
+  "impact.b4v.projects": "proyectos entregados",
+  "impact.b4v.countries": "países",
+  "impact.b4v.hours": "horas",
+
+  // Balance oficial (colapsable)
+  "balance.title": "Balance oficial",
+  "balance.toggle": "Ver cifras de víctimas",
+  "balance.dead": "fallecidos",
+  "balance.injured": "heridos",
+  "balance.missing": "reportados como desaparecidos",
+  "balance.disclaimer": "Cifras al 27 de junio de 2026. Fuente: reportes de Protección Civil de Venezuela y prensa nacional. Los conteos de personas desaparecidas son preliminares y pueden incluir duplicados o personas ya localizadas. Esta página no se actualiza automáticamente.",
+
+  // Actividad sísmica (USGS)
+  "seismic.title": "Actividad sísmica",
+  "seismic.sub": "Consulta automática al USGS. Región norcentral de Venezuela, magnitud ≥ 4.0, desde el 24 de junio de 2026.",
+  "seismic.count": "{n} réplicas registradas desde el 24 de junio",
+  "seismic.latest": "Más reciente: M {mag} · {when}",
+  "seismic.link": "Ver más en USGS",
+  "seismic.loading": "Cargando datos sísmicos…",
+
+  // Reportes oficiales (ReliefWeb)
+  "reports.title": "Reportes oficiales",
+  "reports.sub": "Últimos informes humanitarios sobre Venezuela vía ReliefWeb.",
+
+  // Cierre
+  "closing.title": "Build4Venezuela terminó. Las herramientas no.",
+  "closing.body": "El código es abierto. Si quieres seguir construyendo, está acá.",
+  "closing.github": "Ver el código en GitHub",
 };
 
 
@@ -390,23 +412,12 @@ const en: Dict = {
   "nav.logo": "VZLA Response Hub",
   "lang.toggle": "ES | EN",
 
-  "hero.kicker": "Venezuela Earthquake · Jun 24, 2026 · 6:04 PM",
-  "hero.headline": "1,430+ people deceased. 3,300+ injured. 68,900+ reported missing. The 72-hour window to rescue survivors closes tonight. RIGHT NOW",
-  "hero.stat.dead.label": "deceased",
-  "hero.stat.injured.label": "injured",
-  "hero.stat.missing.label": "missing",
-  "hero.stat.trapped.label": "trapped under rubble",
-  "hero.stat.rescued.label": "rescued alive",
-  "hero.now": "RIGHT NOW",
-  "hero.live": "This second, people are being located",
-  "hero.sub1": "Tech communities built real tools.",
-  "hero.sub2": "You can help.",
-  "hero.sub3": "",
-  "hero.cta": "See how to help",
-  "hero.cta.tools": "See active solutions",
-  "hero.cta.donate": "Donate now",
-  "hero.cta.prepare": "What to do in an earthquake",
-  "nav.lastUpdate": "Last updated",
+  "hero.kicker": "Living archive",
+  "hero.title": "Venezuela Earthquake · June 24, 2026",
+  "hero.subtitle": "In 72 hours, more than 1,000 people from 10 countries built 80+ tools. They're still running.",
+  "hero.cta.tools": "See the tools",
+  "hero.cta.contribute": "How to contribute",
+  "nav.lastUpdate": "Last reviewed",
 
   "impact.title": "Emergency figures",
   "impact.sub": "Official sources. Numbers may change as the response evolves.",
@@ -752,6 +763,34 @@ const en: Dict = {
   "build.layer.title": "Got technical skills?",
   "build.layer.sub": "You can build tools that save lives this weekend.",
   "build.layer.cta": "Built something that can help? Write to us at l.zuluaga@youngaileadershub.org and we'll add it to the hub.",
+
+  "impact.b4v.title": "What was built",
+  "impact.b4v.sub": "Permanent numbers from the citizen-led response in the first 72 hours.",
+  "impact.b4v.builders": "builders mobilized",
+  "impact.b4v.projects": "projects shipped",
+  "impact.b4v.countries": "countries",
+  "impact.b4v.hours": "hours",
+
+  "balance.title": "Official casualty figures",
+  "balance.toggle": "Show casualty figures",
+  "balance.dead": "deceased",
+  "balance.injured": "injured",
+  "balance.missing": "reported missing",
+  "balance.disclaimer": "Figures as of June 27, 2026. Source: reports from Venezuela's Civil Protection and national press. Missing-persons counts are preliminary and may include duplicates or people who have already been located. This page is not updated automatically.",
+
+  "seismic.title": "Seismic activity",
+  "seismic.sub": "Automatic USGS query. North-central Venezuela region, magnitude ≥ 4.0, since June 24, 2026.",
+  "seismic.count": "{n} aftershocks recorded since June 24",
+  "seismic.latest": "Most recent: M {mag} · {when}",
+  "seismic.link": "View more on USGS",
+  "seismic.loading": "Loading seismic data…",
+
+  "reports.title": "Official reports",
+  "reports.sub": "Latest humanitarian reports on Venezuela via ReliefWeb.",
+
+  "closing.title": "Build4Venezuela is over. The tools aren't.",
+  "closing.body": "The code is open. If you want to keep building, it's here.",
+  "closing.github": "See the code on GitHub",
 };
 
 
