@@ -763,6 +763,34 @@ const en: Dict = {
   "build.layer.title": "Got technical skills?",
   "build.layer.sub": "You can build tools that save lives this weekend.",
   "build.layer.cta": "Built something that can help? Write to us at l.zuluaga@youngaileadershub.org and we'll add it to the hub.",
+
+  "impact.b4v.title": "What was built",
+  "impact.b4v.sub": "Permanent numbers from the citizen-led response in the first 72 hours.",
+  "impact.b4v.builders": "builders mobilized",
+  "impact.b4v.projects": "projects shipped",
+  "impact.b4v.countries": "countries",
+  "impact.b4v.hours": "hours",
+
+  "balance.title": "Official casualty figures",
+  "balance.toggle": "Show casualty figures",
+  "balance.dead": "deceased",
+  "balance.injured": "injured",
+  "balance.missing": "reported missing",
+  "balance.disclaimer": "Figures as of June 27, 2026. Source: reports from Venezuela's Civil Protection and national press. Missing-persons counts are preliminary and may include duplicates or people who have already been located. This page is not updated automatically.",
+
+  "seismic.title": "Seismic activity",
+  "seismic.sub": "Automatic USGS query. North-central Venezuela region, magnitude ≥ 4.0, since June 24, 2026.",
+  "seismic.count": "{n} aftershocks recorded since June 24",
+  "seismic.latest": "Most recent: M {mag} · {when}",
+  "seismic.link": "View more on USGS",
+  "seismic.loading": "Loading seismic data…",
+
+  "reports.title": "Official reports",
+  "reports.sub": "Latest humanitarian reports on Venezuela via ReliefWeb.",
+
+  "closing.title": "Build4Venezuela is over. The tools aren't.",
+  "closing.body": "The code is open. If you want to keep building, it's here.",
+  "closing.github": "See the code on GitHub",
 };
 
 
