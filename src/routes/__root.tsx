@@ -82,7 +82,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       {
         name: "description",
         content:
-          "1.430+ fallecidos. 68.900+ desaparecidos. Herramientas tech construidas por comunidades para ayudar a Venezuela. Busca personas, dona, reporta daños.",
+          "Terremoto de Venezuela · 24 de junio de 2026. En 72 horas, más de 1.000 personas de 10 países construyeron 80+ herramientas ciudadanas. Archivo vivo con las herramientas que siguen funcionando.",
       },
       { property: "og:site_name", content: "VZLA Response Hub" },
       { property: "og:title", content: "VZLA Response Hub" },

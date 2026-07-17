@@ -46,16 +46,16 @@ import { I18nProvider, useI18n, type Lang } from "@/lib/i18n";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Venezuela Earthquake Response Hub · Join 3,247 helpers" },
+      { title: "Terremoto de Venezuela · 24 jun 2026 · VZLA Response Hub" },
       {
         name: "description",
         content:
-          "1.430+ fallecidos. 68.900+ desaparecidos. Herramientas tech construidas por comunidades para ayudar a Venezuela. Busca personas, dona, reporta daños.",
+          "Terremoto de Venezuela · 24 de junio de 2026. En 72 horas, más de 1.000 personas de 10 países construyeron 80+ herramientas ciudadanas. Archivo vivo con las herramientas que siguen funcionando.",
       },
       { property: "og:title", content: "Venezuela Earthquake Response Hub" },
       {
         property: "og:description",
-        content: "1.430+ fallecidos. 68.900+ desaparecidos. Herramientas tech construidas por comunidades para ayudar a Venezuela. Busca personas, dona, reporta daños.",
+        content: "Terremoto de Venezuela · 24 de junio de 2026. En 72 horas, más de 1.000 personas de 10 países construyeron 80+ herramientas ciudadanas. Archivo vivo con las herramientas que siguen funcionando.",
       },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "https://vzlaresponsehub.org/" },
