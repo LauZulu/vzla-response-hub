@@ -85,11 +85,19 @@ function Hub() {
       <main>
         <Hero />
         <SectionDivider />
+        <BuildImpact />
+        <SectionDivider />
         <Story />
         <SectionDivider />
         <QuickAccess />
         <SectionDivider />
         <Tools />
+        <SectionDivider />
+        <SeismicActivity />
+        <SectionDivider />
+        <ReliefReports />
+        <SectionDivider />
+        <OfficialBalance />
         <SectionDivider />
         <Emergency />
         <SectionDivider />
@@ -98,6 +106,7 @@ function Hub() {
         <Prepare />
         <SectionDivider />
         <Trust />
+        <Closing />
       </main>
       <Footer />
       <StickyCTA />
